@@ -1,0 +1,10 @@
+{% assign wlmHideItem_Collection = false %}{% for tag in customer.tags %}
+{% if tag == 'mil' %}{% assign wlmLockedTags19347 = true %}{% endif %}
+{% if tag == 'fir' %}{% assign wlmLockedTags19346 = true %}{% endif %}
+{% if tag == 'bbtd' %}{% assign wlmLockedTags23718 = true %}{% endif %}
+{% endfor %}
+
+
+
+{% if wlmHideItem_Collection == true %}{% continue %}{% endif %}
+

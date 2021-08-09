@@ -1,0 +1,27 @@
+{% capture wlmPnfContent %}
+		<div class="page-width">
+		<div class="grid">
+		  <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+			<div class="section-header text-center">
+			  <h1><span class="wlm-title-pnf">{{ wlmPnfHead }}</span></h1>
+			</div>
+
+			<div class="rte">
+			  <div class="wlm-message-pnf">{{ wlmPnfMsg }}</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  {% endcapture %}
+	  {% if wlmLockON %}
+		<div id="wlmpnf">{{ wlmPnfContent }}</div>
+	  {% else %}
+		<wlm class="wlm-content">
+		  {{ content_for_layout }}
+		</wlm>
+		<div id="wlmpnf" style="display:none;">{{ wlmPnfContent }}</div>
+        {% include "wlm-pwd-form" %}
+        <script type="text/javascript" id="wlm-helper">
+        if( typeof wlm == "object" ) wlm.toggleContent(true);
+      </script>
+      {% endif %}

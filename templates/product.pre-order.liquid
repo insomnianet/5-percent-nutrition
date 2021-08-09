@@ -1,0 +1,23 @@
+{% include 'shogun-products', content: product %}
+{{product.metafields.shogun.above}}
+{% section 'product-template' %}
+{% render 'product-description' %}
+{% render 'vimeo-iframe' %}
+{% render '5percent-nation'%}
+{% section 'recently-viewed-products' %}
+{% section 'related-products' %}
+{% include 'product_references'%}
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+
+{{ product.metafields.shogun.below }}
+
+<style type="text/css">
+  .yotpo-product-banner {
+    display: none;
+  }
+
+  .quantity-and-addToCart-container {
+    z-index: 1;
+  }
+</style>

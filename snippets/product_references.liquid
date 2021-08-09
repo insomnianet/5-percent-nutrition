@@ -1,0 +1,18 @@
+{% unless product.metafields.meta.references == blank %}
+<section id="shopify-section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="shopify-section">
+<div class="references-section">
+    <div class="container">
+        <h4 class="references-heading references_font_header" style="margin-bottom: 2px;">References</h4>
+        <div class="references_font">{{ product.metafields.meta.references }}</div>
+      	<h4 class="references-heading references_font_sub_header" style="margin-bottom: 2px;">Product Warnings</h4>
+        <div class="references_font">
+          {% if product.tag contains 'supplement' %}
+ 			Not intended for persons under the age of 18. Do not use if pregnant or nursing. Consult a health care professional prior to consumption if you have any pre-existing medical conditions including but not limited to: diabetes, high or low blood pressure, heart, liver or kidney disease, cardiac arrhythmia, stroke or are taking any prescription medication. Store in a cool, dry place away from sunlight and with lid tightly secured.
+		  {% endif %}
+          <!--references_font_FDA-->† These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+      	</div>
+        <div class="references_font_p65warning"><i class="fas fa-exclamation-triangle"></i>&nbsp;WARNING: Consuming this product can expose you to chemicals including lead, which is known to the State of California to cause cancer, birth defects or other reproductive harm. For more information go to <a target="_blank" href="https://www.P65Warnings.ca.gov/food" >www.P65Warnings.ca.gov/food</a>.</div>
+    </div>
+</div>
+</section>
+{% endunless %}

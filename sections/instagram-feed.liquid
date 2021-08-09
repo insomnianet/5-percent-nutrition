@@ -1,0 +1,63 @@
+{%- capture flickity_config -%}
+{
+  "wrapAround": true,
+  "pageDots": false,
+  "setGallerySize": false,
+  "prevNextButtons": true,
+  "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+}
+{%- endcapture -%}
+   {% include 'instagram-feed' %}
+
+{% schema %}
+{
+  "name": "Instagram feed",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "@YourStore"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Follow us"
+    },
+    {
+      "type": "text",
+      "id": "access_token",
+      "label": "Access token",
+      "info": "[Find your access token](http://www.maestrooo.com/instagram)."
+    },
+    {
+      "type": "range",
+      "id": "image_count",
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": "Image count",
+      "default": 15
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Social media",
+      "name": "Instagram feed",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

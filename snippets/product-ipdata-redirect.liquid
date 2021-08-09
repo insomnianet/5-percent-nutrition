@@ -1,0 +1,164 @@
+let request = new XMLHttpRequest();
+let shop_domain = '{{ shop.domain }}';
+let template = '{{ request.page_type }}';
+let country_code, path, handle;
+
+console.log(template);
+
+switch (template) {
+  case 'product':
+    path = 'products';
+    handle = '{{ product.handle }}';
+    break;
+
+  case 'page':
+    path = 'page';
+    handle = '{{ page.handle }}';
+    break;
+
+  case 'colletion':
+    path = 'collections';
+    handle = '{{ collection.handle }}';
+    break;
+
+  default:
+    path = '/';
+    handle = '';
+    break;
+};
+
+function redirectGlobal(path, handle) {
+  switch (path) {
+    case 'products':
+      window.location.href = 'https://5percentnutrition.com/products/' + handle + '/?redirect=true';
+      break;
+    case 'page':
+      window.location.href = 'https://5percentnutrition.com/page/' + handle + '/?redirect=true';
+      break;
+    case 'collections':
+      window.location.href = 'https://5percentnutrition.com/collections/' + handle + '/?redirect=true';
+      break;
+    default:
+      window.location.href = 'https://5percentnutrition.com/';
+      break;
+  }
+};
+
+function redirectCA(path, handle) {
+  switch (path) {
+    case 'products':
+      window.location.href = 'https://5percentnutrition.ca/products/' + handle + '/?redirect=true';
+      break;
+    case 'page':
+      window.location.href = 'https://5percentnutrition.ca/page/' + handle + '/?redirect=true';
+      break;
+    case 'collections':
+      window.location.href = 'https://5percentnutrition.ca/collections/' + handle + '/?redirect=true';
+      break;
+    default:
+      window.location.href = 'https://5percentnutrition.ca/';
+      break;
+  }
+};
+
+function redirectUK(path, handle) {
+  switch (path) {
+    case 'products':
+      window.location.href = 'https://5percentnutrition.uk/products/' + handle + '/?redirect=true';
+      break;
+    case 'page':
+      window.location.href = 'https://5percentnutrition.uk/page/' + handle + '/?redirect=true';
+      break;
+    case 'collections':
+      window.location.href = 'https://5percentnutrition.uk/collections/' + handle + '/?redirect=true';
+      break;
+    default:
+      window.location.href = 'https://5percentnutrition.uk/';
+      break;
+  }
+};
+
+function redirectEU(path, handle) {
+  switch (path) {
+    case 'products':
+      window.location.href = 'https://5percentnutrition.eu/products/' + handle + '/?redirect=true';
+      break;
+    case 'page':
+      window.location.href = 'https://5percentnutrition.eu/page/' + handle + '/?redirect=true';
+      break;
+    case 'collections':
+      window.location.href = 'https://5percentnutrition.eu/collections/' + handle + '/?redirect=true';
+      break;
+    default:
+      window.location.href = 'https://5percentnutrition.eu/';
+      break;
+  }
+};
+
+request.open('GET', 'https://api.ipdata.co/?api-key=d939ef5e6c20fd419e36b2408010fba598ce784a995134bead508192'); 
+request.setRequestHeader('Accept', 'application/json');
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    let response = JSON.parse(this.responseText);
+    
+    console.log(response); 
+
+    // CA
+    if (shop_domain == '5percentnutrition.ca' && response.country_code == 'UK') {
+      redirectUK(path, handle);
+    } else if (shop_domain == '5percentnutrition.ca' && response.country_code == 'EU') {
+      redirectEU(path, handle);
+    } else if (shop_domain == '5percentnutrition.ca' && response.country_code != 'CA') {
+      redirectGlobal(path, handle);
+    }
+
+    // UK
+    if (shop_domain == '5percentnutrition.uk' && response.country_code == 'CA') {
+      redirectCA(path, handle);
+    } else if (shop_domain == '5percentnutrition.uk' && response.country_code == 'EU') {
+      redirectEU(path, handle);
+    } else if (shop_domain == '5percentnutrition.uk' && response.country_code != 'UK') {
+      redirectGlobal(path, handle);
+    }
+
+    // EU
+    if (shop_domain == '5percentnutrition.eu' && response.country_code == 'CA') {
+      redirectCA(path, handle);
+    } else if (shop_domain == '5percentnutrition.eu' && response.country_code == 'UK') {
+      redirectUK(path, handle);
+    } else if (shop_domain == '5percentnutrition.eu' && response.country_code != 'EU') {
+      redirectGlobal(path, handle);
+    }
+
+    // GLOBAL
+    if (shop_domain == '5percentnutrition.com' && response.country_code == 'CA') {
+      redirectCA(path, handle);
+    } else if (shop_domain == '5percentnutrition.com' && response.country_code == 'UK') {
+      redirectUK(path, handle);
+    } else if (shop_domain == '5percentnutrition.com' && response.country_code == 'EU') {
+      redirectEU(path, handle);
+    }
+
+  }
+};
+
+const searchParams = new URLSearchParams(window.location.search);
+
+if (searchParams.has('redirect') && template == '404') {
+  switch (shop_domain) {
+    case '5percentnutrition.ca':
+      redirectCA('404', null)
+      break;
+    case '5percentnutrition.uk':
+      redirectUK('404', null)
+      break;
+    case '5percentnutrition.eu':
+      redirectEU('404', null)
+      break;
+    default:
+      redirectGlobal('404', null)
+      break;
+  }
+} else {
+  request.send();
+}

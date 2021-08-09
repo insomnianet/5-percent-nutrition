@@ -1,0 +1,118 @@
+{%- layout 'gift_card' -%}
+
+<header class="Header Header--sidebar Header--initialized">
+  <div class="Header__Wrapper Header__Wrapper--center" style="padding-top:0px; padding-bottom:0px;">
+    <a href="https://5percentnutrition.com/" class="Header__LogoLink"><!--style="margin-left:auto; margin-right:auto;"-->
+      <span class="Heading u-h4" style="padding-left:20px; text-transform:uppercase;"><img src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/5Percent-Logo-Vector-Mod_v2_80x.png" alt="{{ shop.name }}"></span>
+    </a>
+    
+    <nav class="Header__MainNav header-main-nav js-header-main-nav" aria-label="Main navigation">
+	<ul class="HorizontalList HorizontalList--spacingExtraLoose">
+		<li class="HorizontalList__Item " aria-haspopup="true" data-navname = "SUPPLEMENTS">
+                  <a href="https://5percentnutrition.com/collections/supplements" class="Heading u-h6 text-uppercase">SUPPLEMENTS<span class="Header__LinkSpacer">SUPPLEMENTS</span>
+                  </a><div class="DropdownMenu" aria-hidden="true"><aside class="red-sidebar">
+		</li>
+		<li class="HorizontalList__Item " aria-haspopup="true" data-navname = "APPAREL">
+                  <a href="https://5percentnutrition.com/collections/apparel" class="Heading u-h6 text-uppercase">APPAREL<span class="Header__LinkSpacer">APPAREL</span>
+                  </a><div class="DropdownMenu" aria-hidden="true"><aside class="red-sidebar">
+		</li>
+		<li class="HorizontalList__Item " aria-haspopup="true" data-navname = "STACKS">
+                  <a href="https://5percentnutrition.com/collections/stacks" class="Heading u-h6 text-uppercase">STACKS<span class="Header__LinkSpacer">STACKS</span>
+                  </a><div class="DropdownMenu" aria-hidden="true"><aside class="red-sidebar">
+		</li>
+		<li class="HorizontalList__Item " aria-haspopup="true" data-navname = "5% NATION">
+                  <a href="https://5percentnutrition.com/pages/family" class="Heading u-h6 text-uppercase">5% NATION<span class="Header__LinkSpacer">5% NATION</span>
+                  </a><div class="DropdownMenu" aria-hidden="true"><aside class="red-sidebar">
+		</li>
+	</ul>
+</nav>
+          
+  </div>
+</header>
+
+<div class="GiftCard {% if gift_card.expired or gift_card.enabled != true %}GiftCard--disabled{% endif %}" data-section-id="gift-card" data-section-type="gift-card">
+  <div class="Container">
+    <div class="PageContent">
+      <h1 class="GiftCard__SubText Heading u-h1" style="font-family:'Acumin Pro Bold'; text-transform:capitalize;">{{ 'gift_card.issued.subtext' | t }}</h1>
+
+      {%- capture print_link -%}
+        <a href="#" id="PrintGiftCard" class="Link Link--underlineNative">{{ 'gift_card.issued.print' | t }}</a>
+      {%- endcapture -%}
+
+      <p class="GiftCard__Redeem">{{ 'gift_card.issued.redeem_html' | t: print_link: print_link }}</p>
+
+      <div class="GiftCard__Wrapper">
+        {%- if gift_card.enabled and gift_card.expired == false -%}
+          <div class="Alert Alert--success" style="border-radius:2px;font-family:'Acumin Pro Bold';">
+            {%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency -%}
+            <p>{{ 'gift_card.issued.initial_amount_html' | t: initial_amount: formatted_initial_value }}</p>
+
+            {%- if gift_card.balance != gift_card.initial_value -%}
+              {%- assign formatted_balance = gift_card.balance | money_without_trailing_zeros: gift_card.currency -%}
+              <p>{{ 'gift_card.issued.remaining_balance_html' | t: balance: formatted_balance }}</p>
+            {%- endif -%}
+
+            {%- if gift_card.expires_on -%}
+              {%- assign gift_card_expiry_date = gift_card.expires_on | date: format: 'month_day_year' -%}
+              <p>{{ 'gift_card.issued.expires_on' | t: expiry: gift_card_expiry_date }}</p>
+            {%- endif -%}
+          </div>
+        {%- else -%}
+          <div class="Alert Alert--error">
+            {%- if gift_card.expired and gift_card.enabled -%}
+              {%- assign gift_card_expiry_date = gift_card.expires_on | date: format: 'month_day_year' -%}
+              <p>{{ 'gift_card.issued.expired' | t: expiry: gift_card_expiry_date }}</p>
+            {%- else -%}
+              <p>{{ 'gift_card.issued.disabled' | t }}</p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <div class="GiftCard__IllustrationWrapper">
+          <img class="GiftCard__Illustration" src="{{ 'Gift_Card2_Flat_WEB.jpg' | asset_url }}" alt="{{ 'gift_card.issued.illustration_alt' | t }}">
+          <span class="GiftCard__CodeHolder Heading u-h6" style="font-family:'Acumin Pro Bold'; font-weight: bold; color:#FFFFFF; background: #AE1F24; bottom:20px; left: 50%; padding: 10px 12px 8px 12px; border-radius:4px;">{{ gift_card.code | format_code }}</span>
+        </div>
+
+        <div id="QrCode" class="GiftCard__QrCode" data-identifier="{{ gift_card.qr_identifier }}"></div>
+      </div>
+
+      <div class="ButtonGroup">
+        {%- if gift_card.pass_url -%}
+          <div class="ButtonGroup__Item">
+            <a href="{{ gift_card.pass_url }}" class="GiftCard__apple-wallet">
+              <img class="apple-wallet-image" src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="120" height="40" alt="{{ 'gift_card.issued.add_to_apple_wallet' | t }}">
+            </a>
+          </div>
+        {%- endif -%}
+
+        <div class="ButtonGroup__Item">
+          <a href="{{ shop.url }}" class="Button Button--primary" target="_blank">{{ 'gift_card.issued.shop_link' | t }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-header').offsetHeight + 'px');
+</script>
+          
+          <style>
+            .header-main-nav {
+              border-top: 1px solid #2F2F2F;
+              opacity: inherit; 
+              visibility: visible;
+              display: flex;
+              transition: all 0.3s ease-in-out;
+              justify-content: center;
+              align-items: center;
+              position: inherit;
+              margin-left: 30px;
+              left: 0;
+              width: max-content; 
+              bottom: -80px;
+              height: 80px;
+              color: #000;
+              background: none;
+            }
+          </style>

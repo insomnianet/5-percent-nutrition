@@ -1,0 +1,256 @@
+{%- if template.name == 'page' or template.name == 'blog' or template == 'customers/account' or template == 'customers/order' or template == 'customers/addresses' -%}
+  {%- assign add_top_margin = true -%}
+{%- else -%}
+  {%- assign add_top_margin = false -%}
+{%- endif -%}
+
+{%- if template == 'page.collections' -%}
+  {%- assign add_top_margin = false -%}
+{%- endif -%}
+
+<footer id="section-{{ section.id }}" class="Footer {% if section.blocks.size <= 2 %}Footer--center{% endif %} {% if template.suffix == 'core' %} footer-Core{% endif %}" role="contentinfo">
+  <div class="Container">
+    {%- if section.blocks.size > 0 -%}
+    <div class="Footer__Inner">
+      {%- for block in section.blocks -%}
+      <div class="Footer__Block Footer__Block--{{ block.type }}" {{ block.shopify_attributes }}>
+        {%- case block.type -%}
+        {%- when 'text' -%}
+        {%- if block.settings.title != blank -%}
+        <h2 align="center" class="homepage-title-footer Footer__Title Heading u-h6">{{ block.settings.title | escape }}</h2>
+        {%- endif -%}
+        <span>
+          <!--      			<img style="width: 120px; margin-left: 10px; margin-bottom: 20px;" alt="Made in the USA" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MadeInUSA_LightGray.png?v=1584045283"/> -->
+          {% if block.settings.img_1 != blank %}
+          {% include 'responsive-image' with image:block.settings.img_1, max_width:120,style:'width: 120px; margin-left: 10px; margin-bottom: 20px;' %}
+          {% endif %}
+        </span>
+
+        <!--             			<img style="margin-bottom: 30px; width: 120px; margin-left: 10px;" alt="Good Manufacturing Practice" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/GMP_Logo_LightGray.png?v=1584045230"/> -->
+        {% if block.settings.img_2 != blank %}
+        {% include 'responsive-image' with image:block.settings.img_2, max_width:120,style:'width: 120px; margin-left: 10px; margin-bottom: 20px;' %}
+        {% endif %}
+
+        {%- if block.settings.content != blank -%}
+        <div class="Footer__Content Rte">
+          {{ block.settings.content }}
+        </div>
+        {%- endif -%}
+
+
+
+        {%- when 'links' -%}
+        {%- assign linklist = linklists[block.settings.menu] -%}
+
+        {%- if linklist != empty -%}
+          <h2 class="homepage-title-footer Footer__Title Heading u-h6">{{ linklist.title | escape }}</h2>
+
+          <ul class="Linklist">
+            {%- for link in linklist.links -%}
+            <li class="Linklist__Item">
+              <a href="{{ link.url }}" class="Link Link--primary">{{ link.title | escape }}</a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        {%- when 'newsletter' -%}
+       	 	{%- if block.settings.title != blank -%}
+              <h2 class="Footer__Title Heading u-h6">{{ block.settings.title | escape }}</h2>
+        {%- endif -%}
+
+        {%- if block.settings.content != blank -%}
+          <div class="Footer__Content Rte">
+            {{ block.settings.content }}
+          </div>
+        {%- endif -%}
+        
+        {%- form 'customer', id: 'footer-newsletter', action: '/#footer-newsletter', class: 'Footer__Newsletter Form' -%}
+        	{%- if form.posted_successfully? -%}
+       			 <p class="Form__Alert Alert Alert--success">{{ 'footer.newsletter.success' | t }}</p>
+        	{%- else -%}
+        {%- if form.errors -%}
+        		<p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
+        {%- endif -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'footer.newsletter.input' | t }}" placeholder="{{ 'footer.newsletter.input' | t }}" required>
+          <button type="submit" class="Form__Submit Button Button--primary">{{ 'footer.newsletter.submit' | t }}</button>
+       {%- endif -%}
+     {%- endform -%}
+ 
+        
+    {%- endcase -%}
+   </div>
+  {%- endfor -%}
+ </div>
+{%- endif -%}
+    <div class="Footer__Aside Footer_1" style="margin-top:0px;">
+      <div class="Footer__Copyright">
+        <span class="Footer__Disclaimer">Disclaimer: Results may vary from person to person. Always consult with a qualified healthcare professional prior to beginning any diet or exercise program or taking any dietary supplement. The content on our website is for informational and educational purposes only and is not intended as medical advice or to replace a relationship with a qualified healthcare professional.<br>No imagery or logos contained within this site may be used without the express written permission of Rich Piana 5% Nutrition LLC.</span>
+      </div>
+      <div class="Footer__Social">
+        <ul class="Footer__PaymentList HorizontalList">
+          <li class="HorizontalList__Item">
+            <a href="https://www.facebook.com/5percentnutrition"><img style="width: 25px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/footer-facebook.svg" alt="Facebook"/></a>
+          </li>
+          <li class="HorizontalList__Item">
+            <a href="https://twitter.com/5percentnutri"><img style="width: 25px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/footer-twitter.svg" alt="Twitter"/></a>
+          </li>
+          <li class="HorizontalList__Item">
+            <a href="https://www.instagram.com/5percentnutrition/"><img style="width: 25px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/footer-insta.svg" alt="Instagram"/></a>
+          </li>
+          <li class="HorizontalList__Item">
+            <a href="https://www.youtube.com/user/5PercentNutrition"><img style="width: 25px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/footer-youtube.svg" alt="YouTube"/></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br/>
+    <div class="Footer__Aside">
+      <div class="Footer__Copyright Footer_Icons">
+        <a href="{{ shop.url }}" class="Footer__StoreName Heading u-h7 Link Link--secondary" style="color:#999999;">© {{ shop.name }} LLC. All rights reserved.</a>&nbsp;<a href="/pages/privacy-policy" class="Footer__Disclaimer u-h7">Privacy Policy.</a>&nbsp;<a href="/pages/terms-of-service" class="Footer__Disclaimer u-h7">Terms of Use.</a>&nbsp;<a href="/pages/accessibility" class="Footer__Disclaimer u-h7">Accessibility.</a>&nbsp;<a href="/pages/shipping-returns" class="Footer__Disclaimer u-h7">Shipping &amp; Returns.</a>&nbsp;<a href="/pages/request-personal-data" class="Footer__Disclaimer u-h7">Personal Data.</a>
+
+        {%- capture powered_by_link -%}{{ powered_by_link | replace: '<a', '<a class="Link Link--primary"' }}{%- endcapture -%}
+
+      </div>
+
+      {%- if section.settings.show_payment_methods -%}
+      {%- capture payment_methods -%}
+      {% comment %} {%- for type in shop.enabled_payment_types -%}
+      <li class="HorizontalList__Item">{{ type | payment_type_svg_tag }}</li>
+      {%- endfor -%} {% endcomment %}
+      <li class="HorizontalList__Item">
+        <a href="/pages/sezzle"><img style="width: 40px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/sezzle-6b6b6b-new.svg" alt="Sezzle"/></a>
+      </li>
+      <li class="HorizontalList__Item">
+        <img style="width: 40px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/mastercard-6b6b6b.svg" alt="Mastercard"/>
+      </li>
+      <li class="HorizontalList__Item">
+        <img style="width: 40px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/amex-6b6b6b.svg" alt="American Express"/>
+      </li>
+      <li class="HorizontalList__Item">
+        <img style="width: 40px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/discover-6b6b6b.svg" alt="Discover"/>
+      </li>
+      <li class="HorizontalList__Item">
+        <img style="width: 40px; height: 25px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/visa-6b6b6b.svg" alt="Visa"/>
+      </li>
+      {%- endcapture -%}
+
+      {%- if payment_methods != blank -%}
+      <ul class="Footer__PaymentList HorizontalList">
+        {{ payment_methods }}
+      </ul>
+      {%- endif -%}
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+
+
+{% schema %}
+{
+"name": "Footer",
+"class": "shopify-section--footer",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_payment_methods",
+"label": "Show payment methods",
+"info": "Payment method icons are automatically displayed based on your Shopify payment methods.",
+"default": true
+}
+],
+"blocks": [
+{
+"type": "text",
+"name": "Text",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "About the shop"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Text",
+"default": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>"
+},
+{
+"type": "checkbox",
+"id": "show_social_media",
+"label": "Show social media",
+"info": "Make sure to have properly configured your social media in the theme settings.",
+"default": true
+},
+{
+"type":"image_picker",
+"id":"img_1",
+"label":"Image 1",
+"info":"Optional..."
+},
+{
+"type":"image_picker",
+"id":"img_2",
+"label":"Image 2",
+"info":"Optional..."
+}
+]
+},
+{
+"type": "links",
+"name": "Links",
+"settings": [
+{
+"type": "link_list",
+"id": "menu",
+"label": "Menu",
+"info": "This menu won't show dropdown items."
+}
+]
+},
+{
+"type": "newsletter",
+"name": "Newsletter",
+"limit": 1,
+"settings": [
+{
+"type": "paragraph",
+"content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Newsletter"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Text",
+"default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+}
+]
+}
+],
+"default": {
+"blocks": [
+{
+"type": "text",
+"settings": {}
+},
+{
+"type": "links",
+"settings": {
+"menu": "footer"
+}
+},
+{
+"type": "newsletter",
+"settings": {}
+}
+]
+}
+}
+{% endschema %}

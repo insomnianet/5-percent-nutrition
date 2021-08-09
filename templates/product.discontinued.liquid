@@ -1,0 +1,10 @@
+{% if product.tags == 'gear-discontinued' or 'apparel-discontinued' or 'supplement-discontinued' or 'discontinued' %}
+  {% section 'announcement-onpage' %}
+{% endif %}
+
+{% section 'product-template' %}
+{% render 'vimeo-iframe' %}
+{% section 'related-products' %}
+{% include 'product_references'%}
+{% section 'recently-viewed-products' %}
+

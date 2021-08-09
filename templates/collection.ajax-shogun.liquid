@@ -1,0 +1,7 @@
+{% render 'shogun-products', content: collection %}
+{% section 'collection-template' %}
+{% include 'shogun-products', content: collection %}
+{{collection.metafields.shogun.above}}
+{% section 'collection-footer' %}
+{{collection.metafields.shogun.below}}
+

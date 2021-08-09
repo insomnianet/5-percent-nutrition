@@ -1,0 +1,55 @@
+{% include 'shogun-products', content: page %}
+
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+    <h1 style="color:#fff;" class="text-uppercase product-h2 js-reviews-heading t-lef SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+<div class="Container">
+
+     {{ page.content }}
+  
+  <div id="bundle-builder-app--bundle-product-content" style="text-align: center;">
+
+  </div>
+  
+  <script type="text/javascript">
+      // Disable tracking (like Facebook Pixel) to prevent duplicated tracking with bundle page
+      window.trekkie = {
+          integrations: [],
+      };
+      window.trekkie.ready = function () {};
+      if (window.fbq) {
+          window.fbq.queue = [];
+      } else {
+          window.fbq = function () {};
+      }
+
+      var loader = document.querySelector('#bundle-builder-app--bundle-product-loader');
+      loader.style.display = 'block';
+
+      var content = document.querySelector('#bundle-builder-app--bundle-product-content');
+      content.style.visibility = 'hidden';
+
+      var link;
+      try {
+          link = /href="([^"]*)"/.exec(document.querySelector('#bundle-builder-app--bundle-product-content noscript').innerHTML)[1];
+      } catch (e) {
+          link = null;
+      }
+      if (link) {
+          window.location.replace(link + window.location.search);
+      } else {
+          var req = new XMLHttpRequest();
+          req.addEventListener('load', function () {
+              var data = JSON.parse(this.responseText);
+              window.location.replace(data.url + window.location.search);
+          });
+          req.open('GET', '/apps/bundles/product/{{ product.id }}/bundle');
+          req.send();
+      }
+  </script>
+  </div>
+
+

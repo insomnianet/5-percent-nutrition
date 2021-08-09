@@ -1,0 +1,180 @@
+{%- if template == 'page' or 'blog' or 'aricle' or template.name == 'index' -%}
+  {%- assign add_top_margin = true -%}
+{%- else -%}
+  {%- assign add_top_margin = false -%}
+{%- endif -%}
+
+{%- if template == 'cart' or 'page.contact' or 'page.shogun.landing' or 'page.sezzle' or 'page.athletes' or 'customers/register' or 'customers/account' or 'customers/order' or 'customers/addresses' -%}
+  {%- assign hidden = true -%}
+{%- else -%}
+  {%- assign hidden = false -%}
+{%- endif -%}
+
+{%- if section.settings.enable_bar == true -%}
+
+
+<section id="section-{{ section.id }}" class="{% if add_top_margin %}Footer--withMargin{% endif %}" style="background-image: url({{'Newsletter-background_static.jpg' | asset_url}}); background-repeat: no-repeat; background-size: cover;{% if hidden %}display:none;{% endif %}">
+  {%- capture mobile_size -%}750x{% if section.settings.image.height >= 960 %}960{% else %}{{ section.settings.image.height }}{% endif %}{%- endcapture -%}
+
+  <div class="FlexboxIeFix" style="border-bottom: solid 1px; border-top: solid 1px;">
+    <div class="ImageHero {% if section.settings.section_size != 'normal' %}ImageHero--{{ section.settings.section_size }}{% endif %} ImageHero--newsletter" {% if section.settings.image %}style="background: url({{ section.settings.image | img_url: '1x1' }})"{% endif %}>
+      <div class="ImageHero__ImageWrapper">
+        <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+             data-optimumx="1.4"
+             data-expand="-150"
+             {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: mobile_size, crop: 'center' }} 750w, {{ section.settings.image | img_url: '1000x' }} 1000w, {{ section.settings.image | img_url: '1500x' }} 1500w"{% endif %}>
+        </div>
+
+        <noscript>
+          <div class="ImageHero__Image" style="background-image: url({{ section.settings.image | img_url: '1000x' }})"></div>
+        </noscript>
+
+        <!--{%- unless section.settings.image != blank -%}
+          <div class="PlaceholderBackground PlaceholderSvg--dark">
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'PlaceholderBackground__Svg' }}
+          </div>
+        {%- endunless -%} -->
+      </div>
+
+      <div class="ImageHero__ContentOverlay">
+        
+        <header class="SectionHeader SectionHeader--center">
+    	  {%- if section.settings.subheading != blank -%}
+            <h2 class="Footer__Title Heading u-h6">{{ section.settings.subheading | escape }}</h2>
+          {%- endif -%}
+
+          {%- if section.settings.title != blank -%}
+            <h2 class="homepage-title-gun SectionHeader__Heading Heading u-h1">JOIN THE 5% NATION TODAY</h2>
+          {%- endif -%}
+
+          {%- if section.settings.content != blank -%}
+            <div class="SectionHeader__Description">
+              Yes, I would like to receive updates on products, promotions, special offers, news &amp; events from 5% Nutrition.
+            </div>
+          {%- endif -%}             
+        </header>
+        
+        {%- form 'customer' , id: 'newsletter', class: '_form _form_1 _inline-form' , action: 'https://5percentnutrition.activehosted.com/proc.php'-%} 
+          {%- if form.posted_successfully? -%}
+            <p class="Form__Alert Alert Alert--success">{{ 'newsletter.success' | t }}</p>
+          {%- else -%}
+            {%- if form.errors -%}
+              <p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
+            {%- endif -%}
+            <div class="Newsletter__Inner">
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'newsletter.input' | t }}" placeholder="{{ 'newsletter.placeholder.input' | t }}" required>
+              <button type="submit" class="Form__Submit Button Button--primary">{{ 'newsletter.submit' | t }}</button>
+            </div>
+          {%- endif -%}
+        {%- endform -%}
+          
+        
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+{%- endif -%}
+
+
+<style type="text/css" media="screen">
+  
+  #section-{{ section.id }},
+  #section-{{ section.id }} .Heading {
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .Form__Submit {
+    border-color: {{ section.settings.text_color }};
+    color: {{ section.settings.button_color }};
+  }
+
+  #section-{{ section.id }} .Form__Submit::before {
+    background-color: {{ section.settings.text_color }};
+  }
+
+  @media (-moz-touch-enabled: 0), (hover: hover) {
+    #section-{{ section.id }} .Form__Submit:hover {
+      color: {{ section.settings.text_color }};
+    }
+  }
+</style>
+
+{% schema %}
+
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true	
+	},
+	{
+      "type": "select",
+      "id": "section_size",
+      "label": "Section size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "small"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1500 x 800px jpg recommended"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "Keep updated"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Newsletter"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+    }
+  ],
+    "presets": [
+	{
+      "name": "Newsletter",
+      "category": "Promotional"
+    }
+   ]
+  }
+{% endschema %}

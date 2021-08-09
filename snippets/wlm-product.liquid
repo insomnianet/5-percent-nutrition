@@ -1,0 +1,9 @@
+{% assign wlmHideItem_Product = false %}{% for tag in customer.tags %}
+{% if tag == 'mil' %}{% assign wlmLockedTags19347 = true %}{% endif %}
+{% if tag == 'fir' %}{% assign wlmLockedTags19346 = true %}{% endif %}
+{% endfor %}
+
+
+
+{% if wlmHideItem_Product == true %}{% continue %}{% endif %}
+

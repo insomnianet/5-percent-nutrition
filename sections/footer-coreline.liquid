@@ -1,0 +1,63 @@
+<section class="Coreline-Footer-Mobile" style="background: {{ section.settings.background }};">
+    <div class="Container">
+    {%- for block in section.blocks -%}
+    {%- assign linklist = linklists[block.settings.menu] -%}
+    {%- if linklist != empty -%}
+    <div class="Collapsible Collapsible--large">
+      <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+        <p class="Button-title" style="color: {{ section.settings.text_color }}"
+        style="color: {{ section.settings.text_color }}">{{- linklist.title 
+          -}}</p> <span class="Collapsible__Plus"></span>
+      </button>
+      
+      <div class="Collapsible__Inner">
+        <div class="Collapsible__Content" style="background: {{ section.settings.background }}">
+        {%- for link in linklist.links -%}
+            <a href="{{ link.url }}" style="color: {{ section.settings.text_color }}">
+            {{ link.title }}
+            </a>
+        {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+    {%- endfor -%}
+</div> 
+</section>
+
+
+{% schema %}
+{
+"name": "Footer",
+"class": "shopify-section--footer",
+"settings": [
+{
+    "type": "color",
+    "id": "background",
+    "label": "Background",
+    "default": "#000000"
+},
+{
+    "type": "color",
+    "id": "text_color",
+    "label": "Text color",
+    "default": "#ffffff"
+}
+],
+"blocks": [
+    {
+    "type": "links",
+    "name": "Links",
+    "settings": [
+        {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "info": "This menu won't show dropdown items."
+        }
+    ]
+    }
+]
+}
+{% endschema %}

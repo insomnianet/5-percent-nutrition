@@ -1,0 +1,8 @@
+<!-- <span class="AspectRatio AspectRatio--withFallback" style="max-width: {{ max_width }}px; padding-bottom: {{ 100.0 | divided_by: image.aspect_ratio }}%; --aspect-ratio: {{ image.aspect_ratio }}"> -->
+
+  {%- include 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: image -%}
+  {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  <img class="Image--lazyLoad Image--fadeIn {{ class }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-image-id="{{ image.id }}" style="{{ style }}">
+  <span class="Image__Loader"></span>
+<!-- </span> -->

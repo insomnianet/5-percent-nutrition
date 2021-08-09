@@ -1,0 +1,46 @@
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+<section class="Coreline-Top product-nav-section js-product-nav-section">
+    <div class="container">
+        <nav>
+            <ul class="product-nav-elements js-product-nav-elements">
+                <li class="js-description active"><a class="scrollTo" href="#descriptionSection">Description</a></li>
+                <!--{--% if product.metafields.supplements != blank %} 
+                    <li class="js-supplements"><a class="scrollTo" href="#supplementFactsSection">Supplement Facts</a></li>
+                {--%endif%--}-->
+                {% unless product.metafields.meta.instagram_feed == blank%}
+                    <li class="js-five-percent-nation"><a class="scrollTo" href="#5NationSection">5% Nation</a></li>
+                {% endunless %}
+                {% unless product.metafields.meta.faq == blank%}
+                    <li class="js-faq"><a class="scrollTo" href="#faqSection">FAQs</a></li>
+                {% endunless %}
+            </ul>
+        </nav>
+        <div class="cart-options js-cart-options">
+            {% comment %} <div class="cart-options__price">
+                {%- if product.template_suffix != 'coming-soon' -%}
+                    <!-- Bold: Memberships (price) -->
+{% include 'bold-memberships-price' %}
+{% if bold_hide_item == false %}
+<div class="ProductMeta__PriceList ProductMeta__PriceList__productNav Heading">
+                        <span class="ProductMeta__Price ProductMeta__Price__productNav Price Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                    </div>
+{% endif %}
+<!-- end Bold code -->
+
+                {%- endif -%}
+            </div> {% endcomment %}
+            <div class="cart-options__cartBtn">
+                <button type="text" class="ProductForm__AddToCart ProductForm__AddToCart__productNav product-button--nav Button Button--navCart {% if selected_variant.available and section.settings.show_payment_button == false %}{% else %}{% endif %} Button--full">
+                        <span class="text-uppercase">ADD TO CART</span>
+
+                        {%- if section.settings.show_price_in_button -%}
+                        <span class="Button__SeparatorDot"></span>
+                        <span data-money-convertible>{{ selected_variant.price | money_without_trailing_zeros }}</span>
+                        {%- endif -%}
+
+                </button>
+                    
+            </div>
+        </div>
+    </div>
+</section>

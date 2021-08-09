@@ -1,0 +1,84 @@
+<div class="ProductMeta">
+  {% comment %} {%- if section.settings.show_vendor and product.vendor != blank -%}
+    <h2 class="ProductMeta__Vendor Heading u-h6">
+      {%- assign vendor_handle = product.vendor | handle -%}
+      {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+      {%- unless collection_for_vendor.empty? -%}
+        <a href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+      {%- else -%}
+        {{- product.vendor -}}
+      {%- endunless -%}
+    </h2>
+  {%- endif -%} {% endcomment %}
+  <div class="heading-wrapper js-heading-wrapper">
+    <h1 class="ProductMeta__Title product-page-title full-underline full-underline--productPageTile Heading u-h2 js-product-heading">
+      {%- if template.name == 'product' -%}
+        {{- product.title -}}
+      {%- else -%}
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      {%- endif -%}
+    </h1>
+  </div>
+  
+<!-- START: add review and rating container -->
+<div class="yotpo-product-banner">
+  <div class="yotpo bottomLine"
+    data-appkey="Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN"
+    data-domain="{{shop.permanent_domain | escape }}"
+    data-product-id="{{ product.id }}"
+    data-product-models="{{ product.id }}"
+    data-name="{{ product.title | escape }}"
+    data-url="{{ shop.url }}{{ product.url }}"
+    data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+    data-description="{{ product.description | escape }}"
+    data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">   
+  </div>
+  <div class='yotpo QABottomLine yotpo-ask-question'
+     data-appkey='Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN'
+     data-product-id='{{ product.id }}'>
+  </div>
+</div>
+
+<!-- END: add review and rating container -->
+  
+  
+<!-- COMEBACKTO: This will go under sticky -->
+
+  {% comment %} {%- if show_description and section.settings.description_below_add_to_cart == false and product.description != blank -%}
+    <div class="ProductMeta__Description Rte">
+      {{ product.description }}
+    </div>
+  {%- endif -%} {% endcomment %}
+
+<!-- COMEBACKTO: This will go under sticky -->
+
+  <div class="short-description-container">
+    {% unless product.metafields.meta.short_description == blank %}
+      {{ product.metafields.meta.short_description }}
+    {% endunless %}
+  </div>
+  <!-- START: Pricing information -->
+  {%- if product.template_suffix != 'coming-soon' -%}
+    <!-- Bold: Memberships (price) -->
+{% include 'bold-memberships-price' %}
+{% if bold_hide_item == false %}
+<div class="ProductMeta__PriceList Heading">
+      {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+        <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+        <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+        <span class="Price--discounted">
+          {{ product.compare_at_price_min | minus: product.price | times: 100.0 | 
+          divided_by: product.compare_at_price_min | money_without_currency | times: 100 
+          | replace: '.0', ''}}% OFF
+        </span>
+      {%- else -%}
+        <span class="ProductMeta__Price Price Price--highlight Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+      {%- endif -%}
+    </div>
+{% endif %}
+<!-- end Bold code -->
+
+  {%- endif -%}
+  <!-- START: Pricing information -->
+</div>

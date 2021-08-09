@@ -1,0 +1,54 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+    <h1 style="color:#fff;" class="text-uppercase product-h2 js-reviews-heading t-lef SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+<div class="Container"><br/>
+<div class="PageContent PageContent--extraNarrow">
+<form id="metafields_form" class="Form Form--spacingTight">  
+  <div class="Form__Item">
+    <input class="Form__Input" type="hidden" name="customer[id]" value="{{ customer.id }}" /> 
+  </div>
+  <!-- Fields belonging to the customer object in Shopify --> 
+  <div class="Form__Item">
+    <input class="Form__Input" type="text" name="customer[first_name]" value="{{ customer.first_name }}" placeholder="First name" /> 
+  </div>
+  <div class="Form__Item">
+    <input class="Form__Input" type="text" name="customer[last_name]" value="{{ customer.last_name }}" placeholder="Last name" /> 
+  </div>
+  <!-- End Shopify fields --> 
+  <!-- Custom Accentuate Form Fields -->
+  <div class="Form__Item">
+    <input class="Form__Input" type="text" name="metafield[meta.birthday]" value="{{ customer.metafields.meta.birthday }}" placeholder="Your birthday" /> 
+  </div>
+  <div class="Form__Item">
+    <input class="Form__Input" type="text" name="metafield[meta.nickname]" value="{{ customer.metafields.meta.nickname }}" placeholder="Nickname" /> 
+  </div>
+  <div class="Form__Item">
+    <input class="Form__Input" type="text" name="metafield[meta.favorite_apparel__gear]" value="{{ customer.metafields.meta.favorite_apparel__gear }}" placeholder="Favorite Apparel?" /> 
+  </div>
+  <div class="Form__Item">
+    <input class="Form__Input" type="text" name="metafield[meta.favorite_supplement]" value="{{ customer.metafields.meta.favorite_supplement }}" placeholder="Favorite Supplement?" /> 
+  </div>
+  <!-- End Accentuate fields --> 
+  <!-- Fields belonging to the customer object in Shopify --> 
+  <div class="Form__Item">
+    <input type="checkbox" name="customer[accepts_marketing]" style="appearance: auto;" {% if customer.accepts_marketing %} checked {% endif %}/> Do you want to receive marketing messages?  
+  </div>
+  <!-- End Shopify fields --> 
+
+  {% if template contains 'customers/account' or template contains 'account-edit' %}  
+  <script src="https://app.accentuate.io/dist/proxy.js"></script> 
+  <script> Accentuate(jQuery("#metafields_form")); </script> 
+  {% endif %}  
+  
+{% if(jQuery.DatePicker) //jquery object exists %}
+  	TRUE  	
+{% endif %}
+  
+</form>
+</div>
+</div>

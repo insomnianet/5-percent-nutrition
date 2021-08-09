@@ -1,0 +1,67 @@
+<div class="Container atheles_header_bg">
+	<div id="shopify-section-athlete-bio" class="shopify-section shopify-section--bordered">
+		<section class="Section">
+			<div class="FeatureText {% if page.metafields.meta.ath_image != blank %}FeatureText--withImage FeatureText--imageLeft{% endif %}">
+				{%- if page.metafields.meta.ath_image != blank -%}
+					<div class="FeatureText__ImageWrapper">
+						{%- include 'image-size', sizes: '400,600,700,800,900,1000,1200', image: page.metafields.meta.ath_image -%}
+
+						<div class="AspectRatio athelete-image" style="max-width: 800px; --aspect-ratio: 1.1111111111111112">
+							{%- assign image_url = page.metafields.meta.ath_image | img_url: '1x1' | replace: '_1x1.', '_800x.' -%}
+							<img class="Image--lazyLoad Image--slideLeft" data-src="{{ page.metafields.meta.ath_image }}" data-expand="-200" data-widths="[400,600,700,800]" data-sizes="auto" alt="{{ page_title }}">
+
+							<noscript>
+								<img src="{{ page.metafields.meta.ath_image | img_url: '800x' }}" alt="{{ page_title }}">
+							</noscript>
+						</div>
+					</div>
+				{%- endif -%}
+
+				<div class="FeatureText__ContentWrapper">
+					<div class="FeatureText__Content">
+						<header class="SectionHeader">
+							<h1 class="atheles_text text-uppercase product-h2 t-lef SectionHeader__Heading Heading u-h1">{% if page.metafields.meta.ath_title != blank %}{{ page.metafields.meta.ath_title }}{%else if%}{{ page_title }}{%endif%}</h1>
+					 		{%- if page.metafields.meta.ath_subhead != blank -%}
+								<h3 class="atheles_text atheles_text SectionHeader__SubHeading Heading u-h6">{{ page.metafields.meta.ath_subhead | escape }}</h3>
+							{%- endif -%}
+							<ul class="athlete-basic-info atheles_text">
+								{% if page.metafields.meta.ath_height != blank %}
+									<li>Height: {{page.metafields.meta.ath_height}}</li>
+								{% endif %}
+								{% if page.metafields.meta.ath_weight != blank %}
+									<li>Weight: {{page.metafields.meta.ath_weight}}</li>
+								{% endif %}
+								{% if page.metafields.meta.ath_dob != blank %}<li>Date of Birth: {{page.metafields.meta.ath_dob}}</li>
+								{% endif %}
+								{% if page.metafields.meta.ath_residence != blank %}<li>Residence: {{page.metafields.meta.ath_residence}}</li>
+								{% endif %}
+							</ul>
+							{%- if page.metafields.meta.ath_headertext != blank -%}
+								<div class="SectionHeader__Description SectionHeader__Description--athlete" style="margin-top:16px; margin-bottom: 0px;">
+									{{ page.metafields.meta.ath_headertext }}
+								</div>
+							{%- endif -%}
+							<br/>
+							<div class="atheles_text">{% include 'social-media-athlete-bio'%}</div>
+						</header>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div class="Container atheles_sec_top">
+	<h1 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline">EXPERIENCE</h1>
+	<br/>
+	{{ page.content }}
+</div>
+
+{%- if page.metafields.meta.ath_gallery != blank -%}
+	<div class="Container atheles_sec_top">
+		<h2 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline ">INSTAGRAM</h2>
+			<div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ page.metafields.meta.ath_gallery }}"></div>
+	</div>
+{% endif %}
+<br>&nbsp;
+{% section 'newsletter-sitewide' %}

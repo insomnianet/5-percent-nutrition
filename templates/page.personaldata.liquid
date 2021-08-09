@@ -1,0 +1,37 @@
+{% comment %}
+   Page Liquid for Easy GDPR Shopify app: https://apps.shopify.com/easy-gdpr
+   The 3 GDPR pages (Request Personal Data, My Personal Data, Edit Personal Data) should use this liquid.
+   PLEASE DON'T MODIFY
+{% endcomment %}
+<link rel="stylesheet" href="https://gdpr-app.firebaseapp.com/style.css" type="text/css"/>
+<div class="EG-container">
+{% render 'shogun-products', content: page %}
+
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+    <h1 style="color:#fff;" class="text-uppercase product-h2 js-reviews-heading t-lef SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+<div class="Container">
+  <!-- Bold: Memberships (page) -->
+  {% include 'bold_mem_helper' with 'page' %}
+  <!-- end Bold code -->
+   {{ page.content }}
+  
+</div>
+
+{% section 'newsletter-sitewide' %}
+
+
+</div>
+
+<div>
+{% if customer %}
+  {% assign hash_id = customer.id | append: '-' | append: shop.permanent_domain %}
+{% else %}
+  {% assign hash_id = '0-' | append: shop.permanent_domain %}
+{% endif %}
+  <input type="hidden" value="{{ hash_id | hmac_sha256: "LPcV+aqr-M4M6gN%" }}" id="eg_hmac" />
+  <input type="hidden" id="accounts_enabled" value="{{ shop.customer_accounts_enabled }}" />
+</div>

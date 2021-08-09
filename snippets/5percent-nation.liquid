@@ -1,0 +1,15 @@
+{% unless product.metafields.meta.instagram_feed == blank %}
+  <a name="5NationSection"></a>
+  <section id="5NationSection" class="fivenation-section js-fivenation-section">
+    <div class="text-uppercase product-h2 t-center">
+      <div class="full-underline full-underline--fivenation">5% Nation
+        <div class="t-center instagram-links">
+          <a href="https://www.instagram.com/explore/tags/5percentnutrition/">#5percentnutrition | </a>
+          <a href="https://www.instagram.com/5percentnutrition/">@5percentnutrition</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="yotpo yotpo-pictures-widget" data-gallery-id="{% if shop.domain == '5percentnutrition.com' %}5d121d537c86290007f506e5{% elsif shop.domain == '5percentnutrition.uk' %}60c0fa6b238de42084034ee2{% elsif shop.domain == '5percentnutrition.eu' %}60edfba1238de46a72215b30{% elsif shop.domain == '5percentnutrition.ca' %}60edfcbee711a83086d766d3{% endif %}" data-product-id="{{ product.id }}"></div>
+  </section>
+{% endunless %}

@@ -1,0 +1,49 @@
+<!-- Begin Criteo OneTag -->
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+  var site_type = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+  window.criteo_q = window.criteo_q || [];
+  window.criteo_q.push(
+    { event: "setAccount", account: 51455 },
+    { event: "setSiteType", type: site_type},
+    { event: "setEmail", email: "{{customer.email | remove: " " | strip_newlines | downcase | md5}}"});
+</script>
+{% case template %}
+  {% when 'index' %}
+    <script type="text/javascript">
+      window.criteo_q.push(
+        { event: "viewHome", ecpplugin: "shopify"}
+      );
+    </script>
+  {% when 'collection' %}
+    <script>
+      var criteo_items = [];
+      {% for item in collection.products limit:3 %}
+        criteo_items.push("{{item.id}}");
+      {% endfor %}
+        window.criteo_q.push(
+          { event: "viewList", ecpplugin: "shopify", product: criteo_items}
+        );
+    </script>
+  {% when 'product' %}
+    <script type="text/javascript">
+      window.criteo_q.push(
+        { event: "viewItem", ecpplugin: "shopify", product: "{{ product.id }}" }
+      );
+    </script>
+  {% when 'cart' %}
+    <script>
+      var criteo_items = [];
+      {% for item in cart.items %}
+        criteo_items.push({
+          id : "{{item.product.id}}",
+          price : {{item.price | money_without_currency | remove: ","}}, //removing comma to comply with most countries
+          quantity : {{item.quantity}}
+        });
+      {% endfor %}
+      window.criteo_q.push(
+        { event: "viewBasket", ecpplugin: "shopify", product: criteo_items}
+      );
+    </script>
+{% endcase %}
+<!-- End Criteo OneTag -->

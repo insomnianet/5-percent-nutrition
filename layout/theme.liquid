@@ -1,0 +1,337 @@
+<!doctype html>  
+
+<html class="no-js" lang="{{ shop.locale }}">
+  <head> 
+
+    {% include 'wp_shopify_tracking' %}
+
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="theme-color" content="{{ settings.accent_color }}">
+
+    <title> 
+      {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+
+    {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- endif -%}
+
+    {% include 'social-meta-tags' %}
+
+    <!--{#%#include 'GPO_script'#%#}-->
+    {% include 'wlm-head' %}
+
+    {{ content_for_header }}
+    
+    <link rel="stylesheet" href="https://use.typekit.net/oqg3szt.css">   
+
+    <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+
+    <script defer>
+      // This allows to expose several variables to the global scope, to be used in scripts
+      window.theme = {
+        template: {{ template.name | json }},
+        shopCurrency: {{ shop.currency | json }},
+        moneyFormat: {{ shop.money_format | json }},
+        moneyWithCurrencyFormat: {{ shop.money_with_currency_format | json }},
+        currencyConversionEnabled: {{ settings.currency_conversion_enabled | json }},
+        currencyConversionMoneyFormat: {{ settings.currency_conversion_money_format | json }},
+        currencyConversionRoundAmounts: {{ settings.currency_conversion_round_amounts | json }},
+        productImageSize: {{ settings.product_image_size | json }},
+        searchMode: {{ settings.search_mode | json }},
+        showPageTransition: {{ settings.show_page_transition | json }},
+        showElementStaggering: {{ settings.show_element_staggering | json }},
+        showImageZooming: {{ settings.show_image_zooming | json }},
+        enableExperimentalResizeObserver: false
+      };
+
+      window.languages = {
+        cartAddNote: {{ 'cart.general.add_note' | t | json }},
+        cartEditNote: {{ 'cart.general.edit_note' | t | json }},
+        productImageLoadingError: {{ 'product.slideshow.image_loading_error' | t | json }},
+        productFormAddToCart: {% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t | json }}{% else %}{{ 'product.form.add_to_cart' | t | json }}{% endif %},
+        productFormUnavailable: {{ 'product.form.unavailable' | t | json }},
+        productFormSoldOut: {{ 'product.form.sold_out' | t | json }},
+        shippingEstimatorOneResult: {{ 'cart.shipping_estimator.one_result_title' | t | json }},
+        shippingEstimatorMoreResults: {{ 'cart.shipping_estimator.more_results_title' | t | json }},
+        shippingEstimatorNoResults: {{ 'cart.shipping_estimator.no_results_title' | t | json }}
+      };
+
+      window.lazySizesConfig = {
+        loadHidden: false,
+        hFac: 0.5,
+        expFactor: 2,
+        ricTimeout: 150,
+        lazyClass: 'Image--lazyLoad',
+        loadingClass: 'Image--lazyLoading',
+        loadedClass: 'Image--lazyLoaded'
+      };
+
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      document.documentElement.style.setProperty('--window-height', window.innerHeight + 'px');
+
+      // We do a quick detection of some features (we could use Modernizr but for so little...)
+      (function() {
+        document.documentElement.className += ((window.CSS && window.CSS.supports('(position: sticky) or (position: -webkit-sticky)')) ? ' supports-sticky' : ' no-supports-sticky');
+        document.documentElement.className += (window.matchMedia('(-moz-touch-enabled: 1), (hover: none)')).matches ? ' no-supports-hover' : ' supports-hover';
+      }());
+
+      window.onpageshow = function (event) {
+        if (event.persisted) {
+          window.location.reload();
+        }
+      };
+    </script>
+    
+    {% include 'microdata-schema' %}
+
+    <script src="{{ 'lazysizes.min.js' | asset_url }}" async></script>
+
+    {% if settings.currency_conversion_enabled %}
+    <script src="//cdn.shopify.com/s/javascripts/currencies.js" defer></script>
+    {% endif %}
+
+    {%- if template == 'customers/addresses' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+    <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+    {%- endif -%}
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,Element.prototype.closest,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,Object.assign,CustomEvent,IntersectionObserver,IntersectionObserverEntry" defer></script>
+    
+    <script src="{{ 'libs.min.js' | asset_url }}" ></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="{{ 'theme.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+    {% comment %}
+    `<script src="{{ 'combine.min.js' | asset_url }}" defer></script>
+    {% endcomment %}
+
+    {% include 'google-tag-manager' %}
+    {% include 'activecampaign-tracking' %}
+    {% include 'yotpo-script' %}
+    {% include 'hotjar-tracking' %}
+
+    {% include 'sca.freegifts' %}
+    {% render 'shogun-head' %}
+
+    <script src="{{ 'fontawesome_kit.js' | asset_url }}" defer></script>
+
+    {%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+    {%- assign time_now = 'now' | date: '%s' %}
+    {%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+    {%- assign diffSeconds = time_now | minus: yotpo_live_time %}
+    {%- if yotpo_offload_content == 'yes' and diffSeconds < 86400 -%}
+   	 {{ 'yotpo-full-css.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+    
+<!-- REAMAZE INTEGRATION START - DO NOT REMOVE -->
+{% render 'reamaze-config' %}
+{% render 'reamaze-sso' %}
+<!-- REAMAZE INTEGRATION END - DO NOT REMOVE -->
+
+	
+    
+  {% if template contains 'account-edit' %}  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  {% endif %} 
+  
+{%- if settings.tracking_scripts -%}
+{{ settings.tracking_scripts }}
+{%- endif -%}
+
+  {% include 'za_product_blocker' %}</head>
+
+  <body class="prestige--v3 {% if template.directory %}template-{{ template.directory | handle }}{% endif %} template-{{ template.name | handle }}">
+
+	<!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWBJGZR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    
+    <a class="PageSkipLink u-visually-hidden" href="#main">{{ 'header.navigation.skip_to_content' | t }}</a>
+    <span class="LoadingBar"></span>
+    <div class="PageOverlay"></div>
+    <div class="PageTransition"></div>
+
+    {% section 'sidebar-menu' %}
+
+    {%- if template != 'cart' -%}
+    	{% include 'cart-drawer' %}
+    {%- endif -%}
+
+    <div class="PageContainer">
+      {% section 'announcement' %}
+      {% section 'header' %}
+
+      <main id="main" role="main">
+        {% comment %}{{ content_for_layout }}{% endcomment %}{% include 'wlm-body' %}
+      </main>
+      {% section 'footer' %}
+    </div>
+    
+
+    {% include 'smile-initializer' %}
+
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    SEARCH FORM (available globally)
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="Search" class="Search Modal Modal--fullScreen" aria-hidden="true" data-scrollable>
+      <div class="Search__SearchBar">
+        <form action="/search" name="GET" role="search" class="Search__Form">
+          <input type="search" class="Search__Input Heading" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="{{ 'search.general.input_placeholder' | t }}" autofocus>
+          <input type="hidden" name="type" value="product">
+        </form>
+
+        <button class="Search__Close Link Link--primary" data-action="close-modal">{% include 'icon' with 'close' %}</button>
+      </div>
+
+      <div class="Search__Results">
+        {%- if settings.search_mode != 'product' -%}
+        <div class="PageLayout PageLayout--breakLap">
+          <div class="PageLayout__Section"></div>
+          <div class="PageLayout__Section PageLayout__Section--secondary"></div>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {% include 'ajaxify-cart' %}
+
+    <script defer>
+      // Necessary in order to clone add to cart buttons that only appear once the "market" variant is switched from international to domestic or vice versa
+      $(document).on('click', '.Popover__Value', function(){
+        setTimeout(function(){
+          if(typeof BOLD === 'object' && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function') {
+            BOLD.common.eventEmitter.emit("BOLD_COMMON_cart_loaded");
+            BOLD.common.eventEmitter.emit('BOLD_COMMON_redirect_upsell_product');
+          }
+        }, 1000);
+      }); 
+    </script>
+
+    {% if settings.bfca-offer %}
+    {% if template contains 'cart' %}
+    {% assign cart_total = 0 %}
+    {% for cart_item in cart.items %}
+    {% assign item_price = 0 %}
+    {% unless cart_item.product.tags contains 'free-gift' %}
+    {% assign item_price = cart_item.original_line_price %}
+    {% assign cart_total = cart_total | plus: item_price %}
+    {% endunless %}
+    {% endfor %}
+
+{% for item in cart.items %}
+    {% if item.product.id == 6188177391796 %}
+    {% assign queue = '[{ variant_id: 31743578931279, quantity_id: 1 }]' %}
+    {% endif %}
+{% endfor %}
+
+    <script defer>
+      $(document).ready(function() {
+        var queue = {{ queue }};
+        function moveAlong(){
+          if (queue.length) {
+            var request = queue.shift();
+            var tempId = request.variant_id;
+            var tempQty = request.quantity_id;
+            var params = {
+              type: 'POST',
+              url: '/cart/update.js',
+              data: 'updates['+tempId+']='+tempQty,
+              dataType: 'json',
+              success: function(line_item) {
+                moveAlong();
+              },
+              error: function() {
+                alert(tempId);
+              }
+            };
+            $.ajax(params);
+          }
+          else {	
+            //  document.location.href = '/cart';
+            // Replace the product section content
+            // Update this URL to the final website URL
+            var location = window.location.href;
+
+            $.get(location, function(data){
+              var $product = $(data).find('.Cart__ItemList');
+              var $cartTotal = $(data).find('.Cart__Total');
+              if($product.length) {
+                $('.Cart__ItemList').replaceWith($product);
+              } 
+              /*  if($cartTotal.length) {
+                  $('.Cart__Total').replaceWith($cartTotal);
+                } */
+            });
+
+          }  
+        };
+        moveAlong();
+      });
+    </script>
+    {% endif %}
+    {% endif %}
+
+    <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=5percent-nutrition.myshopify.com"></script>
+
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.wishpond.net/connect.js?merchantId=1156121&writeKey=94a1839a6c0b" async defer></script>
+
+    <!-- Back in Stock helper snippet -->
+    {% render 'back-in-stock-helper' %}
+    <!-- End Back in Stock helper snippet -->
+
+  </body>
+
+  <script defer="defer">
+    /* Product Tag Filters - Good for any number of filters on any type of collection pages */
+    var collFilters = jQuery('.coll-filter');
+    collFilters.change(function() {
+      var newTags = [];
+      collFilters.each(function() {
+        if (jQuery(this).val()) {
+          newTags.push(jQuery(this).val());
+        }
+      });
+      if (newTags.length) {
+        var query = newTags.join('+');
+        window.location.href = jQuery('{{ 'tag' | link_to_tag: 'tag' }}').attr('href').replace('/' + 'tag', '/' + query);
+      }
+      else {
+        {% if collection.handle %}
+        window.location.href = '/collections/{{ collection.handle }}';
+        {% elsif collection.products.first.type == collection.title %}
+        window.location.href = '{{ collection.title | url_for_type }}';
+        {% elsif collection.products.first.vendor == collection.title %}
+        window.location.href = '{{ collection.title | url_for_vendor }}';
+        {% endif %}
+      }
+      });
+  </script>
+
+  {% if settings.product_redirect == true %}
+    <!-- IPDATA feature -->
+    <script defer="defer">
+      {% render 'product-ipdata-redirect' %}
+    </script>
+  {% endif %}
+
+</html>

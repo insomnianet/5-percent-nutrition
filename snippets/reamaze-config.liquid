@@ -1,0 +1,336 @@
+<!-- Reamaze Config file - DO NOT REMOVE -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.account = "5percentnutrition";
+</script>
+
+<!-- reamaze_embeddable_17196_s -->
+<!-- Embeddable - 5% Nutrition Chat / Contact Form Shoutbox -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support['account'] = '5percentnutrition';
+  _support['ui']['contactMode'] = 'anonymous';
+  _support['ui']['enableKb'] = 'true';
+  _support['ui']['styles'] = {
+    widgetColor: 'rgb(0, 0, 0)',
+    gradient: true,
+  };
+  _support['ui']['widget'] = {
+    icon: 'chat',
+    displayOn: 'all',
+    label: {
+      text: 'Let us know if you have any questions! &#128522;',
+      mode: "prompt-3",
+      delay: 8,
+      duration: 20,
+    },
+    position: 'bottom-right',
+    size: 46,
+    mobilePosition: {
+      bottom: '56px',
+      right: '22px'
+    },
+    mobileSize: 36
+  };
+  _support['apps'] = {
+    recentConversations: {"header":"Recent Chat History"},
+    faq: {"enabled":true,"header":"Have a question? View our FAQs","placeholder":"Search our frequently asked questions..."},
+    orders: {"enabled":true,"enable_notes":true,"header":"Have an existing order?","no_orders":"Sorry, we don't detect any past orders.","order_history_button_text":"View All Orders","find_order_button_text":"Find My Order","order_number_placeholder":"Enter your order number (e.g. starts with \"200 ...\")","order_name_prefix":"Order #","order_email_placeholder":"Enter the email from your order"}
+  };
+</script>
+<!-- reamaze_embeddable_17196_e -->
+
+
+
+
+
+
+
+
+
+<!-- reamaze_cue_13140_s -->
+<!-- Cue - Welcome Message (Repeat Visitors) -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "13140",
+    name: "Welcome Message (Repeat Visitors)",
+    message: "Thanks for visiting! We're here to assist you whenever you have a question. Or jump to a section of our site below.",
+    sound: false,
+    transient: true,
+    botsEnabled: true,
+    disableCueClick: false,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "team"
+    },
+    buttons: [
+      {
+        text: "View FAQs",
+        url: "https://5percentnutrition.com/pages/customer-faqs",
+      },
+      {
+        text: "Office Hours",
+        url: "https://5percentnutrition.com/pages/contact-us",
+      },
+      {
+        text: "Contact Form",
+        url: "https://5percentnutrition.com/pages/contact-us",
+      },
+    ],
+    rules: [
+      {
+        type: "timeOnSite",
+        op: "greaterThan",
+        value: "15s",
+      },
+      {
+        type: "identified",
+        op: "isTrue",
+      },
+      {
+        type: "url",
+        op: "doesNotContain",
+        value: "/cart",
+      },
+      {
+        type: "url",
+        op: "doesNotContain",
+        value: "/products/",
+      },
+      {
+        type: "url",
+        op: "doesNotContain",
+        value: "/blogs/",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_13140_e -->
+
+
+
+
+<!-- reamaze_embeddable_18268_s -->
+<!-- Embeddable - 5% Nutrition Customer Service Form -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support['account'] = '5percentnutrition';
+  _support['contact_custom_fields'] = _support['contact_custom_fields'] || {};
+  _support['contact_custom_fields']['rmz_form_id_18268'] = {
+      'heading-1605289698824': {
+        pos: 1605290113595,
+        type: 'heading',
+        value: 'What can we help you with?',
+      },
+      'Contact Reason': {
+        pos: 1605290113596,
+        type: 'dropdown',
+        value: ['Customer Service','Order Assistance','Shipping','Wholesale','Other'],
+        required: true,
+        placeholder: '-- Select from Options --',
+      },
+      'heading-1605289874087': {
+        pos: 1605290113597,
+        type: 'heading',
+        value: 'Do you have an existing order number?',
+        dependantField: 'Contact Reason',
+        dependantOptions: ['Yes','Order Assistance','Shipping'],
+      },
+      'Existing Order': {
+        pos: 1605290113598,
+        type: 'dropdown',
+        value: ['Yes','No'],
+        required: true,
+        placeholder: '',
+        dependantField: 'Contact Reason',
+        dependantOptions: ['Order Assistance','Shipping'],
+      },
+      '__order_number': {
+        pos: 1605290113599,
+        type: 'order_number',
+        required: true,
+        placeholder: 'Enter your order number e.g. #200111',
+        dependantField: 'Existing Order',
+        dependantOptions: ['Order Assistance','Yes'],
+      },
+      'Phone': {
+        pos: 1605290113600,
+        type: 'phone',
+        value: 'Enter your phone number (optional)',
+        required: false,
+        placeholder: '(123) 456-7890',
+        dependantField: 'Contact Reason',
+        dependantOptions: ['Customer Service','Order Assistance','Wholesale'],
+      }
+  };
+</script>
+<!-- reamaze_embeddable_18268_e -->
+
+
+<!-- reamaze_cue_13141_s -->
+<!-- Cue - Cart Abandonment (on page) -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "13141",
+    name: "Cart Abandonment (on page)",
+    message: "Before you leave, did you have a question about a product or special offer?",
+    sound: false,
+    transient: false,
+    botsEnabled: false,
+    disableCueClick: false,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "team"
+    },
+    rules: [
+      {
+        type: "leavingSite",
+        op: "isTrue",
+      },
+      {
+        type: "url",
+        op: "contains",
+        value: "/cart",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_13141_e -->
+
+
+<!-- reamaze_cue_13142_s -->
+<!-- Cue - Need Help with Product -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "13142",
+    name: "Need Help with Product",
+    message: "Hi, do you have a question regarding this product? We'd love to help you out!",
+    sound: false,
+    transient: true,
+    botsEnabled: true,
+    disableCueClick: false,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "team"
+    },
+    buttons: [
+      {
+        text: "No thanks, I'm good!",
+        dismiss: true
+      },
+      {
+        text: "Yes, I have a question.",
+        response: true
+      },
+      {
+        text: "Jump to Product FAQs",
+        url: "{{ url }}#faqSection",
+        target: "_top",
+      },
+    ],
+    rules: [
+      {
+        type: "timeOnPage",
+        op: "greaterThan",
+        value: "60s",
+      },
+      {
+        type: "url",
+        op: "contains",
+        value: "/products/",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_13142_e -->
+
+
+
+
+<!-- reamaze_cue_23270_s -->
+<!-- Cue - Welcome Message (New Customers) -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "23270",
+    name: "Welcome Message (New Customers)",
+    message: "Welcome to 5% Nutrition! We're here to assist should you have any questions.",
+    sound: false,
+    transient: true,
+    botsEnabled: false,
+    disableCueClick: false,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "team"
+    },
+    rules: [
+      {
+        type: "identified",
+        op: "isFalse",
+      },
+      {
+        type: "url",
+        op: "doesNotContain",
+        value: "/cart",
+      },
+      {
+        type: "url",
+        op: "doesNotContain",
+        value: "/products/",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_23270_e -->
+
+
+<!-- reamaze_cue_23272_s -->
+<!-- Cue - Stacks Welcome Message -->
+<script type="text/javascript">
+  var _support = _support || { 'ui': {}, 'user': {} };
+  _support.outbounds = _support.outbounds || [];
+  _support.outbounds.push({
+    id: "23272",
+    name: "Stacks Welcome Message",
+    message: "Shop our stacks to save anywhere between 15% and 25% off the regular product price (when purchased separately). No discount codes needed!",
+    sound: true,
+    transient: true,
+    botsEnabled: false,
+    disableCueClick: true,
+    enableCustomFields: false,
+    start: "",
+    end: "",
+    user: {
+      type: "team"
+    },
+    buttons: [
+      {
+        text: "Got it, thanks!",
+        dismiss: true
+      },
+    ],
+    rules: [
+      {
+        type: "url",
+        op: "contains",
+        value: "/stacks",
+      },
+    ],
+  });
+</script>
+<!-- reamaze_cue_23272_e -->

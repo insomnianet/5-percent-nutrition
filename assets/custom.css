@@ -1,0 +1,24 @@
+/* Helper for breakpoints hiden content */
+@media screen and (min-width: 1023px){
+  .section-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .section-mobile {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .section-desktop {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .section-desktop {
+    display: none;
+  }
+}

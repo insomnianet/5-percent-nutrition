@@ -1,0 +1,35 @@
+{{product.metafields.shogun.above}}
+
+<div id="pre-order-template" style="background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Home-Banner-White-Label-6.jpg);background-repeat: no-repeat;margin-top: -15px;padding-top: 15px;background-size: contain;">
+  {% include 'shogun-products', content: product %}
+  {{product.metafields.shogun.above}}
+  {% section 'product-template' %}
+  <div class="container frequently_bought_together_app"></div>
+  {% render 'product-page-nav2' %}
+  {% render 'product-description' %}
+  {% render 'supplements' %}
+  {% render 'vimeo-iframe' %}
+  {% render 'product-benefits' %}
+  {% include 'product-rating'%}
+  {% render '5percent-nation-coreline'%}
+  {% section 'related-metafield-products' %}
+  {% render 'product-faq' %}
+  {% include 'product_references'%}
+
+  <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+
+  {{product.metafields.shogun.below}}
+</div>
+
+<style type="text/css">
+  .is-sticky .product-nav-section, .quantity-and-addToCart-container {
+    z-index: 3 !important;
+  }
+
+  .product-description-heading {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Gunplay-Regular';
+    text-transform: uppercase;
+  }
+</style>

@@ -1,0 +1,249 @@
+<div class="Coreline-Body">
+  <div id="pre-order-template" style="background-repeat: no-repeat;margin-top: -15px;padding-top: 15px; background-size: cover;">
+    <div class="Coreline-Top" style="background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/PageBackground-Core-FadeUP2.png);background-repeat: repeat-x; background-size: cover; padding-bottom: 50px;">
+	    {% section 'product-coreline-template' %}
+    </div>
+    {% section 'product-coreline-page-nav2' %}
+  </div>
+  {% render 'product-description' %}
+
+  <div class="CoreProductsDescription">
+    <div class="logoCore">
+      <img src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Logo_REV_200x675_3615c056-f31f-4490-8b8a-f77543774136.png">
+    </div>
+    <div class="image">
+      <img src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Core-Products.png?v=1614258884" alt="Core products">
+    </div>
+    <div class="background"></div>
+  </div>
+  {% render 'product-benefits' %}
+  {% render 'vimeo-iframe' %}
+  <div class="section-desktop">
+    {% include 'product-rating' %}
+  </div>
+  {% render '5percent-nation-coreline' %}
+  {% section 'related-metafield-products' %}
+  <div class="section-mobile">
+    {% include 'product-rating' %}
+  </div>
+  {% section 'product-coreline-faqs' %}
+  <div class="section-mobile">
+    {% section 'product-coreline-references' %}
+  </div>
+  <div class="section-desktop">
+    {% include 'product_references' %}
+  </div>
+</div>
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+
+{% section 'footer-coreline' %}
+
+<style type="text/css">
+  @media screen and (min-width:1024px){
+    #pre-order-template {
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/img_BackgroundCoreDesktop.png?v=1614188411);
+    }
+  }
+
+  @media screen and (max-width:1024px){
+    #pre-order-template {
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/img_BackgroundCore.png?v=1614189827);
+    background-position: bottom;
+    }
+  }
+
+  .product-h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+
+  .sezzle-checkout-button-wrapper { /*JS ADDED 04062021*/
+    color: white;
+  }
+
+  .yotpo .yotpo-icon-double-bubble:before {
+    color: #ebd3a0;
+  }
+
+  .ProductMeta .yotpo .yotpo-stars .yotpo-icon:before, .yotpo .yotpo-icon-empty-star:before {
+    color: #ebd3a0 !important;
+  }
+
+  .yotpo-product-banner a:link, .ProductMeta .yotpo .text-m {
+    color: #ebd3a0 !important;
+  }
+
+  @media screen and (min-width: 1025px) {
+    .Product__SlideshowNavImage {
+      border: 1px solid #E0B357;
+    }
+
+    .breadcrumb a, .breadcrumb span[aria-hidden="true"] {
+      color: #ebd3a0 !important;
+    }
+  }
+
+  .is-sticky .product-nav-section, .quantity-and-addToCart-container {
+    z-index: 3 !important;
+	}
+
+  .feature-banner {
+    height:520px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/5150-WL-Banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position:center 5px;
+  }
+
+  .feature-bottomborder {
+    height:520px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/BottomGrunge-BG-White.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-left: 78px;
+  }
+
+  .product-description-heading {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Gunplay-Regular';
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .product-description-heading, .product-h2--related {
+      text-align: center;
+    }
+
+    .product-h2--related, .fivenation-section .product-h2 .full-underline {
+      border-bottom: none;
+    }
+
+    .Section-header--related {
+      margin-bottom: 0;
+    }
+
+    .related-product-heading {
+      font-size: 13px;
+    }
+
+    .yotpo-product-banner {
+      display: none;
+    }
+
+    .supplement-info__table .t-right {
+      text-align: center;
+    }
+
+    .product-description-text-container.to-expand {
+      background-image: linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0));
+    }
+
+    .read-more-container {
+      width: 100%;
+      display: flex;
+    }
+
+    .read-more-button {
+      color: #d9b267;
+      border: 1px solid #d9b267;
+      border-radius: 10px;
+      width: 100%;
+      margin: 10px auto;
+      max-width: 300px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+  }
+
+  .product-description-text-container {
+    position: relative;
+  }
+
+  .gradient {
+    position:absolute;
+    bottom:0px;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height:150px;
+    background: -moz-linear-gradient(top,  rgba(137,255,241,0) 0%, rgba(255, 255, 255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  }
+
+  /* PHONE & TABLET  */
+  @media screen and (max-width: 768px) {
+  	.feature-banner {
+      background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/5150-WL-Banner2-CENTER.jpg);
+      height:680px;
+	    background-size: 1245px 359px; 
+      background-position: center bottom;  
+    }
+
+  	.feature-bottomborder {
+      height:680px;
+    }
+  }
+
+  /* LAPTOP-and-up  */
+  @media screen and (min-width: 1025px) {
+    .product-nav-section {
+      display: block;
+      background: #FFFFFF;
+      border-bottom: solid 1px #E5E5E5;
+    }
+  }
+
+  .CoreProductsDescription {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .CoreProductsDescription .image {
+    width: 130%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-bottom: 30px;
+  }
+
+  .CoreProductsDescription .background {
+    position: absolute;
+    height: 200px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Core-Lineup-Web-FadeUp-Background.jpg); /*JS ADDED 04062021*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: -1;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .CoreProductsDescription .logoCore {
+    width: 130px;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .CoreProductsDescription{
+      display: none;
+    }
+  }
+</style>
+
+{% if template.suffix == 'core' %}
+  <style>
+    .cbb-frequently-bought-container{
+      display: none;
+    }
+  </style>
+{% endif %}

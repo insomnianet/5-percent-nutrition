@@ -1,0 +1,30 @@
+{{product.metafields.shogun.above}}
+{% render 'shogun-products', content: product %}
+{% include 'shogun-products', content: product %}
+{{ product.metafields.shogun.above }}
+
+{% section 'product-template' %}
+  <div class="container frequently_bought_together_app">
+  </div>
+{% render 'product-page-nav' %}
+{% render 'product-description' %}
+{% render 'product-benefits' %}
+{% render 'vimeo-iframe' %}
+{% render 'supplements' %}
+{% include 'product-rating'%}
+{% render '5percent-nation'%}
+{% render 'product-faq' %}
+{% section 'related-metafield-products' %}
+<div class="section-mobile">
+  {% section 'product-coreline-references' %}
+</div>
+<div class="section-desktop">
+  {% include 'product_references' %}
+</div>
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+
+{{ product.metafields.shogun.below }}
+
+
+{{product.metafields.shogun.below}}

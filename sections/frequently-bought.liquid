@@ -1,0 +1,158 @@
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+{%- assign color_label = 'color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ',' -%}
+{%- assign size_label = 'size,taille,bröße,tamanho,tamaño,koko,サイズ' | split: ',' -%}
+
+{%- assign size_chart_page = '' -%}
+{%- assign frequent_product_popovers = '' -%}
+{%- assign show_option_label = false -%}
+{% comment %} {{selectee_variant}} {% endcomment %}
+{% comment %} {%- assign frequent_collection = product.metafields.meta.frequently_bought-%} {% endcomment %}
+
+<section class="frequently-boughtProducts-section" id="">
+
+    <div class="container">
+        <h2 class="text-uppercase product-h2 t-center"><span class="underline-grey--notFull">OFTEN BOUGHT WITH</span></h2>
+        <form id="frequently-added-form" method="post" action="/cart/add">
+        {% comment %} {{ selected_variant }} {% endcomment %}
+
+            <div class="frequently-bought-products-container">
+                <ul class="frequent-product-details-wrapper">
+                {% assign current_price = 0%}
+                    {% assign count = 0 %}
+                    {%- assign frequent_collection = product.metafields.meta.frequently_bought-%}
+                    {% for product in collections[frequent_collection].products limit:3 %}
+                        {% assign count = count | plus: 1 %}
+                        {% assign checkbox_id = "frequent-checkbox-" | append: count %}
+                        
+                    <li class="frequent-product-details-li">
+                        <!-- checkbox-->
+                        <div class="frequent-checkbox">
+                            <div class="md-checkbox">
+                            {% comment %} <input style="width: 0; height: 0;" type="checkbox" name="id[]" value="{{product.selected_or_first_available_variant.id}}" id="radio_{{variant.id}}" {%if forloop.first%} {%endif%} {% if variant.available == false %}disabled{% endif %} /> {% endcomment %}
+                                <input class="frequent-product-checkbox js-frequent-product-checkbox" id={{checkbox_id}} type="checkbox" data-variant-id="{{product.selected_or_first_available_variant.id}}" data-inventory-quantity="{{product.selected_or_first_available_variant.inventory_quantity}}" checked>
+                                <label for={{checkbox_id}}></label>
+                            </div>
+                        </div>
+                        <!-- END: checkbox -->
+                        <div class="frequent-product-details">
+                            <div class="frequent-product-details__text">
+                                <a href="{{product.url}}">
+                                    <h4 class="product-h4">{{ product.title }}</h4>
+                                </a>
+                                {% capture totalPriceFrequentlyBought %}
+                                    {{product.selected_or_first_available_variant.price | times: 1}}
+                                {% endcapture %}
+                                {% assign current_price = current_price | plus: totalPriceFrequentlyBought %}
+
+                                {% capture totalPriceFrequentlyBoughtCompareAt %}
+                                    {{product.selected_or_first_available_variant.compare_at_price | times: 1}}
+                                {% endcapture %}
+                                {% assign current_price_compareAt = current_price_compareAt | plus: totalPriceFrequentlyBoughtCompareAt %}
+                                    {% comment %} {{totalPriceFrequentlyBoughtCompareAt}} {% endcomment %}
+                                    {% comment %} {{current_price_compareAt}} {% endcomment %}
+
+                                <div class="frequent-product-pricing">
+                                    {%- if product.template_suffix != 'coming-soon' -%}
+                                        <!-- Bold: Memberships (price) -->
+                                        {% include 'bold-memberships-price' %}
+                                        {% if bold_hide_item == false %}
+										<div class="ProductMeta__PriceList ProductMeta__PriceList--frequent Heading {{checkbox_id}} active-price">
+                                          {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+                                              <span class="ProductMeta__Price Price Price--highlight Price--highlight--frequent Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                                              <span class="ProductMeta__Price Price Price--compareAt Price--compareAt--frequent Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+                                              <!--span class="Price--discounted Price--discounted--frequent">
+                                              {{ product.compare_at_price_min | minus: product.price | times: 100.0 | 
+                                              divided_by: product.compare_at_price_min | money_without_currency | times: 100 
+                                              | replace: '.0', ''}}% OFF
+                                              </span-->
+                                        {%- else -%}
+                                            <span class="ProductMeta__Price Price Price--highlight Price--highlight--frequent Text--subdued u-h4" data-money-convertible>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                                            <span class="ProductMeta__Price Price Price--compareAt Price--compareAt--frequent Text--subdued u-h4" data-money-convertible style="visibility: hidden; width: 0; height: 0;">{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                                            <!--span class="Price--discounted Price--discounted--frequent" style="visibility: hidden; width: 0; height: 0;">0</span-->
+                                        {%- endif -%}
+                                        </div>
+                                    {% endif %}
+                                    <!-- end Bold code -->
+
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                            <div class="frequent-product-details__image">
+                                <div class="frequent-product-details__image-container">
+                                    <img class="image" src="{{ product.images[0] | img_url: '160x' }}"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frequent-variant-wrapper">
+                            <div class="ProductForm__Variants product-variant-container">
+                            {% comment %} {{product.has_only_default_variant}} {% endcomment %}
+                            <ul class="frequently-bought-metadata">
+                                {%for product_variant in  product.variants %}
+                                    <li data-title="{{product_variant.title}}" data-variantid="{{product_variant.id}}" data-variantquantity="{{product_variant.inventory_quantity}}">{{product_variant.title}}
+                                    {{product_variant.id}}</li>
+                                {%endfor%}
+                            </ul>
+                            {% comment %} {{product.options_with_values[0].values[1]}}
+                            {{ product.options_with_values["Flavor"]}} {% endcomment %}
+                            {% comment %} {{ product.options.size }} {% endcomment %}
+                            {% for product_option in product.options_with_values %}
+                                {% comment %} {{ product_option.name }} {% endcomment %}
+                                <select class="frequent-variants-container variant-{{product.id}}">
+                                {% for value in product_option.values %}
+                                    <option data-id=
+                                    "{{product_option.values.id}}" {% if product_option.selected_value == value %}selected{% endif %}>
+                                    {{ value }}
+                                    </option>
+                                {% endfor %}
+                                </select>
+                            {% endfor %}
+                                {%- unless product.has_only_default_variant -%}
+                                
+
+                                <div class="no-js ProductForm__Option">
+                                    <div class="Select Select--primary">
+                                    {%- include 'icon' with 'select-arrow' -%}
+
+                                    <select id="product-select-{{ product.id }}" name="id" title="Variant">
+                                        {%- for variant in product.variants -%}
+                                        <option {% if variant == selected_variant %}selected="selected"{% endif %} {% unless variant.available %}disabled="disabled"{% endunless %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                                        {%- endfor -%}
+                                    </select>
+                                    </div>
+                                </div>
+                                {%- else -%}
+                                <input type="hidden" name="id" data-sku="{{ selected_variant.sku }}" value="{{ selected_variant.id }}">
+                                {%- endunless -%}
+
+                                
+                            </div>
+                        </div>
+                        
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="frequent-product-priceTotal js-frequent-product-priceTotal" data-total = "{{current_price}}" data-compareat = "{{current_price_compareAt}}">
+                    {% comment %} <input type="hidden" name="id" value="{{ selected_variant.id }}"> {% endcomment %}
+                    <input type="hidden" name="quantity" id="holdQuantityValue">
+                    <span class="ProductMeta__Price Price Price--highlight Price--highlight--frequentCart Text--subdued u-h4 js-frequent-totalPrice" data-money-convertible></span>
+                    <span class="ProductMeta__Price Price Price--compareAt Price--compareAt--frequentCart Text--subdued u-h4 js-frequent-compareAt" data-money-convertible></span>
+                    <!--span class="Price--discounted Price--discounted--frequentCart js-frequent-discount"></span-->
+
+                    <button type="submit" class="ProductForm__AddToCart ProductForm__AddToCart--frequent ProductForm__AddToCart__productNav Button Button--full" data-action="add-to-cart">
+                            <span class="frequent-add-cart-text text-uppercase active">add selected to cart</span>
+                            <span class="frequent-adding-cart-text text-uppercase">adding...</span>
+                            <a href="/cart" class="frequent-go-cart-text text-uppercase">View cart</a>
+                            {%- if section.settings.show_price_in_button -%}
+                            <span class="Button__SeparatorDot"></span>
+                            <span data-money-convertible>{{ selected_variant.price | money_without_trailing_zeros }}</span>
+                            {%- endif -%}
+
+                    </button>
+
+                </div>
+          	  </div>
+            </form>
+        </div>
+    
+    
+</section>

@@ -1,0 +1,53 @@
+{% if product.metafields.supplements != blank %} 
+  <a name="supplementFactsSection"></a>
+  <section id="supplementFactsSection" class="supplement-section js-supplement-section">
+    {%- if product.template_suffix == 'whitelabel-KillIt' -%}
+      <div class="richPiana-image-container" style="background-image: url({{'rich-piana2x-KILLIT.png' | asset_url}}); background-repeat: no-repeat; background-position: right 0 top 60px; background-size: contain;"></div>
+    {%- elsif product.template_suffix == 'whitelabel-KIReloaded' -%}
+      <div class="richPiana-image-container" style="background-image: url({{'rich-piana-reloaded-1028-2x.png' | asset_url}}); background-repeat: no-repeat; background-position: right 0 top 60px; background-size: contain;"></div>
+    {%- elsif product.template_suffix != nil -%}
+      <div class="richPiana-image-container" style="background-image: url({{'rich-piana2x.png' | asset_url}}); background-repeat: no-repeat; background-position: right 0 top 60px; background-size: contain;"></div>
+    {%- endif -%}
+      <div class="container">
+        <div class="supplement-data-container">
+          <div class="supplement-data-heading full-underline full-underline--supplements">
+            <h2 class="product-h2 product-h2--supplements text-uppercase">supplement facts</h2>
+            {% for product_option in product.options_with_values limit: 1 %}
+              {% comment %} {{ product_option.name }} {% endcomment %}
+              <span class="variants-supplements-container-dropdown">
+                <select id="variantsSupplementsDropdown" class="variants-supplements-container js-variants-supplements-container">
+                {% for value in product_option.values %}
+                    <option data-id=
+                    "{{product_option.values.id}}" {% if product_option.selected_value == value %}selected{% endif %}>
+                    {{ value }}
+                    </option>
+                {% endfor %}
+                </select>
+              </span>
+            {% endfor %}
+          </div>
+          {% for product_option in product.options_with_values limit: 1 %}
+            <div class="slider-gran">
+              <ul id="variantsSupplementsDropdownMobile" class="slider-parent variants-supplements-container variants-supplements-container--mobile">
+                {% for value in product_option.values %}
+                  <li class="variant-name-mobile" data-id=
+                  "{{product_option.values.id}}" {% if product_option.selected_value == value %}selected{% endif %}>
+                  {{ value }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+          <div class="supplement-info">
+            {% for product_option in product.options_with_values limit: 1 %}
+              {% for value in product_option.values %}
+                {% unless product.metafields.supplements[value] == blank %}
+                  {{ product.metafields.supplements[value]}} 
+                {% endunless %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+  </section>
+{%endif%}

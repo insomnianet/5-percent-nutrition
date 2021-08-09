@@ -1,0 +1,4 @@
+<!-- Bold: Memberships (index) -->
+{% include 'bold_mem_helper' with 'index' %}
+<!-- end Bold code -->
+{% layout none %}{%- assign parentposition = 0 -%}{%- assign counter = 0 -%}{%- assign count = 0 -%}{% for linklist in linklists %}{%- assign counter = counter | plus: 1 -%}{% endfor %}{"link_lists": [{% for linklist in linklists %}{%- assign count = count | plus: 1 -%}{"id": "{{ count }}","title": "{{ linklist.title | replace: '"', '\"' }}","handle": "{{ linklist.handle }}","levels": {{ linklist.levels }},"default": true,"links": {% include "motifmate-links", linklist: linklist, count: count %}}{%- assign parentposition = parentposition | plus: 1 -%}{% if parentposition > 0 and parentposition < counter %},{% endif %}{% endfor %}]}

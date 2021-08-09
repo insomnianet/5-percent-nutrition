@@ -1,0 +1,138 @@
+
+{{product.metafields.shogun.above}}
+
+<div id="pre-order-template" style="background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Home-Banner-White-Label-6.jpg);background-repeat: no-repeat;margin-top: -15px;padding-top: 15px;background-size: contain;">
+  {% include 'shogun-products', content: product %}
+  {{product.metafields.shogun.above}}
+  {% section 'product-template' %}
+  <div class="container frequently_bought_together_app"></div>
+  {% render 'product-page-nav2' %}
+  {% render 'product-description' %}
+  {% render 'vimeo-iframe' %}
+  <div class="video_box" id="video_box" style="margin-bottom: -10px;">
+    <img src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/BottomGrunge-BG-Black.png" style="width:100%;">
+  </div>
+  {% render 'supplements' %}
+  {% render 'product-benefits' %}
+  {% include 'product-rating'%}
+  {% render '5percent-nation-coreline'%}
+  {% section 'related-metafield-products' %}
+  {% render 'product-faq' %}
+  {% include 'product_references'%}
+
+  <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+
+  {{product.metafields.shogun.below}}
+</div>
+
+<style type="text/css">
+  .is-sticky .product-nav-section, .quantity-and-addToCart-container {
+    z-index: 3 !important;
+  }
+
+  .bundlebutton1 {
+    position: relative;
+    text-align: center;
+    width:200px;
+    margin-bottom: 20px;
+  }
+
+  .bundlebutton2 {
+    position: relative;
+    text-align: center;
+    width: 200px;
+  }
+
+  #video_overlays {
+    position:absolute;
+    float:left;
+    width:100%;
+    z-index:2;
+    color:#FF0000;
+  }
+
+  #video_player {
+    background: #FFFFFF;
+  }
+
+  .bottomcentered {
+    position: absolute;
+    bottom: -16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#ae1f24;
+    width:100%;
+    padding: 12px 0px 12px 0px;
+    margin:0px;
+    text-transform: uppercase;
+  }
+
+  .product-description-heading {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Gunplay-Regular';
+    text-transform: uppercase;
+  }
+
+  /* PHONE  */
+  @media screen and (max-width: 500px) {
+    #video_overlays, #video_player {
+      height: 100px;
+    }
+  }
+
+  /* PHONE-landscape  */
+  @media screen and (min-width: 501px) and (max-width: 767px) {
+    #video_overlays, #video_player {
+      height: 100px;
+    }
+  }
+
+  /* TABLET  */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #video_overlays, #video_player {
+      min-height: 150px;
+    }
+  }
+
+  /* TABLET-and-up  */
+  @media screen and (min-width: 768px) {
+    #video_overlays, #video_player {
+      min-height: 150px;
+    }
+  }
+
+  /* POCKET  */
+  @media screen and (min-width: 768px) and (max-width: 1007px) {
+    #video_overlays, #video_player {
+      height: 150px;
+    }
+  }
+
+  /* LAPTOP-and-up  */
+  @media screen and (min-width: 1025px) {
+    #video_overlays, #video_player {
+      height: 400px;
+    }
+
+    .product-nav-section {
+      display: block;
+      background: #FFFFFF;
+      border-bottom: solid 1px #E5E5E5;
+    }
+  }
+
+  /* DESKTOP  */
+  @media screen and (min-width: 1200px) {
+    #video_overlays, #video_player {
+      height: 400px;
+    }
+  }
+
+  /* WIDESCREEN  */
+  @media screen and (min-width: 1500px) {
+    #video_overlays, #video_player {
+      height: 400px;
+    }
+  }
+</style>

@@ -1,0 +1,136 @@
+{%- if section.settings.enable_bar -%}
+  {%- unless template == 'product' -%}
+    <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+      <div class="MessageBar container container--lg">
+        <div class="MessageBar__Wrapper">
+          <p class="MessageBar__Content Heading">
+            {{ section.settings.content | escape }}
+          </p>
+        </div>
+      </div>
+    </section>
+  {%- endunless -%}
+{%- endif -%}
+
+<style type="text/css" media="screen">
+  #section-{{ section.id }} {
+    background: {{ section.settings.background }};
+    color: {{ section.settings.text_color }};
+  }
+
+  .MessageBar {
+    position: relative;
+    text-align: center;
+    font-size: to-size(10px);
+    z-index: 1;
+  }
+
+  .MessageBar__Wrapper {
+    padding: 16px 18px;
+  }
+
+  .MessageBar__Content {
+    margin: 0;
+  }
+
+  .MessageBar__Content Heading {
+    text-align: center;
+    font-family: 'acumin-pro-condensed';
+    font-weight: bold;
+  }
+
+  .ProductForm main-product-form {
+    display: none !important;
+  }
+
+  .ProductMeta__PriceList Heading {
+    font-size: to-size(12px);
+    color: #ccc;
+  }
+
+  .share-wishlist-row {
+    display: none !important;
+    border: 0px #fff;
+  }
+
+  .ProductForm__Option {
+    display: none !important;
+  }
+
+  .ProductMeta__PriceList {
+    color: #ccc;
+  }
+
+  .Price--highlight {
+    font-size: to-size(12px);
+    color: #ccc;
+  }
+
+  .ProductForm__QuantitySelector {
+    display: none !important;
+  }
+
+  .ProductForm__AddToCart {
+    display: none !important;
+  }
+
+  .ProductForm__Variants {
+    display: none !important;
+  }
+
+  .quantity-and-addToCart-container {
+    display: none !important;
+  }
+
+  @include av-mq('tablet-and-up') {
+    .MessageBar {
+      font-size: to-size(12px);
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+  }
+
+  @include av-mq("tablet-and-up") {
+    .MessageBar {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+  }
+</style>
+
+<script>
+  document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement-bar').offsetHeight + 'px');
+</script>
+
+{% schema %}
+{
+  "name": "In-line Message",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Sorry, this item is discontinued. We've included some other options for you."
+    }
+  ]
+}
+{% endschema %}

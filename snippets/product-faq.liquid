@@ -1,0 +1,13 @@
+{% unless product.metafields.meta.faq == blank %}
+  <a name="faqSection"></a>
+  <section class="product-faq-section js-product-faq-section" id="faqSection">
+    <div class="container">
+      <h2 class="text-uppercase product-h2 t-center"><span class="underline-grey--notFull">Frequently Asked Questions</span></h2>
+      <div class="faq-accordion">
+        <ul class="faq-accordion-container">
+            {{product.metafields.meta.faq}}
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endunless %}

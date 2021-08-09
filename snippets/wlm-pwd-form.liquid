@@ -1,0 +1,18 @@
+<div id="wlm-pwd-form" style="display: none;">
+		<div id="wlm-wrapper">
+		  {% unless wlmPwdMsg == "" %}
+			<div id="wlm-pwd-msg">
+			  {{ wlmPwdMsg }}
+			</div>
+		  {% endunless %}
+		  <div class="wlm-form-holder">
+			<div id="wlm-pwd-error">Invalid Password</div>
+			<input type="password" placeholder="Enter passcode" id="wlm-pwd"
+				   onkeypress='if( event.keyCode == 13 && typeof wlm == "object" && typeof wlm.unlockByAuth == "function" ) { event.preventDefault(); wlm.unlockByAuth(this); }' />
+			<a href="javascript:void(0);" id="wlm-pwd-form-button"
+			   onclick='if( typeof wlm == "object" && typeof wlm.unlockByAuth == "function" ) wlm.unlockByAuth(this);'>
+			  Enter
+			</a>
+		  </div>
+		</div>
+	  </div>

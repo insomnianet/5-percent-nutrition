@@ -1,0 +1,25 @@
+{% comment %}This snippet is generated and updated by Bold Memberships.{% endcomment %}
+{% assign bold_hide_item = false %}
+{% assign bold_item_type = 'blog'%}
+{% for bold_rule in blog.metafields.bold_mem %}
+	{% if bold_rule.last== 'hide' %}
+		{% assign bold_hide_item = false %}
+	{% endif %}
+	{% if bold_rule.last == 'show' %}
+		{% assign bold_hide_item = true %}
+		{% assign bold_noaccess_snippet = 'bold-memberships-noaccess-' | append: bold_rule.first %}
+	{% endif %}
+{% endfor %}
+{% for bold_rule in blog.metafields.bold_mem %}
+	{% for customer_tag in customer.tags %}
+	  {% if customer_tag == bold_rule.first %}
+		{% if bold_rule.last == 'hide' %}
+			{% assign bold_hide_item = true %}
+			{% assign bold_noaccess_snippet = 'bold-memberships-noaccess-' | append: customer_tag %}
+		{% endif %}
+		{% if bold_rule.last == 'show' %}
+			{% assign bold_hide_item = false %}
+		{% endif %}
+	  {% endif %}
+	{% endfor %}
+{% endfor %}

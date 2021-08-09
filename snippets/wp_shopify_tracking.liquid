@@ -1,0 +1,19 @@
+<script>
+  var wpShopifyTracking = {}
+
+  {% if customer %}
+    wpShopifyTracking.customer =
+      {
+        shopify_id: {{ customer.id }},
+        email:      '{{ customer.email }}'
+      }
+  {% endif %}
+
+  {% if product %}
+    wpShopifyTracking.product =
+      {
+        collections: '{{ product.collections | map: "title" | join: "," }}',
+        tags: '{{ product.tags | join: "," }}'
+      }
+  {% endif %}
+</script>

@@ -1,0 +1,17 @@
+{% unless product.metafields.meta.benefits == blank %}
+  <section class="benefits-section js-benefits-section hiden-mobile-core">
+    <div class="container">
+      <h2 class="text-uppercase product-h2 t-center"><span class="underline-grey--notFull">PRODUCT BENEFITS</span></h2>
+      <div class="benefits-content-container">
+        <div class="benefits-image-container">
+          <img src="{{ product.images[0] | img_url: '900x' }}"/>
+        </div>
+        <div class="">
+          <ul class="group benefits-content js-benefits-slider">
+            {{ product.metafields.meta.benefits }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endunless %}

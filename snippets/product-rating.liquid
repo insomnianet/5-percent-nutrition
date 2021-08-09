@@ -1,0 +1,11 @@
+<a name="reviewSection"></a>
+<section id="reviewSection" class="review-section js-review-section">
+  <div class="container" >
+    <h2 class="text-uppercase product-h2 js-reviews-heading t-left">
+      CUSTOMER REVIEWS<span class="review-btns-container js-review-btns-container"></span></h2>
+    <div class="full-underline js-full-underline--reviews" style="padding: 0;"></div>
+  <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
+
+  </div>
+</section>
+

@@ -1,0 +1,25 @@
+
+{% assign bb_price = item.price %}
+{% assign bb_line_price = item.line_price %}
+{% assign bb_final_line_price = item.final_line_price %}
+{% assign bb_final_price = item.final_price %}
+{% assign bb_original_line_price = item.original_line_price %}
+{% assign bb_original_price = item.original_price %}
+
+{% for property in item.properties %}
+    {% if property.first == '_bundle_price' %}
+        {% assign bb_price = property.last %}
+        {% assign bb_final_price = bb_price %}
+        {% assign bb_line_price = bb_price | times: item.quantity %}
+        {% assign bb_final_line_price = bb_line_price %}
+        {% assign bb_original_price = bb_price %}
+        {% assign bb_original_line_price = bb_line_price %}
+    {% endif %}
+{% endfor %}
+
+{% for property in item.properties %}
+    {% if property.first == '_original_bundle_price' %}
+        {% assign bb_original_price = property.last %}
+        {% assign bb_original_line_price = bb_original_price | times: item.quantity %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,11 @@
+{% if product.metafields.meta.video or product.metafields.meta.video_mobile %}
+  <div class="embedded-iframe {% if product.metafields.meta.video_mobile %} embedded-iframe--mobile-padding {% endif %} {% unless product.metafields.meta.video %} embedded-iframe--mobile {% endunless %}">
+    {% if product.metafields.meta.video %}
+      <iframe data-vimeo-desktop {% if product.metafields.meta.video_mobile %} class="embedded-iframe__desktop" {% endif %} src="https://player.vimeo.com/video/{{ product.metafields.meta.video | split: '/' | last }}?autoplay=0" width="100%" height="100%" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+    {% endif %}
+
+    {% if product.metafields.meta.video_mobile %}
+      <iframe data-vimeo-mobile class="embedded-iframe__mobile" src="https://player.vimeo.com/video/{{ product.metafields.meta.video_mobile | split: '/' | last }}?autoplay=0" width="100%" height="100%" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,0 +1,139 @@
+
+{%- if item -%}
+    {%- assign bb_price = item.price -%}
+    {%- assign bb_line_price = item.line_price -%}
+    {%- assign bb_final_line_price = item.final_line_price -%}
+    {%- assign bb_final_price = item.final_price -%}
+    {%- assign bb_original_line_price = item.original_line_price -%}
+    {%- assign bb_original_price = item.original_price -%}
+
+    {% assign price_key = '_bundle_price' %}
+    {%- capture price_with_currency_key -%}{{ price_key }}-{{ cart.currency.iso_code }}{%- endcapture -%}
+    {% assign original_price_key = '_original_bundle_price' %}
+    {%- capture original_price_with_currency_key -%}{{ original_price_key }}-{{ cart.currency.iso_code }}{%- endcapture -%}
+
+    {%- for property in item.properties -%}
+        {%- if property.first == price_key -%}
+            {%- assign bb_price = property.last -%}
+            {%- assign bb_final_price = bb_price -%}
+            {%- assign bb_line_price = bb_price | times: item.quantity -%}
+            {%- assign bb_final_line_price = bb_line_price -%}
+            {%- assign bb_original_price = bb_price -%}
+            {%- assign bb_original_line_price = bb_line_price -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- for property in item.properties -%}
+        {%- if property.first == price_with_currency_key -%}
+            {%- assign bb_price = property.last -%}
+            {%- assign bb_final_price = bb_price -%}
+            {%- assign bb_line_price = bb_price | times: item.quantity -%}
+            {%- assign bb_final_line_price = bb_line_price -%}
+            {%- assign bb_original_price = bb_price -%}
+            {%- assign bb_original_line_price = bb_line_price -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- for property in item.properties -%}
+        {%- if property.first == original_price_key -%}
+            {%- assign bb_original_price = property.last -%}
+            {%- assign bb_original_line_price = bb_original_price | times: item.quantity -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- for property in item.properties -%}
+        {%- if property.first == original_price_with_currency_key -%}
+            {%- assign bb_original_price = property.last -%}
+            {%- assign bb_original_line_price = bb_original_price | times: item.quantity -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- if type == 'bb_price' -%}
+        {{ bb_price }}
+    {%- elsif type == 'bb_line_price' -%}
+        {{ bb_line_price }}
+    {%- elsif type == 'bb_final_line_price' -%}
+        {{ bb_final_line_price }}
+    {%- elsif type == 'bb_final_price' -%}
+        {{ bb_final_price }}
+    {%- elsif type == 'bb_original_line_price' -%}
+        {{ bb_original_line_price }}
+    {%- elsif type == 'bb_original_price' -%}
+        {{ bb_original_price }}
+    {%- endif -%}
+{%- elsif type == 'cart' -%}
+    {%- assign bb_prefix = "/apps/bundles" -%}
+    <input type="hidden" name="_cart" value="{{ cart | json | escape }}" />
+    <input type="hidden" name="_shop" value="{{ shop.permanent_domain | escape }}" />
+    <input type="hidden" id="bb_proxy_prefix" value="{{ bb_prefix }}" />
+{%- elsif type == 'bb_checkout_link' -%}
+    {%- assign bb_contains_bundle = false -%}
+    {%- assign bb_prefix = "/apps/bundles" -%}
+
+    {%- for item in cart.items -%}
+        {%- for property in item.properties -%}
+            {%- if property.first == '_bundle_price' -%}
+                {%- assign bb_contains_bundle = true -%}
+                {%- break -%}
+            {%- endif -%}
+        {%- endfor -%}
+
+        {%- if bb_contains_bundle -%}
+            {%- break -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- if bb_contains_bundle -%}
+        {{ bb_prefix }}/cart
+    {%- endif -%}
+{%- else -%}
+    {%- assign bb_total_price = 0 -%}
+    {%- assign bb_original_total_price = 0 -%}
+
+    {% assign price_key = '_bundle_price' %}
+    {%- capture price_with_currency_key -%}{{ price_key }}-{{ cart.currency.iso_code }}{%- endcapture -%}
+    {% assign original_price_key = '_original_bundle_price' %}
+    {%- capture original_price_with_currency_key -%}{{ original_price_key }}-{{ cart.currency.iso_code }}{%- endcapture -%}
+
+    {%- for item in cart.items -%}
+        {%- assign _final_price = item.final_line_price -%}
+        {%- assign _original_price = item.original_line_price -%}
+        {%- for property in item.properties -%}
+            {%- if property.first == price_key -%}
+                {%- assign _final_price = property.last | times: item.quantity -%}
+                {%- assign _original_price = property.last | times: item.quantity -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- for property in item.properties -%}
+            {%- if property.first == price_with_currency_key -%}
+                {%- assign _final_price = property.last | times: item.quantity -%}
+                {%- assign _original_price = property.last | times: item.quantity -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- for property in item.properties -%}
+            {%- if property.first == original_price_key or property.first == original_price_with_currency_key -%}
+                {%- assign _original_price = property.last | times: item.quantity -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- for property in item.properties -%}
+            {%- if property.first == original_price_with_currency_key -%}
+                {%- assign _original_price = property.last | times: item.quantity -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- assign bb_total_price = bb_total_price | plus: _final_price -%}
+        {%- assign bb_original_total_price = bb_original_total_price | plus: _original_price -%}
+    {%- endfor -%}
+
+    {% assign bb_items_subtotal_price = bb_total_price %}
+    {%- for discount_application in cart.cart_level_discount_applications -%}
+        {%- assign bb_total_price = bb_total_price | minus: discount_application.total_allocated_amount -%}
+    {% endfor %}
+
+    {%- if type == 'bb_total_price' -%}
+        {{ bb_total_price }}
+    {%- elsif type == 'bb_original_total_price' -%}
+        {{ bb_original_total_price }}
+    {%- elsif type == 'bb_items_subtotal_price' -%}
+        {{ bb_items_subtotal_price }}
+    {%- endif -%}
+{%- endif -%}

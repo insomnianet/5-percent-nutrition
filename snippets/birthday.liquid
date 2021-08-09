@@ -1,0 +1,4 @@
+  {%- if customer.metafields.global.birthday_mg == 0 -%}
+        <p class="SectionHeader__Description">{{ 'customer.metafields.global.birthday_mg.empty' | t }}</p>
+	{% section 'birthday-capture' %}
+  {%- endif -%}

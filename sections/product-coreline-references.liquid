@@ -1,0 +1,76 @@
+{% unless product.metafields.meta.references == blank %}
+
+<section class="Faq faqs-container-core references-core" style="background: {{ section.settings.background_color }};">
+    <div class="container">
+        <div class="faqs">
+
+            <div class="Collapsible Collapsible--large">
+                <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+                    <p class="Button-title" style="color: {{ section.settings.text_color }}">REFERENCES</p> <span
+                        class="Collapsible__Plus" style="color: {{ section.settings.text_color }}"></span>
+                </button>
+
+                <div class="Collapsible__Inner">
+                    <div class="Collapsible__Content" style="background: {{ section.settings.background_color }};">
+                        <div class="Rte" style="color: {{ section.settings.text_color }};">
+                            {{ product.metafields.meta.references }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Collapsible Collapsible--large">
+                <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+                    <p class="Button-title" style="color: {{ section.settings.text_color }}">Product Warnings</p> <span
+                        class="Collapsible__Plus" style="color: {{ section.settings.text_color }}"></span>
+                </button>
+
+                <div class="Collapsible__Inner">
+                    <div class="Collapsible__Content" style="background: {{ section.settings.background_color }};">
+                        <div class="Rte" style="color: {{ section.settings.text_color }};">
+                            {% if product.tag contains 'supplement' %}
+                            Not intended for persons under the age of 18. Do not use if pregnant or nursing. Consult a
+                            health care professional prior to consumption if you have any pre-existing medical
+                            conditions including but not limited to: diabetes, high or low blood pressure, heart, liver
+                            or kidney disease, cardiac arrhythmia, stroke or are taking any prescription medication.
+                            Store in a cool, dry place away from sunlight and with lid tightly secured.
+                            {% endif %}
+                            <!--references_font_FDA-->† These statements have not been evaluated by the Food and Drug
+                            Administration. This product is not intended to diagnose, treat, cure, or prevent any
+                            disease.
+                        </div>
+                        <div class="references_font_p65warning"><i
+                                class="fas fa-exclamation-triangle"></i>&nbsp;WARNING: Consuming this product can expose
+                            you to chemicals including lead, which is known to the State of California to cause cancer,
+                            birth defects or other reproductive harm. For more information go to <a target="_blank"
+                                href="https://www.P65Warnings.ca.gov/food">www.P65Warnings.ca.gov/food</a>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+{% endunless %}
+
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+  {
+    "type": "color",
+    "id": "text_color",
+    "label": "Text",
+    "default": "#bcb8b8"
+  },
+  {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f7f7f7"
+  }
+  ]
+}
+{% endschema %}

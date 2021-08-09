@@ -1,0 +1,13 @@
+.athletes_h1 { 
+    font-size: 45px;
+    margin-top: 20px;
+    line-height: 45px;
+  
+}
+
+.athletes-title-divider {
+    width: 70px;
+    height: 5px;
+    background-color: #AE1F24;
+    margin: 30px 0 50px 0;
+}

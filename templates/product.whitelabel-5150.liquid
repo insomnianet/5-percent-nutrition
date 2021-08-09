@@ -1,0 +1,185 @@
+
+{% render 'shogun-products', content: product %}
+
+<div id="pre-order-template" style="background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Home-Banner-White-Label-6.jpg);background-repeat: no-repeat;margin-top: -15px;padding-top: 15px;background-size: contain;">
+  {{product.metafields.shogun.above}}
+  {% section 'product-template' %}
+  <div class="feature-banner">
+	  <div class="feature-bottomborder">
+      <a href="#"><div class="bundlebutton1">
+        <img src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Stim-Levels-5150.png" alt="Stim Chart" style="width:100%;">
+      </a>
+    </div>
+  </div>
+  <div class="container frequently_bought_together_app"></div>
+  {% render 'product-page-nav' %}
+  {% render 'product-description' %}
+  {% render 'vimeo-iframe' %}
+  {{product.metafields.shogun.below}}
+  {% render 'supplements' %}
+  {% render 'product-benefits' %}
+  {% include 'product-rating'%}
+  {% render '5percent-nation'%}
+  {% section 'related-metafield-products' %}
+  {% render 'product-faq' %}
+  {% include 'product_references'%}
+
+  <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+</div>
+<style type="text/css">
+  .is-sticky .product-nav-section, .quantity-and-addToCart-container {
+    z-index: 3 !important;
+	}
+
+  .bundlebutton1 {
+    position: relative;
+    text-align: center;
+    width:360px;
+    margin-bottom: 20px;
+  }
+
+  .bundlebutton2 {
+    position: relative;
+    text-align: center;
+    width: 200px;
+  }
+
+  #video_overlays {
+    position:absolute;
+    float:left;
+    width:100%;
+    z-index:2;
+    color:#FF0000;
+  }
+
+  #video_player {
+    background: #000000;
+  }
+
+  .feature-banner {
+    height:520px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/5150-WL-Banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center 5px;
+  }
+
+  .feature-bottomborder {
+    height:520px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/BottomGrunge-BG-White.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-left: 78px;
+  }
+
+  .bottomcentered {
+    position: absolute;
+    bottom: -16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#ae1f24;
+    width:100%;
+    padding: 12px 0px 12px 0px;
+    margin:0px;
+    text-transform: uppercase;
+  }
+
+  .product-description-heading {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Gunplay-Regular';
+    text-transform: uppercase;
+  }
+
+  /* PHONE & TABLET  */
+  @media screen and (max-width: 768px) {
+    .bundlebutton1 {
+      position: relative;
+      text-align: left;
+      width:300px;
+      padding-top: 0px;
+        padding-right:20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bundlebutton1 img {
+      margin-right: auto;
+      Margin-left: auto;
+    }
+
+  	.feature-banner {
+      background-image: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/5150-WL-Banner2-CENTER.jpg);
+      height:680px;
+	    background-size: 1245px 359px;
+      background-position: center bottom;
+    }
+
+  	.feature-bottomborder {
+      height:680px;
+    }
+  }
+
+  /* PHONE  */
+  @media screen and (max-width: 500px) {
+    #video_overlays, #video_player {
+      height: 280px;
+    }
+  }
+
+  /* PHONE-landscape  */
+  @media screen and (min-width: 501px) and (max-width: 767px) {
+    #video_overlays, #video_player {
+      height: 300px;
+    }
+  }
+
+  /* TABLET  */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #video_overlays, #video_player {
+      min-height: 350px;
+    }
+  }
+
+  /* TABLET-and-up  */
+  @media screen and (min-width: 768px) {
+    #video_overlays, #video_player {
+      min-height: 350px;
+    }
+  }
+
+  /* POCKET  */
+  @media screen and (min-width: 768px) and (max-width: 1007px) {
+    #video_overlays, #video_player {
+      height: 450px;
+    }
+  }
+
+  /* LAPTOP-and-up  */
+  @media screen and (min-width: 1025px) {
+    #video_overlays, #video_player {
+      height: 600px;
+    }
+
+    .product-nav-section {
+      display: block;
+      background: #FFFFFF;
+      border-bottom: solid 1px #E5E5E5;
+    }
+  }
+
+  /* DESKTOP  */
+  @media screen and (min-width: 1200px) {
+    #video_overlays, #video_player {
+      height: 800px;
+    }
+  }
+
+  /* WIDESCREEN  */
+  @media screen and (min-width: 1500px) {
+    #video_overlays, #video_player {
+      height: 800px;
+    }
+  }
+</style>

@@ -1,0 +1,101 @@
+{%assign sca_product_id_text = "," | append : sca_freegift_price.id | append : ","%}
+
+{%assign sca_price = sca_freegift_price.price%}
+{%assign sca_price_min = sca_freegift_price.price_min %}
+{%assign sca_price_max = sca_freegift_price.price_max %}
+{% assign sca_compare_at_price = sca_freegift_price.compare_at_price %}
+{%assign sca_compare_at_price_min = sca_freegift_price.compare_at_price_min %}
+{%assign sca_compare_at_price_max = sca_freegift_price.compare_at_price_max %}
+{%assign sca_product_available = sca_freegift_price.available %}
+{%assign sca_product_variantCount = sca_freegift_price.variants.size %}
+{%assign sca_compare_at_price_varies = sca_freegift_price.compare_at_price_varies %}
+{%assign sca_price_varies = sca_freegift_price.price_varies %}
+
+{%assign sca_has_only_default_variant = false %}
+
+{% if sca_all_gift_products_ids == null or sca_all_gift_products_ids contains  sca_product_id_text %} 
+  
+  {%assign sca_price_min = 999999999 %}
+  {%assign sca_price_max = 0 %}
+
+  {%if sca_freegift_price.compare_at_price %}
+    {% assign sca_compare_at_price = sca_freegift_price.compare_at_price %}
+
+    {% if sca_freegift_price.compare_at_price_max %}
+      {%assign sca_compare_at_price_min = sca_freegift_price.compare_at_price_max %}
+    {%else%}
+      {%assign sca_compare_at_price_min = 999999999 %}
+    {%endif%}
+
+    {% if sca_freegift_price.compare_at_price_min %}
+      {%assign sca_compare_at_price_max = sca_freegift_price.compare_at_price_min %}
+    {%else%}
+      {%assign sca_compare_at_price_max = 0 %}
+    {%endif%}
+
+  {% else %}
+    {% assign sca_compare_at_price = sca_freegift_price.price_max %}
+  {% endif %}
+
+  {%assign sca_product_available = false %}
+  {%assign sca_product_variantCount = 0 %}
+  {%assign sca_has_only_default_variant = false %}
+
+  {% for variant in sca_freegift_price.variants %}
+    {% unless variant.metafields.secomapp.freegifts %}
+    {% unless variant.title contains '(Freegifts)' %}
+    {% unless variant.title contains '% Off' %}
+    {% unless variant.metafields.shappify_qb.qb_hide == "1" %}
+    {% unless variant.metafields.shappify_bundle.is_bundle == "true" %}
+    {% unless variant.metafields.brodev_scn.hide == "true" %}  
+    {% unless variant.metafields.wholesaler2.wholesale %}  
+    {% unless variant.metafields.Wholesaler.level %}
+    {% unless variant.title contains '(Wholesale' %}
+      {% if sca_price_min >= variant.price %}
+        {% assign sca_price_min = variant.price %}
+        {% assign sca_price = variant.price %}
+      {%endif%}
+      {% if sca_price_max <= variant.price %}
+        {% assign sca_price_max = variant.price %}
+      {%endif%}
+      {%if variant.compare_at_price %}
+        {% if sca_compare_at_price_min >= variant.compare_at_price %}
+          {% assign sca_compare_at_price_min = variant.compare_at_price %}
+          {% assign sca_compare_at_price = variant.compare_at_price %}
+        {%endif%}
+        {% if sca_compare_at_price_max < variant.compare_at_price %}
+          {% assign sca_compare_at_price_max = variant.compare_at_price %}
+        {%endif%}
+      {%endif%}
+      {% if variant.available == true %}
+        {% assign sca_product_available = true %}
+      {% endif %}
+      {% assign sca_product_variantCount = sca_product_variantCount | plus: 1 %}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+    {%endunless%}
+  {% endfor %}
+  {% if sca_price_min < sca_price_max %}
+    {%assign sca_price_varies = true%}
+  {%else%}
+    {%assign sca_price_varies = false%}
+  {%endif%}
+
+  {% if sca_compare_at_price_min < sca_compare_at_price_max %}
+    {%assign sca_compare_at_price_varies = true%}
+  {%else%}
+    {%assign sca_compare_at_price_varies = false%}
+  {%endif%}
+
+  {%if sca_product_variantCount > 1 %}
+    {%assign sca_has_only_default_variant = true %}
+  {%endif%}
+{%endif%}
+
+

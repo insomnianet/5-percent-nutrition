@@ -1,0 +1,34 @@
+
+{% assign bb_prefix = "/apps/bundles" %}
+{% assign bb_total_price = 0 %}
+{% assign bb_original_total_price = 0 %}
+{% assign bb_contains_bundle = false %}
+
+{% for item in cart.items %}
+    {% assign _price = item.line_price %}
+    {% assign _original_price = item.original_line_price %}
+    {% for property in item.properties %}
+        {% if property.first == '_bundle_price' %}
+            {% assign _price = property.last | times: item.quantity %}
+            {% assign _original_price = property.last | times: item.quantity %}
+            {% assign bb_contains_bundle = true %}
+        {% endif %}
+    {% endfor %}
+    {% for property in item.properties %}
+        {% if property.first == '_original_bundle_price' %}
+            {% assign _original_price = property.last | times: item.quantity %}
+        {% endif %}
+    {% endfor %}
+    {% assign bb_total_price = bb_total_price | plus: _price %}
+    {% assign bb_original_total_price = bb_original_total_price | plus: _original_price %}
+{% endfor %}
+
+{% if bb_contains_bundle %}
+    {% capture bb_checkout_link %}{{ bb_prefix }}/cart{% endcapture %}
+{% endif %}
+
+{% capture bb_inside_cart %}
+<input type="hidden" name="_cart" value="{{ cart | json | escape }}" />
+<input type="hidden" name="_shop" value="{{ shop.permanent_domain | escape }}" />
+<input type="hidden" id="bb_proxy_prefix" value="{{ bb_prefix }}" />
+{% endcapture %}

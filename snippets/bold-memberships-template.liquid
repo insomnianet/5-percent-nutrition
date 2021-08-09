@@ -1,0 +1,20 @@
+{%comment %}This snippet is generated and updated by Bold Memberships. any changes will be overridden when the Store Owner saves a Plan in the app.{%endcomment%}
+
+{% assign bold_membership_partial_redirect = false %}
+
+{% assign bold_membership_full_redirect = false %}
+
+{% assign mem_current_template = template %}
+
+{%if bold_membership_partial_redirect == true %}
+	<script>
+	 top.location = (window.location.href + "?view={{bold_membership_template}}");
+	</script>
+{%endif%}
+
+{% if bold_membership_full_redirect == true %}
+    <script>
+     bold_url = window.location.href
+     top.location = bold_url.split("?view=")[0];
+    </script>
+{%endif%}

@@ -1,0 +1,194 @@
+<section class="Section {% unless section.settings.image %}Section--spacingNormal{% endunless %}">
+  {%- capture section_content -%}
+    <div class="FeatureText__ContentWrapper">
+      <div class="FeatureText__Content">
+        {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+          <header class="SectionHeader">
+         
+
+            {%- if section.settings.title != blank -%}
+              <h1 class="text-uppercase product-h2 t-lef SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h1>
+            {%- endif -%}
+   {%- if section.settings.subheading != blank -%}
+              <h3 class="SectionHeader__SubHeading Heading u-h6">{{ section.settings.subheading | escape }}</h3>
+            {%- endif -%}
+            <ul class="athlete-basic-info">
+              {% if section.settings.height != blank %}
+                <li>Height: {{section.settings.height}}</li>
+              {% endif %}
+              {% if section.settings.weight != blank %}
+                <li>Weight: {{section.settings.weight}}</li>
+              {% endif %}
+              {% if section.settings.DOB != blank %}
+                <li>Date of Birth: {{section.settings.DOB}}</li>
+              {% endif %}
+              {% if section.settings.residence != blank %}
+                <li>Residence: {{section.settings.residence}}</li>
+              {% endif %}
+            </ul>
+            {%- if section.settings.content != blank -%}
+              <div class="SectionHeader__Description SectionHeader__Description--athlete">
+                {{ section.settings.content }}
+              </div>
+            {%- endif -%}
+
+           {% include 'social-media-athlete'%}
+          </header>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endcapture -%}
+
+  {%- capture section_image -%}
+    {%- if section.settings.image != blank -%}
+      <div class="FeatureText__ImageWrapper">
+        {%- include 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}
+
+        <div class="AspectRatio athelete-image" style="max-width: {{ section.settings.image.width }}px; --aspect-ratio: {{ section.settings.image.aspect_ratio }}">
+          {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <img class="Image--lazyLoad Image--slide{{ section.settings.image_position | capitalize }}" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}">
+
+          <noscript>
+            <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.image.alt | escape }}">
+          </noscript>
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endcapture -%}
+
+  <div class="FeatureText {% if section.settings.image != blank %}FeatureText--withImage FeatureText--image{{ section.settings.image_position | capitalize }}{% endif %}">
+    {%- if section.settings.image_position == 'left' -%}
+      {{- section_image -}}
+      {{- section_content -}}
+    {%- else -%}
+      {{- section_content -}}
+      {{- section_image -}}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rich text with image",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "Sub-heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1200 x 1200px png recommended"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+    },
+    {
+      "type": "text",
+      "id": "height",
+      "label": "Height"
+    },
+    {
+      "type": "text",
+      "id": "weight",
+      "label": "Weight"
+    },
+    {
+      "type": "text",
+      "id": "DOB",
+      "label": "Date of Birth (Month DD, YYYY)"
+    },
+    {
+     "type": "text",
+      "id": "residence",
+      "label": "Residence"
+    },
+    {
+        "type": "url",
+        "id": "facebook_url",
+        "label": "Facebook"
+    },
+    {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram"
+    },
+    {
+        "type": "url",
+        "id": "youtube_url",
+        "label": "Youtube"
+    },
+    {
+        "type": "url",
+        "id": "pinterest_url",
+        "label": "Pinterest"
+    },
+    {
+        "type": "url",
+        "id": "snapchat_url",
+        "label": "Snapchat"
+    },
+    {
+        "type": "url",
+        "id": "twitter_url",
+        "label": "Twitter"
+    },
+    {
+        "type": "url",
+        "id": "tumblr_url",
+        "label": "Tumblr"
+    },
+    {
+        "type": "url",
+        "id": "google_plus_url",
+        "label": "Google Plus"
+    },
+    {
+        "type": "url",
+        "id": "vimeo_url",
+        "label": "Vimeo"
+    },
+    {
+        "type": "url",
+        "id": "linkedin_url",
+        "label": "LinkedIn"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Rich text with image",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

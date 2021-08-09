@@ -1,0 +1,220 @@
+{%- assign main_menu_handle = section.settings.primary_menu | default: 'main-menu' -%}
+{%- assign main_menu = linklists[main_menu_handle] -%}
+
+<section id="sidebar-menu" class="SidebarMenu Drawer Drawer--small Drawer--fromLeft mobile-sidenav" aria-hidden="true" data-section-id="{{ section.id }}" data-section-type="sidebar-menu">
+    <header class="Drawer__Header" data-drawer-animated-left>    
+      <div style="width:135px; background: transparent">
+        <img src="{{ mobile_logo }}"/>
+      </div>
+      <button class="Drawer__Close close-navbar-mobile Icon-Wrapper--clickable" data-action="close-drawer" data-drawer-id="sidebar-menu" aria-label="{{ 'header.navigation.close_sidebar' | t }}">
+        {%- include 'icon' with 'close' -%}
+      </button>
+    </header>
+
+    <div class="Drawer__Content">
+      <div class="Drawer__Main Drawer__Main--sidenav" data-drawer-animated-left data-scrollable>
+        <div class="Drawer__Container Drawer__Container--sidenav">
+          <nav class="SidebarMenu__Nav SidebarMenu__Nav--primary" aria-label="{{ 'header.navigation.sidebar_title' | t }}">
+            {%- for link in main_menu.links -%}
+              <div class="Collapsible">
+                {%- if link.links != blank -%}
+                  <button class="Collapsible__Button Heading u-h6 Heading--sidenav text-uppercase heading-main" data-action="toggle-collapsible" {% if link.links != blank %}aria-expanded="false"{% endif %}>
+                    {{- link.title | escape -}} <span class="Collapsible__Plus"></span>
+                  </button>
+
+                  <div class="Collapsible__Inner">
+                    <div class="Collapsible__Content">
+                      {%- for sub_link in link.links -%}
+                        <div class="Collapsible {% if sub_link.links != blank %} has-subtitle {% endif %}">
+                          {%- if sub_link.links != blank -%}
+                          	{% comment %} --- Sub Title on "Supplements" submenu --- {% endcomment %}
+                            <h4 class="subtitle">{{ sub_link.title | escape }}</h4>
+                          
+                            {% comment %} <button class="Collapsible__Button Heading Heading--sidenav Text--subdued Link--primary u-h7 heading-secondary" data-action="toggle-collapsible" {% if sub_link.links != blank %}aria-expanded="false"{% endif %}>
+                              {{- sub_link.title | escape -}} <span class="Collapsible__Plus"></span>
+                            </button> {% endcomment %}
+
+                            {% comment %} <div class="Collapsible__Inner"> {% endcomment %}
+                              {% comment %} <div class="Collapsible__Content"> {% endcomment %}
+                                <ul class="Linklist">
+                                  {%- for sub_sub_link in sub_link.links -%}
+                                    <li class="Linklist__Item">
+                                      <a href="{{ sub_sub_link.url }}" class="Text--subdued Link Link--primary Link--sidenav final-link">{{ sub_sub_link.title | escape }}</a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {% comment %} </div> {% endcomment %}
+                            {% comment %} </div> {% endcomment %}
+                          {%- else -%}
+                            <a href="{{ sub_link.url }}" class="Collapsible__Button Heading Link Link--primary u-h7 Link--sidenav final-link">{{ sub_link.title | escape }}</a>
+                          {%- endif -%}
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                {%- else -%}
+                  <a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary u-h6 Heading--sidenav heading-main">{{ link.title | escape }}</a>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+
+<!--JS ADDED-->
+{% if customer.tags contains 'bbtd' %}
+            <!--
+              <div class="Collapsible">
+                  <a href="/pages/members-only-bigger-by-the-day-mini-series" class="Collapsible__Button Heading Link Link--primary u-h6 Heading--sidenav heading-main">BIGGER BY THE DAY</a>
+              </div>
+-->
+{% else %}
+            <!--
+              <div class="Collapsible">
+                  <a href="/pages/biggerbytheday" class="Collapsible__Button Heading Link Link--primary u-h6 Heading--sidenav heading-main">BIGGER BY THE DAY</a>
+              </div>
+-->
+{% endif %}
+<!--            
+			  <div class="Collapsible">
+                  <a href="#" onclick="Privy('show', 1248351)" class="Collapsible__Button Heading Link Link--primary u-h6 Heading--sidenav heading-main">STUCK AT HOME?</a>
+              </div>
+-->
+			  <div class="Collapsible">
+                  <a href="/pages/core-line/" class="Collapsible__Button Heading Link Link--primary u-h6 Heading--sidenav heading-main"><span style="color:#d9b267;">CORE</span></a>
+              </div>
+<!--END JS ADDED-->
+            
+          </nav>
+
+          {%- assign secondary_menu = linklists[section.settings.secondary_menu] -%}
+
+          <nav class="SidebarMenu__Nav SidebarMenu__Nav--secondary">
+            {% comment %} <a href="https://5percent-nutrition.myshopify.com/pages/earn-rewards" class="Collapsible__Button Heading Link Link--primary u-h6 Heading--sidenav heading-secondarynav">Earn Rewards</a> {% endcomment %}
+            <ul class="Linklist Linklist--spacingLoose">
+              <li class="">
+                  <a href="https://5percent-nutrition.myshopify.com/pages/retail-locations" class="Heading Link Text--subdued u-h8 Heading--sidenav heading-secondarynav">
+                      <span>Where to Buy</span> 
+                  </a>
+                </li>
+              <li class="rewards">
+                  <a href="https://5percent-nutrition.myshopify.com/pages/earn-rewards" class="Heading Link Text--subdued u-h8 Heading--sidenav heading-secondarynav">
+                Earn Rewards <span class="rewards-new rewards-new--sidenav">NEW</span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="https://5percent-nutrition.myshopify.com/pages/about-us" class="Heading Link Text--subdued u-h8 Heading--sidenav heading-secondarynav">
+                About Us
+                  </a>
+                </li>
+              {% comment %} {%- for link in secondary_menu.links -%}
+                <li class="Linklist__Item">
+                  <a href="{{ link.url }}" class="Text--subdued Link Link--primary Link--sidenav Heading--sidenav">{{ link.title | escape }}</a>
+                </li>
+           
+              {%- endfor -%} {% endcomment %}
+         
+              {%- comment -%}We automatically add some links to the secondary menu{%- endcomment -%}
+
+                
+
+              {% comment %} <li class="Linklist__Item">
+                <a href="/search" class="Text--subdued Link Link--primary Heading--sidenav" data-action="open-modal" aria-controls="Search">{{ 'header.navigation.search' | t }}</a>
+              </li> {% endcomment %}
+            </ul>
+          </nav>
+          <div class="sidenav-account-options">
+            {% if customer %}
+              <div style="padding: 0 25px;">
+                <div class="postLoginSection">
+                  <label>Logged In</label>
+                  <p class="greeting"> Hello, {{customer.first_name }} </p>
+                  {% comment %} <p>{{customer.email}}</p>
+                  <p>{{customer.first_name}}</p> {% endcomment %}
+                </div>
+                <div class="postLoginSection">
+                  <a href="/account">My Orders</a>
+                  <!--a href="#swym-wishlist" class="swym-wishlist">
+                    Wishlist
+                  </a-->
+                </div>
+                <div class="postLoginSection">
+                  <a href="/account">Edit Profile</a>
+                  <a href="/account/logout">Logout</a>
+                </div>
+              </div>
+            {% else %}
+              <div>
+                <h4>Your Account</h4>
+                <p>Access account and manage orders</p>
+                <div class="account-options__buttons">
+                  <a href="/account/register" class="accounts-buttons accounts-buttons--register ">sign up</a>
+                  <a href="{% if customer %}/account{% else %}/account/login{% endif %}" class="accounts-buttons accounts-buttons--login">Login</a>
+                  
+                </div>
+              </div>
+            {% endif %}
+            
+          </div>
+        </div>
+      </div>
+
+      {% comment %} {%- if section.settings.show_social_media -%}
+        {%- capture social_media -%}
+          {% include 'social-media', class: 'SidebarMenu__Social', spacing: 'fill' %}
+        {%- endcapture -%}
+      {%- endif -%} {% endcomment %}
+
+      {%- if settings.currency_conversion_enabled or social_media != blank -%}
+        <aside class="Drawer__Footer" data-drawer-animated-bottom>
+          {%- if settings.currency_conversion_enabled -%}
+            <div class="SidebarMenu__CurrencySelector">
+              <div class="Select Select--transparent">
+                <select class="CurrencySelector__Select" title="{{ 'header.navigation.currency_selector' | t | escape }}">
+                  {%- capture codes -%}USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,BWP,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK{%- endcapture -%}
+                  {%- assign supported_codes = settings.currency_conversion_supported_currencies | remove_first: shop.currency | upcase | split: ' ' | uniq -%}
+
+                  <option value="{{ shop.currency }}" selected="selected">{{ shop.currency }}</option>
+
+                  {%- for code in supported_codes -%}
+                    {%- if codes contains code -%}
+                      <option value="{{ code }}">{{ code }}</option>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </select>
+
+                {%- include 'icon' with 'select-arrow' -%}
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if social_media != blank -%}
+            {{ social_media }}
+          {%- endif -%}
+        </aside>
+      {%- endif -%}
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sidebar menu",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "primary_menu",
+      "label": "Primary menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary menu",
+      "info": "This menu won't show dropdown items."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

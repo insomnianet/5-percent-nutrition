@@ -1,0 +1,104 @@
+{%- if section.settings.enable_bar -%}
+  {%- unless section.settings.home_page_only and template != 'index' -%}
+    <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+      <div class="AnnouncementBar container container--lg">
+        <div class="AnnouncementBar__Wrapper">
+          <p class="AnnouncementBar__Content Heading">
+            {%- if section.settings.link -%}
+              <a class="announcement-bold" href="{{ section.settings.link }}">{{ section.settings.content | escape }}</a>
+            {%- else -%}
+              {{ section.settings.content | escape }}
+            {%- endif -%}
+          </p>
+        </div>
+        <div class="AnnouncementBar__Wrapper">
+          <ul class="announcementbar-list">
+            <li class="link-accessibility">
+                <a id="accessibilityEnablerCustomTrigger" href="/pages/accessibility" class="Heading Link Text--subdued u-h8">
+                    <span>Accessibility</span>
+                    <!--img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/accessibility-svg-icon-3.png" alt="accessibility"/-->
+                </a>
+            </li>
+            <li class="rewards">
+                <a href="/pages/retail-locations" class="Heading Link Text--subdued u-h8">
+                    <span>Where to Buy</span>
+                    <img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="{{'Location.svg' | asset_url}}" alt="location"/>
+                </a>
+              </li>
+            <li class="rewards">
+                {% if customer %}
+                  <a href="#smile-points-products" class="Heading Link Text--subdued u-h8">Kill It Points: 
+                    <span class="sweettooth-points-balance" style="color:#ffffff;">
+                    <i class="fas fa-trophy-alt"></i></span>
+                  </a>
+                {% else %}
+                  <a href="/pages/earn-rewards#smile-referral-program-details" class="Heading Link Text--subdued u-h8">
+                  Earn <span class="rewards-new">Rewards</span>
+                  </a>
+                {% endif %}
+              </li>
+              <li class="">
+                <a href="/pages/about-us" class="Heading Link Text--subdued u-h8">
+                  <span>About Us</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      #section-{{ section.id }} {
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+      }
+    </style>
+
+    <script>
+      document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+    </script>
+  {%- endunless -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "home_page_only",
+      "label": "Home page only",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ]
+}
+{% endschema %}

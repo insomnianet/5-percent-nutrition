@@ -1960,7 +1960,7 @@
             "settings": {
               "collection": "new-products",
               "title": "NEW RELEASES",
-              "grid_items_count": 8,
+              "grid_items_count": 16,
               "button_text": ""
             }
           }

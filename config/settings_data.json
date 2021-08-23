@@ -256,10 +256,10 @@
               "button_1_link": "",
               "button_2_text": "",
               "button_2_link": "",
-              "buttton_1_text_color": "#FFFFFF",
-              "buttton_1_bg_color": "#AE1F24",
-              "buttton_2_text_color": "#FFFFFF",
-              "buttton_2_bg_color": "#AE1F24"
+              "buttton_1_text_color": "#ffffff",
+              "buttton_1_bg_color": "#ae1f24",
+              "buttton_2_text_color": "#ffffff",
+              "buttton_2_bg_color": "#ae1f24"
             }
           },
           "3877181d-81df-43d8-9aaa-9d82ade6b6ab": {
@@ -652,19 +652,6 @@
               "apply_overlay": false
             }
           },
-          "1552680530295": {
-            "type": "collection",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/EdHall_Slate_1200.jpg",
-              "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
-              "content_position": "bottomLeft",
-              "title": "Ed Hall",
-              "button_text": "View Profile",
-              "button_link": "shopify:\/\/pages\/ed-hall",
-              "apply_overlay": false
-            }
-          },
           "1583519652846": {
             "type": "collection",
             "settings": {
@@ -714,19 +701,6 @@
               "title": "Anthony Salamone",
               "button_text": "View profile",
               "button_link": "shopify:\/\/pages\/anthony-salamone",
-              "apply_overlay": false
-            }
-          },
-          "d7695c41-31ca-4df4-83d4-220f88e462b3": {
-            "type": "collection",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_DarianVincenzo_1080.jpg",
-              "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/romania-small_small_87db0b78-77b2-4b90-9743-e319077a84b9.jpg",
-              "content_position": "bottomLeft",
-              "title": "Darian Vicenzo",
-              "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/darian-vicenzo",
               "apply_overlay": false
             }
           },
@@ -788,12 +762,10 @@
           "1594845135926",
           "1594845137171",
           "1594845141939",
-          "1552680530295",
           "1583519652846",
           "e8b6e7a2-1f6a-456a-ba3c-157327e6a7cf",
           "b055b9b4-db7d-486c-bde0-32f2d8f87a5a",
           "a50fcc59-84d1-4f90-9e81-5ba2a961ea89",
-          "d7695c41-31ca-4df4-83d4-220f88e462b3",
           "36751cd2-d504-4442-9e16-c69b49b9356f",
           "31db384e-d9cd-42e2-bf52-30e66352dd82",
           "e8ceda72-60f0-4198-ad53-f1258fbec557"

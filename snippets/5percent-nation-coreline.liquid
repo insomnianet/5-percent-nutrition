@@ -10,8 +10,7 @@
       </div>
     </div>
 
-  {%- comment -%}
-    <div class="yotpo yotpo-pictures-widget" data-gallery-id="6011df93f1b60841068964fd"></div>
-  {%- endcomment -%}
+    <div class="yotpo yotpo-pictures-widget 09102021" data-gallery-id="{% if shop.domain == '5percentnutrition.com' %}5d121d537c86290007f506e5{% elsif shop.domain == '5percentnutrition.uk' %}60c0fa6b238de42084034ee2{% elsif shop.domain == '5percentnutrition.eu' %}60edfba1238de46a72215b30{% elsif shop.domain == '5percentnutrition.ca' %}60edfcbee711a83086d766d3{% endif %}" data-product-id="{{ product.id }}"></div>
+
   </section>
 {% endunless %}

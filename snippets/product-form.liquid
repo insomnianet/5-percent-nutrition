@@ -33,11 +33,11 @@ for size, we use it to display a size chart (if applicable)
 
   <div class="ProductForm__Option {% if show_option_label %}ProductForm__Option--labelled{% endif %}">
     {%- if show_option_label -%}
-    {{ selected_variant }}
+    <!--{{ selected_variant }} #JS043021# -->
     {%- assign size_chart_page_handle = settings.size_chart_page | default: 'size-chart' -%}
     {%- assign size_chart_page = pages[size_chart_page_handle] -%}
 
-    <span class="ProductForm__Label">
+    <span class="ProductForm__Label main-product-label text-uppercase">
       {{ option.name }}:
 
       {% if color_label contains downcase_option and section.settings.show_color_swatch %}
@@ -50,6 +50,8 @@ for size, we use it to display a size chart (if applicable)
       </button>
       {%- endif -%}
     </span>
+    {%- else -%}<!--#JS043021# -->
+    <label class="main-product-label text-uppercase">{{ option.name }}</label>
     {%- endif -%}
 
     {%- if color_label contains downcase_option and section.settings.show_color_swatch -%}
@@ -75,7 +77,6 @@ for size, we use it to display a size chart (if applicable)
       {%- endfor -%}
     </ul>
     {%- else -%}
-    <label class="main-product-label text-uppercase">{{ option.name }}</label>
     <button type="button" class="ProductForm__Item" aria-expanded="false" aria-controls="{{ popover_id }}">
       <span class="ProductForm__OptionName"><span class="ProductForm__SelectedValue">{{ option.selected_value }}</span></span>
       {%- include 'icon' with 'select-arrow' -%}
@@ -248,7 +249,7 @@ ADD TO CART BUTTON
   <!-- quantity selector -->
   {%- if section.settings.show_quantity_selector -%}
   {%- if show_option_label -%}
-  <span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span>
+  <!--span class="ProductForm__Label">{{ 'product.form.quantity' | t }}:</span #JS043021# -->
   {%- endif -%}
 
   <div class="ProductForm__QuantitySelector">

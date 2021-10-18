@@ -613,19 +613,6 @@
               "apply_overlay": false
             }
           },
-          "1594845135926": {
-            "type": "collection",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Viridiana_Slate-WEB.jpg",
-              "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
-              "content_position": "bottomLeft",
-              "title": "Viridiana Sanchez",
-              "button_text": "View Profile",
-              "button_link": "shopify:\/\/pages\/viridiana-sanchez",
-              "apply_overlay": false
-            }
-          },
           "1594845137171": {
             "type": "collection",
             "settings": {
@@ -746,7 +733,6 @@
           "1559923858975",
           "1594778458413",
           "1594845134201",
-          "1594845135926",
           "1594845137171",
           "1594845141939",
           "1583519652846",

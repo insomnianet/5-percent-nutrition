@@ -431,19 +431,6 @@
               "apply_overlay": false
             }
           },
-          "1544995585685": {
-            "type": "collection",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate.jpg",
-              "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/denmark-small.jpg",
-              "content_position": "bottomLeft",
-              "title": "Jens Dalsgaard",
-              "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/jens-dalsgaard",
-              "apply_overlay": false
-            }
-          },
           "1566401778730": {
             "type": "collection",
             "settings": {
@@ -719,7 +706,6 @@
         },
         "block_order": [
           "1578331301212",
-          "1544995585685",
           "1566401778730",
           "1544995837391",
           "1544995823655",

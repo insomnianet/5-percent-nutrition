@@ -639,19 +639,6 @@
               "apply_overlay": false
             }
           },
-          "e8b6e7a2-1f6a-456a-ba3c-157327e6a7cf": {
-            "type": "collection",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/SarahLamay_Slate_1200.jpg",
-              "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small_small_6f63303e-0fc4-4321-a366-b580b5167849.jpg",
-              "content_position": "bottomLeft",
-              "title": "Sarah Lamay",
-              "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/sarah-lamay",
-              "apply_overlay": false
-            }
-          },
           "b055b9b4-db7d-486c-bde0-32f2d8f87a5a": {
             "type": "collection",
             "settings": {
@@ -691,6 +678,18 @@
               "apply_overlay": false
             }
           },
+          "76551503-841f-4042-b143-960b9278a6de": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_AlGreen.jpg",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "title": "Al Green",
+              "button_text": "View profile",
+              "button_link": "shopify:\/\/pages\/al-green",
+              "apply_overlay": false
+            }
+          },
           "e8ceda72-60f0-4198-ad53-f1258fbec557": {
             "type": "collection",
             "settings": {
@@ -722,10 +721,10 @@
           "1594845137171",
           "1594845141939",
           "1583519652846",
-          "e8b6e7a2-1f6a-456a-ba3c-157327e6a7cf",
           "b055b9b4-db7d-486c-bde0-32f2d8f87a5a",
           "36751cd2-d504-4442-9e16-c69b49b9356f",
           "31db384e-d9cd-42e2-bf52-30e66352dd82",
+          "76551503-841f-4042-b143-960b9278a6de",
           "e8ceda72-60f0-4198-ad53-f1258fbec557"
         ],
         "settings": {

@@ -535,19 +535,6 @@
               "apply_overlay": false
             }
           },
-          "1551902301517": {
-            "type": "collection",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Andrew_Rose_Slate.png",
-              "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
-              "content_position": "bottomLeft",
-              "title": "Andrew Rose",
-              "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/andrew-rose",
-              "apply_overlay": false
-            }
-          },
           "1559923858975": {
             "type": "collection",
             "settings": {
@@ -687,7 +674,6 @@
           "1551901592579",
           "1550852169345",
           "1548049613252",
-          "1551902301517",
           "1559923858975",
           "1594778458413",
           "1594845134201",

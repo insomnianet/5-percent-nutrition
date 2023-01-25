@@ -659,7 +659,7 @@
               "content_position": "bottomLeft",
               "title": "You're Next",
               "button_text": "Join Team",
-              "button_link": "shopify:\/\/pages\/ambassadors",
+              "button_link": "shopify:\/\/pages\/brand-ambassadors-signup",
               "apply_overlay": false
             }
           }

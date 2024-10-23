@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "heading_color": "#000000",
@@ -58,21 +58,21 @@
     "cart_free_shipping_threshold": "99",
     "bfca-offer": false,
     "share_image": "",
-    "social_facebook": "https:\/\/www.facebook.com\/5percentnutrition",
-    "social_twitter": "https:\/\/twitter.com\/5percentnutri",
+    "social_facebook": "https://www.facebook.com/5percentnutrition",
+    "social_twitter": "https://twitter.com/5percentnutri",
     "social_google_plus": "",
     "social_pinterest": "",
-    "social_instagram": "https:\/\/www.instagram.com\/5percentnutrition\/",
+    "social_instagram": "https://www.instagram.com/5percentnutrition/",
     "social_vimeo": "",
     "social_tumblr": "",
-    "social_youtube": "https:\/\/www.youtube.com\/user\/5PercentNutrition",
+    "social_youtube": "https://www.youtube.com/user/5PercentNutrition",
     "social_linkedin": "",
     "social_snapchat": "",
     "social_fancy": "",
-    "favicon": "shopify:\/\/shop_images\/previmg_758e19a8-45ad-462b-a8ad-df0d0e52f7d1.png",
-    "tracking_scripts": "<!-- Facebook Pixel Code -->\n<!-- Removed to let the default FB Channel Pixel work -->\n<!-- End Facebook Pixel Code -->\n<!-- Twitter universal tag code -->\n<script>\n!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);\n},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='\/\/static.ads-twitter.com\/uwt.js',\na=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');\n\/\/ Insert Twitter Pixel ID and Standard Event data below\ntwq('init','o6vax');\ntwq('track','PageView');\n<\/script>\n<!-- End Twitter universal tag code -->\n<!-- YotPo Facebook Pixel Code --> \n<script nonce=\"2EDIsP5n\"> \n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod? \nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n; n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0; \nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,'script',\n'https:\/\/connect.facebook.net\/en_US\/fbevents.js'); \nfbq('init', '224183712661008'); \nfbq('track', 'ViewContent');\n<\/script> \n<noscript><img height=\"1\" width=\"1\" style=\"display:none\" src=\"https:\/\/www.facebook.com\/tr?id=224183712661008&ev=ViewContent&noscript=1\"><\/noscript> \n<!-- End Facebook Pixel Code -->\n\n\n<!-- Start Yopto Reviews -->\n<script type=\"text\/javascript\">\n  (function e(){var e=document.createElement(\"script\");e.type=\"text\/javascript\",e.async=true,e.src=\"\/\/staticw2.yotpo.com\/Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN\/widget.js\";var t=document.getElementsByTagName(\"script\")[0];t.parentNode.insertBefore(e,t)})();\n<\/script>\n<!--End Yopto Reviews -->",
+    "favicon": "shopify://shop_images/previmg_758e19a8-45ad-462b-a8ad-df0d0e52f7d1.png",
+    "tracking_scripts": "<!-- Facebook Pixel Code -->\n<!-- Removed to let the default FB Channel Pixel work -->\n<!-- End Facebook Pixel Code -->\n<!-- Twitter universal tag code -->\n<script>\n!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);\n},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',\na=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');\n// Insert Twitter Pixel ID and Standard Event data below\ntwq('init','o6vax');\ntwq('track','PageView');\n</script>\n<!-- End Twitter universal tag code -->\n<!-- YotPo Facebook Pixel Code --> \n<script nonce=\"2EDIsP5n\"> \n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod? \nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n; n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0; \nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,'script',\n'https://connect.facebook.net/en_US/fbevents.js'); \nfbq('init', '224183712661008'); \nfbq('track', 'ViewContent');\n</script> \n<noscript><img height=\"1\" width=\"1\" style=\"display:none\" src=\"https://www.facebook.com/tr?id=224183712661008&ev=ViewContent&noscript=1\"></noscript> \n<!-- End Facebook Pixel Code -->\n\n\n<!-- Start Yopto Reviews -->\n<script type=\"text/javascript\">\n  (function e(){var e=document.createElement(\"script\");e.type=\"text/javascript\",e.async=true,e.src=\"//staticw2.yotpo.com/Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN/widget.js\";var t=document.getElementsByTagName(\"script\")[0];t.parentNode.insertBefore(e,t)})();\n</script>\n<!--End Yopto Reviews -->",
     "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/5_-Logo_3efccc68-aaa5-4a87-b601-74f96ca15e56.png",
+    "checkout_logo_image": "shopify://shop_images/5_-Logo_3efccc68-aaa5-4a87-b601-74f96ca15e56.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "large",
     "checkout_body_background_image": "",
@@ -103,7 +103,7 @@
           "background": "#ae1f24",
           "text_color": "#ffffff",
           "content": "ADYM LEGENDARY NOW AVAILABLE! - Shop Now",
-          "link": "shopify:\/\/pages\/all-day-you-may-legendary-series"
+          "link": "shopify://pages/all-day-you-may-legendary-series"
         }
       },
       "header": {
@@ -121,7 +121,7 @@
         ],
         "settings": {
           "use_sticky_header": false,
-          "logo": "shopify:\/\/shop_images\/Asset_2_2x_711d64b0-acab-4cdc-bc75-6334d6b928d0.png",
+          "logo": "shopify://shop_images/Asset_2_2x_711d64b0-acab-4cdc-bc75-6334d6b928d0.png",
           "logo_max_width": 75,
           "mobile_logo_max_width": 60,
           "navigation_menu": "main-menu",
@@ -129,23 +129,23 @@
           "enable_transparent_header": false,
           "enable_transparent_header_collection": false,
           "transparent_text_color": "#ffffff",
-          "mass-building1": "shopify:\/\/shop_images\/MASS-BUILDING-button.jpg",
-          "build-strength2": "shopify:\/\/shop_images\/BUILD-STRENGTH-button.jpg",
-          "endurance3": "shopify:\/\/shop_images\/ENDURANCE-button.jpg",
-          "pre-workouts2": "shopify:\/\/shop_images\/Pre-workout-Supplements_collection.jpg",
-          "post-workouts3": "shopify:\/\/shop_images\/Post-workout-Supplements_collection.jpg",
-          "support-supplements4": "shopify:\/\/shop_images\/Support-Supplements_collection.jpg",
-          "muscle-builders2": "shopify:\/\/shop_images\/Menu-MUSCLEBUILDERS2.jpg",
-          "recovery3": "shopify:\/\/shop_images\/Menu-RECOVERY2.jpg",
-          "weight-loss4": "shopify:\/\/shop_images\/Menu-WEIGHTLOSS3.jpg",
-          "men-s-apparel1": "shopify:\/\/shop_images\/Menu-MENS2_520x620_89fe52d6-2741-4a62-bd37-6ae777619cf9.jpg",
-          "women-s-apparel2": "shopify:\/\/shop_images\/Menu-WOMENS2.jpg",
-          "gear3": "shopify:\/\/shop_images\/Menu-GEAR2.jpg",
-          "daily-deals4": "shopify:\/\/shop_images\/Menu-DAILYDEALS3.jpg",
-          "athletes1": "shopify:\/\/shop_images\/Menu-NATION1.jpg",
-          "family2": "shopify:\/\/shop_images\/Menu-NATION2.jpg",
-          "ambassador3": "shopify:\/\/shop_images\/Menu-NATION3.jpg",
-          "videos4": "shopify:\/\/shop_images\/Menu-NATION4.jpg"
+          "mass-building1": "shopify://shop_images/MASS-BUILDING-button.jpg",
+          "build-strength2": "shopify://shop_images/BUILD-STRENGTH-button.jpg",
+          "endurance3": "shopify://shop_images/ENDURANCE-button.jpg",
+          "pre-workouts2": "shopify://shop_images/Pre-workout-Supplements_collection.jpg",
+          "post-workouts3": "shopify://shop_images/Post-workout-Supplements_collection.jpg",
+          "support-supplements4": "shopify://shop_images/Support-Supplements_collection.jpg",
+          "muscle-builders2": "shopify://shop_images/Menu-MUSCLEBUILDERS2.jpg",
+          "recovery3": "shopify://shop_images/Menu-RECOVERY2.jpg",
+          "weight-loss4": "shopify://shop_images/Menu-WEIGHTLOSS3.jpg",
+          "men-s-apparel1": "shopify://shop_images/Menu-MENS2_520x620_89fe52d6-2741-4a62-bd37-6ae777619cf9.jpg",
+          "women-s-apparel2": "shopify://shop_images/Menu-WOMENS2.jpg",
+          "gear3": "shopify://shop_images/Menu-GEAR2.jpg",
+          "daily-deals4": "shopify://shop_images/Menu-DAILYDEALS3.jpg",
+          "athletes1": "shopify://shop_images/Menu-NATION1.jpg",
+          "family2": "shopify://shop_images/Menu-NATION2.jpg",
+          "ambassador3": "shopify://shop_images/Menu-NATION3.jpg",
+          "videos4": "shopify://shop_images/Menu-NATION4.jpg"
         }
       },
       "footer": {
@@ -181,8 +181,8 @@
               "title": "",
               "content": "",
               "show_social_media": false,
-              "img_1": "shopify:\/\/shop_images\/America-Flag_Made-In-USA_nocopy.png",
-              "img_2": "shopify:\/\/shop_images\/GMP_Logo_LightGray_38c63a21-0b1a-4e5a-af14-95c003e00277.png"
+              "img_1": "shopify://shop_images/America-Flag_Made-In-USA_nocopy.png",
+              "img_2": "shopify://shop_images/GMP_Logo_LightGray_38c63a21-0b1a-4e5a-af14-95c003e00277.png"
             }
           }
         },
@@ -203,8 +203,8 @@
           "ab7410b3-0541-4261-890f-5de6344c3301": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/ADYMLegendarySeries_NowAvailable_Herobanner.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/ADYMLegendarySeries_NowAvailable_Mobilebanner-2.jpg",
+              "image": "shopify://shop_images/ADYMLegendarySeries_NowAvailable_Herobanner.jpg",
+              "mobile_image": "shopify://shop_images/ADYMLegendarySeries_NowAvailable_Mobilebanner-2.jpg",
               "apply_overlay": false,
               "content_position": "bottomCenter",
               "left_position": "-17.5%",
@@ -215,7 +215,7 @@
               "subheading": "",
               "title": "",
               "button_1_text": "Shop Now",
-              "button_1_link": "shopify:\/\/products\/alldayyoumay-bcaa-legendary-series",
+              "button_1_link": "shopify://products/alldayyoumay-bcaa-legendary-series",
               "button_2_text": "",
               "button_2_link": "",
               "buttton_1_text_color": "#ffffff",
@@ -227,8 +227,8 @@
           "f4ded1ce-2fe8-4229-9f2a-4ac1570e3139": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Shred-Time-Stage-Ready_Now-Available_Herobanner.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/Shred-Time-Stage-Ready_Now-Available_Mobilebanner.jpg",
+              "image": "shopify://shop_images/Shred-Time-Stage-Ready_Now-Available_Herobanner.jpg",
+              "mobile_image": "shopify://shop_images/Shred-Time-Stage-Ready_Now-Available_Mobilebanner.jpg",
               "apply_overlay": false,
               "content_position": "bottomCenter",
               "left_position": "0px",
@@ -239,7 +239,7 @@
               "subheading": "",
               "title": "",
               "button_1_text": "Shop Now",
-              "button_1_link": "shopify:\/\/collections\/stage-ready-shred-time",
+              "button_1_link": "shopify://collections/stage-ready-shred-time",
               "button_2_text": "",
               "button_2_link": "",
               "buttton_1_text_color": "#ffffff",
@@ -251,7 +251,7 @@
           "fe241a87-e87e-4c9c-8527-976962086ec2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/killit-2-rich.jpg",
+              "image": "shopify://shop_images/killit-2-rich.jpg",
               "apply_overlay": true,
               "content_position": "bottomLeft",
               "left_position": "0px",
@@ -274,8 +274,8 @@
           "3877181d-81df-43d8-9aaa-9d82ade6b6ab": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Core_Web.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/Core_Mobile.jpg",
+              "image": "shopify://shop_images/Core_Web.jpg",
+              "mobile_image": "shopify://shop_images/Core_Mobile.jpg",
               "apply_overlay": false,
               "content_position": "bottomCenter",
               "left_position": "0px",
@@ -286,7 +286,7 @@
               "subheading": "",
               "title": "",
               "button_1_text": "SHOP NOW",
-              "button_1_link": "shopify:\/\/pages\/core-line",
+              "button_1_link": "shopify://pages/core-line",
               "button_2_text": "",
               "button_2_link": "",
               "buttton_1_text_color": "#000000",
@@ -348,7 +348,7 @@
           "text_color": "#ffffff",
           "apply_overlay": true,
           "title": "Our story",
-          "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          "content": "<p>Add your own custom content to explain your processes...</p>"
         }
       },
       "product-template": {
@@ -393,7 +393,7 @@
           "show_only_for_visitors": false,
           "show_only_once": false,
           "title": "Want $25 Off Your Order?",
-          "content": "<p>Just spend over $149 and we'll apply your discount at checkout.<\/p>\n<p><strong>Offer valid with FREE SHIPPING!<\/strong><\/p>",
+          "content": "<p>Just spend over $149 and we'll apply your discount at checkout.</p>\n<p><strong>Offer valid with FREE SHIPPING!</strong></p>",
           "show_newsletter": false,
           "apparition_delay": 6
         }
@@ -404,7 +404,7 @@
           "1544153586359-0": {
             "type": "collection",
             "settings": {
-              "collection": "best-sellers",
+              "collection": "best-sellers-old",
               "title": "BEST SELLERS",
               "grid_items_count": 8,
               "button_text": ""
@@ -430,245 +430,245 @@
           "1578331301212": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_Illia_Golem.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_Illia_Golem.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/czech-small.jpg",
+              "country": "shopify://shop_images/czech-small.jpg",
               "content_position": "bottomLeft",
               "title": "Illia Yefimchyk",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/illia-yefimchyk",
+              "button_link": "shopify://pages/illia-yefimchyk",
               "apply_overlay": false
             }
           },
           "1566401778730": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_Amazonka_8d25c9eb-2b09-49fe-b673-6a1c810fc792.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_Amazonka_8d25c9eb-2b09-49fe-b673-6a1c810fc792.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/russia-small.jpg",
+              "country": "shopify://shop_images/russia-small.jpg",
               "content_position": "bottomLeft",
               "title": "Natalia Amazonka",
               "button_text": "VIEW PROFILE",
-              "button_link": "shopify:\/\/pages\/nataliya-amazonka",
+              "button_link": "shopify://pages/nataliya-amazonka",
               "apply_overlay": false
             }
           },
           "1544995837391": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_2_a0235a3b-a772-43b6-8c36-74815b15f392.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_2_a0235a3b-a772-43b6-8c36-74815b15f392.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Jack Barontini",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/jack-barontini",
+              "button_link": "shopify://pages/jack-barontini",
               "apply_overlay": false
             }
           },
           "1544995823655": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1_3f4e5e34-6d1d-4c9f-a624-156ccc00e7ef.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_1_3f4e5e34-6d1d-4c9f-a624-156ccc00e7ef.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Alexandre DiCiero",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/alexandre-diciero",
+              "button_link": "shopify://pages/alexandre-diciero",
               "apply_overlay": false
             }
           },
           "1544995927386": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_6.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_6.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Caleb Green",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/caleb-green",
+              "button_link": "shopify://pages/caleb-green",
               "apply_overlay": false
             }
           },
           "1544995768611": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Kable_Web_Slate.png",
+              "image": "shopify://shop_images/Kable_Web_Slate.png",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Chris \"Kable\" Martinez",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/chris-martinez",
+              "button_link": "shopify://pages/chris-martinez",
               "apply_overlay": false
             }
           },
           "1551901592579": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/John_Harris_Slate_39021b92-84d5-4219-81b2-0b8ba5286f6c.png",
+              "image": "shopify://shop_images/John_Harris_Slate_39021b92-84d5-4219-81b2-0b8ba5286f6c.png",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "John Harris",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/john-harris",
+              "button_link": "shopify://pages/john-harris",
               "apply_overlay": false
             }
           },
           "1550852169345": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Alessandro_Lima_SLATE.jpg",
+              "image": "shopify://shop_images/Alessandro_Lima_SLATE.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Alessandro Lima",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/alessandro-lima",
+              "button_link": "shopify://pages/alessandro-lima",
               "apply_overlay": false
             }
           },
           "1548049613252": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_8e84e59d-c7d6-4905-a829-30e51411f52c.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_8e84e59d-c7d6-4905-a829-30e51411f52c.jpg",
               "image_alignment": "top center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Dillon Williams",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/dillon-williams",
+              "button_link": "shopify://pages/dillon-williams",
               "apply_overlay": false
             }
           },
           "1559923858975": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_800xMihai-Ionita.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_800xMihai-Ionita.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/uk-small.jpg",
+              "country": "shopify://shop_images/uk-small.jpg",
               "content_position": "bottomLeft",
               "title": "Mihai Ionita",
               "button_text": "View Profile",
-              "button_link": "shopify:\/\/pages\/mihai-ionita",
+              "button_link": "shopify://pages/mihai-ionita",
               "apply_overlay": false
             }
           },
           "1594778458413": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/BobbyTomlinson_Slate-WEB.jpg",
+              "image": "shopify://shop_images/BobbyTomlinson_Slate-WEB.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Bobby Tomlinson",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/bobby-tomlinson",
+              "button_link": "shopify://pages/bobby-tomlinson",
               "apply_overlay": false
             }
           },
           "1594845134201": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NealKirby_Slate2-WEB.jpg",
+              "image": "shopify://shop_images/NealKirby_Slate2-WEB.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Neal Kirby",
               "button_text": "View Profile",
-              "button_link": "shopify:\/\/pages\/neal-kirby",
+              "button_link": "shopify://pages/neal-kirby",
               "apply_overlay": false
             }
           },
           "1594845137171": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/DanielCollins_Slate-WEB.jpg",
+              "image": "shopify://shop_images/DanielCollins_Slate-WEB.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Daniel Collins",
               "button_text": "View Profile",
-              "button_link": "shopify:\/\/pages\/daniel-collins",
+              "button_link": "shopify://pages/daniel-collins",
               "apply_overlay": false
             }
           },
           "1594845141939": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/KrisCraig_Slate_1200.jpg",
+              "image": "shopify://shop_images/KrisCraig_Slate_1200.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Kris Craig",
               "button_text": "VIEW PROFILE",
-              "button_link": "shopify:\/\/pages\/kris-craig",
+              "button_link": "shopify://pages/kris-craig",
               "apply_overlay": false
             }
           },
           "1583519652846": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/EmmaIsaacson_Slate_1200.jpg",
+              "image": "shopify://shop_images/EmmaIsaacson_Slate_1200.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small.jpg",
+              "country": "shopify://shop_images/usa-small.jpg",
               "content_position": "bottomLeft",
               "title": "Emma Isaacson",
               "button_text": "VIEW PROFILE",
-              "button_link": "shopify:\/\/pages\/emma-isaacson",
+              "button_link": "shopify://pages/emma-isaacson",
               "apply_overlay": false
             }
           },
           "b055b9b4-db7d-486c-bde0-32f2d8f87a5a": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Chris_Myers_Slate_1080.jpg",
+              "image": "shopify://shop_images/Chris_Myers_Slate_1080.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small_small_6f63303e-0fc4-4321-a366-b580b5167849.jpg",
+              "country": "shopify://shop_images/usa-small_small_6f63303e-0fc4-4321-a366-b580b5167849.jpg",
               "content_position": "bottomLeft",
               "title": "Chris Myers",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/chris-myers",
+              "button_link": "shopify://pages/chris-myers",
               "apply_overlay": false
             }
           },
           "36751cd2-d504-4442-9e16-c69b49b9356f": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_LisamarieAsaro_1080.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_LisamarieAsaro_1080.jpg",
               "image_alignment": "center center",
-              "country": "shopify:\/\/shop_images\/usa-small_small_6f63303e-0fc4-4321-a366-b580b5167849.jpg",
+              "country": "shopify://shop_images/usa-small_small_6f63303e-0fc4-4321-a366-b580b5167849.jpg",
               "content_position": "bottomLeft",
               "title": "Lisa Marie Asaro",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/lisa-marie-asaro",
+              "button_link": "shopify://pages/lisa-marie-asaro",
               "apply_overlay": false
             }
           },
           "76551503-841f-4042-b143-960b9278a6de": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_AlGreen.jpg",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate_1080_AlGreen.jpg",
               "image_alignment": "center center",
               "content_position": "bottomLeft",
               "title": "Al Green",
               "button_text": "View profile",
-              "button_link": "shopify:\/\/pages\/al-green",
+              "button_link": "shopify://pages/al-green",
               "apply_overlay": false
             }
           },
           "e8ceda72-60f0-4198-ad53-f1258fbec557": {
             "type": "collection",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate.png",
+              "image": "shopify://shop_images/SponsoredAthlete_Slate.png",
               "image_alignment": "center center",
               "content_position": "bottomLeft",
               "title": "You're Next",
               "button_text": "Join Team",
-              "button_link": "shopify:\/\/pages\/ambassadors",
+              "button_link": "shopify://pages/ambassadors",
               "apply_overlay": false
             }
           }
@@ -709,8 +709,8 @@
           "text_color": "#ffffff",
           "subheading": "",
           "title": "",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate.jpg",
-          "video_url": "https:\/\/youtu.be\/9ysRpmOUD_c"
+          "image": "shopify://shop_images/SponsoredAthlete_Slate.jpg",
+          "video_url": "https://youtu.be/9ysRpmOUD_c"
         }
       },
       "athletes_instagram-feed": {
@@ -734,16 +734,16 @@
         "settings": {
           "subheading": "THE BEAST",
           "title": "Jens Dalsgaard",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate.jpg",
+          "image": "shopify://shop_images/SponsoredAthlete_Slate.jpg",
           "image_position": "left",
           "content": "",
           "height": "5'10\"",
           "weight": "270 lbs",
           "DOB": "April 26, 1984",
           "residence": "Copenhagen, Denmark",
-          "facebook_url": "https:\/\/www.facebook.com\/jens.dalsgaard.336",
-          "instagram_url": "https:\/\/www.instagram.com\/jensthebeast1\/",
-          "youtube_url": "https:\/\/www.youtube.com\/channel\/UCFJ0DW7pd6Ij1ZKez7TJGFg",
+          "facebook_url": "https://www.facebook.com/jens.dalsgaard.336",
+          "instagram_url": "https://www.instagram.com/jensthebeast1/",
+          "youtube_url": "https://www.youtube.com/channel/UCFJ0DW7pd6Ij1ZKez7TJGFg",
           "pinterest_url": "",
           "snapchat_url": "",
           "twitter_url": "",
@@ -758,7 +758,7 @@
         "settings": {
           "show_shipping_estimator": false,
           "shipping_estimator_default_country": "United States",
-          "cart_custom_banner": "\/\/cdn.shopify.com\/s\/files\/1\/0063\/4218\/0928\/files\/Free-Shipping-Cart-Block.jpg?v=1563549268",
+          "cart_custom_banner": "//cdn.shopify.com/s/files/1/0063/4218/0928/files/Free-Shipping-Cart-Block.jpg?v=1563549268",
           "cart_custom_message": "FREE SHIPPING WITH ORDERS $99+"
         }
       },
@@ -787,7 +787,7 @@
             "type": "collection",
             "settings": {
               "collection": "supplements",
-              "image": "shopify:\/\/shop_images\/HomeNavigation_Supplements.jpg",
+              "image": "shopify://shop_images/HomeNavigation_Supplements.jpg",
               "image_alignment": "top center",
               "content_position": "bottomCenter",
               "subheading": "",
@@ -801,7 +801,7 @@
             "type": "collection",
             "settings": {
               "collection": "apparel",
-              "image": "shopify:\/\/shop_images\/HomeNavigation_Apparel.jpg",
+              "image": "shopify://shop_images/HomeNavigation_Apparel.jpg",
               "image_alignment": "top center",
               "content_position": "bottomCenter",
               "subheading": "",
@@ -815,7 +815,7 @@
             "type": "collection",
             "settings": {
               "collection": "gear",
-              "image": "shopify:\/\/shop_images\/HomeNavigation-Gear.jpg",
+              "image": "shopify://shop_images/HomeNavigation-Gear.jpg",
               "image_alignment": "top center",
               "content_position": "bottomCenter",
               "subheading": "",
@@ -829,13 +829,13 @@
             "type": "collection",
             "settings": {
               "collection": "best-sellers-stacks",
-              "image": "shopify:\/\/shop_images\/HomeNavigation_DailyDeals.jpg",
+              "image": "shopify://shop_images/HomeNavigation_DailyDeals.jpg",
               "image_alignment": "center center",
               "content_position": "bottomCenter",
               "subheading": "",
               "title": "STACK N’ SAVE",
               "button_text": "SHOP STACKS",
-              "button_link": "shopify:\/\/collections\/best-sellers-stacks",
+              "button_link": "shopify://collections/best-sellers-stacks",
               "apply_overlay": false
             }
           }
@@ -859,7 +859,7 @@
         "settings": {
           "subheading": "",
           "title": "Dillon Williams",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_8e84e59d-c7d6-4905-a829-30e51411f52c.jpg",
+          "image": "shopify://shop_images/SponsoredAthlete_Slate_8e84e59d-c7d6-4905-a829-30e51411f52c.jpg",
           "image_position": "left",
           "content": "",
           "height": "5' 9\"",
@@ -867,7 +867,7 @@
           "DOB": "January 28, 1987",
           "residence": "Dublin, Ohio, USA",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/pmluke_cage\/",
+          "instagram_url": "https://www.instagram.com/pmluke_cage/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -883,7 +883,7 @@
         "settings": {
           "subheading": "",
           "title": "Jack Barontini",
-          "image": "shopify:\/\/shop_images\/SH_ATH_JBarontini.png",
+          "image": "shopify://shop_images/SH_ATH_JBarontini.png",
           "image_position": "left",
           "content": "",
           "height": "5' 8\"",
@@ -891,7 +891,7 @@
           "DOB": "December 14, 1968",
           "residence": "Orlando, Florida",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/smp_jack\/",
+          "instagram_url": "https://www.instagram.com/smp_jack/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -907,7 +907,7 @@
         "settings": {
           "subheading": "",
           "title": "Shay O'Toole",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_4.jpg",
+          "image": "shopify://shop_images/SponsoredAthlete_Slate_4.jpg",
           "image_position": "left",
           "content": "",
           "height": "5' 8\"",
@@ -915,7 +915,7 @@
           "DOB": "February 17, 1976",
           "residence": "Midlands, United Kingdom",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/5percenterforlife\/",
+          "instagram_url": "https://www.instagram.com/5percenterforlife/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -933,10 +933,10 @@
           "text_color": "#ae1e24",
           "title": "RICHER BY THE DAY",
           "subheading": "ENTER FOR A CHANCE TO WIN",
-          "link_url": "https:\/\/www.5percentcontest.com\/",
+          "link_url": "https://www.5percentcontest.com/",
           "link_text": "Enter Now!",
-          "image": "shopify:\/\/shop_images\/Video_BG_Still.jpg",
-          "video_url": "https:\/\/vimeo.com\/395018989"
+          "image": "shopify://shop_images/Video_BG_Still.jpg",
+          "video_url": "https://vimeo.com/395018989"
         }
       },
       "A02": {
@@ -944,7 +944,7 @@
         "settings": {
           "subheading": "",
           "title": "Paulo Almeida",
-          "image": "shopify:\/\/shop_images\/SH_ATH_PALmeida.png",
+          "image": "shopify://shop_images/SH_ATH_PALmeida.png",
           "image_position": "left",
           "content": "",
           "height": "5' 10\"",
@@ -952,7 +952,7 @@
           "DOB": "May 13, 1976",
           "residence": "Victoria, British Columbia",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/pauloalmeidaifbbpro\/",
+          "instagram_url": "https://www.instagram.com/pauloalmeidaifbbpro/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -968,7 +968,7 @@
         "settings": {
           "subheading": "",
           "title": "Mihai Ionita",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Mihai-Ionita.png",
+          "image": "shopify://shop_images/SponsoredAthlete_Mihai-Ionita.png",
           "image_position": "left",
           "content": "",
           "height": "6'",
@@ -976,8 +976,8 @@
           "DOB": "August 15, 1993",
           "residence": "Dunstable, UK",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/mihaitrainer\/",
-          "youtube_url": "https:\/\/www.youtube.com\/mihaitrainer",
+          "instagram_url": "https://www.instagram.com/mihaitrainer/",
+          "youtube_url": "https://www.youtube.com/mihaitrainer",
           "pinterest_url": "",
           "snapchat_url": "",
           "twitter_url": "",
@@ -1003,15 +1003,15 @@
         "settings": {
           "subheading": "",
           "title": "Nataliya Amazonka",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Page_Amazonka.png",
+          "image": "shopify://shop_images/SponsoredAthlete_Page_Amazonka.png",
           "image_position": "left",
           "content": "",
           "height": "5' 7\"",
           "weight": "209 lbs",
           "DOB": "January 7, 1991",
           "residence": "Krasnogorsk, Russia",
-          "facebook_url": "https:\/\/www.facebook.com\/nataliya.kuznetsova.923",
-          "instagram_url": "https:\/\/www.instagram.com\/nataliya.amazonka\/",
+          "facebook_url": "https://www.facebook.com/nataliya.kuznetsova.923",
+          "instagram_url": "https://www.instagram.com/nataliya.amazonka/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1038,7 +1038,7 @@
         "settings": {
           "subheading": "",
           "title": "Pedro Barron",
-          "image": "shopify:\/\/shop_images\/SH_ATH_PBarron.png",
+          "image": "shopify://shop_images/SH_ATH_PBarron.png",
           "image_position": "left",
           "content": "",
           "height": "5'3\"",
@@ -1046,7 +1046,7 @@
           "DOB": "October 20th",
           "residence": "Venice, California",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/pedrobarron_ifbbpro\/",
+          "instagram_url": "https://www.instagram.com/pedrobarron_ifbbpro/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1073,7 +1073,7 @@
         "settings": {
           "subheading": "",
           "title": "Alex Di Ciero",
-          "image": "shopify:\/\/shop_images\/SH_ATH_ADiCeiero.png",
+          "image": "shopify://shop_images/SH_ATH_ADiCeiero.png",
           "image_position": "left",
           "content": "",
           "height": "6' 3\"",
@@ -1081,7 +1081,7 @@
           "DOB": "January 13, 1979",
           "residence": "Long Beach, California",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/alexdiciero\/",
+          "instagram_url": "https://www.instagram.com/alexdiciero/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1130,7 +1130,7 @@
         "settings": {
           "subheading": "",
           "title": "Bobby Tomlinson",
-          "image": "shopify:\/\/shop_images\/BobbyTomlinson_Bio-WEB.png",
+          "image": "shopify://shop_images/BobbyTomlinson_Bio-WEB.png",
           "image_position": "left",
           "content": "",
           "height": "5' 7\"",
@@ -1138,7 +1138,7 @@
           "DOB": "August 26th, 1994",
           "residence": "Huntington Beach, California, USA",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/bobb_thebuilderr\/",
+          "instagram_url": "https://www.instagram.com/bobb_thebuilderr/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1176,7 +1176,7 @@
         "settings": {
           "subheading": "5% AMBASSADOR",
           "title": "Amelia OToole",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_5.jpg",
+          "image": "shopify://shop_images/SponsoredAthlete_Slate_5.jpg",
           "image_position": "left",
           "content": "",
           "height": "",
@@ -1184,7 +1184,7 @@
           "DOB": "",
           "residence": "",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/5percenterforlife\/",
+          "instagram_url": "https://www.instagram.com/5percenterforlife/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1211,7 +1211,7 @@
         "settings": {
           "subheading": "",
           "title": "Caleb Green",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_6.jpg",
+          "image": "shopify://shop_images/SponsoredAthlete_Slate_6.jpg",
           "image_position": "left",
           "content": "",
           "height": "6' 4\"",
@@ -1219,7 +1219,7 @@
           "DOB": "September 13, 1981",
           "residence": "Jacksonville, Florida",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/big_c_green\/",
+          "instagram_url": "https://www.instagram.com/big_c_green/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1265,35 +1265,35 @@
             "type": "question",
             "settings": {
               "title": "What carriers and service options are available?",
-              "answer": "<p>We have two popular shipping services on tap with FedEx and USPS. We default to FedEx Ground and normal priority. If your order needed a custom solution or was especially large, we can route your order via freight forwarder.<\/p>"
+              "answer": "<p>We have two popular shipping services on tap with FedEx and USPS. We default to FedEx Ground and normal priority. If your order needed a custom solution or was especially large, we can route your order via freight forwarder.</p>"
             }
           },
           "page-faq-template-2": {
             "type": "question",
             "settings": {
               "title": "How long will it take to get my order?",
-              "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>\n<p>*<strong>Orders Shipped via USPS:&nbsp;<\/strong>While we&rsquo;ve returned to normal business operations, one of our carriers United States Postal Service, remains impacted by the COVID-19 pandemic. USPS has recently stated that there could be additional delays for packages. Should you continue your order with USPS, please note that it may take longer than expected to arrive. Thank you for your patience<\/p>"
+              "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>\n<p>*<strong>Orders Shipped via USPS:&nbsp;</strong>While we&rsquo;ve returned to normal business operations, one of our carriers United States Postal Service, remains impacted by the COVID-19 pandemic. USPS has recently stated that there could be additional delays for packages. Should you continue your order with USPS, please note that it may take longer than expected to arrive. Thank you for your patience</p>"
             }
           },
           "page-faq-template-1": {
             "type": "question",
             "settings": {
               "title": "Do you ship overseas?",
-              "answer": "<p><span>Yes, we ship all over the world. Orders shipped to countries outside of the United States could be subject to import taxes and customs duties charged by the destination country. Customs policies are different from country to country and as such, we advise contacting your local customs office for further information. <\/span><span>For more information, please view our&nbsp; <\/span><a href=\"https:\/\/5percentnutrition.com\/pages\/shipping-returns#internationalshipping\" title=\"https:\/\/5percentnutrition.com\/pages\/shipping-returns#internationalshipping\">Shipping Policies<\/a><span>.<\/span><\/p>"
+              "answer": "<p><span>Yes, we ship all over the world. Orders shipped to countries outside of the United States could be subject to import taxes and customs duties charged by the destination country. Customs policies are different from country to country and as such, we advise contacting your local customs office for further information. </span><span>For more information, please view our&nbsp; </span><a href=\"https://5percentnutrition.com/pages/shipping-returns#internationalshipping\" title=\"https://5percentnutrition.com/pages/shipping-returns#internationalshipping\">Shipping Policies</a><span>.</span></p>"
             }
           },
           "page-faq-template-5": {
             "type": "question",
             "settings": {
               "title": "What is your return policy?",
-              "answer": "<p>Our return and refund policy lasts up to 30 days from the date of purchase. If 30 days have gone by since your purchase, unfortunately, we can&rsquo;t offer you a refund or exchange.<\/p>\n<p>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging. Please return the unopened item(s) to the address below:<\/p>\n<p><strong>5% Nutrition<br><\/strong><strong>ATTN: RETURNS<br><\/strong><strong>8285 Bryan Dairy Rd<br><\/strong><strong>Suite 190<br><\/strong><strong>Largo, FL 33777<\/strong><\/p>\n<p>Please be sure to include a brief note within your package, stating the reason for the exchange\/return and describing any pertinent info about the exchange\/return (i.e. Return for size X, return for full refund, etc.), order number, full name and email address.&nbsp;<\/p>\n<p>For more information, please view our <a href=\"https:\/\/5percentnutrition.com\/pages\/shipping-returns#returns\" title=\"https:\/\/5percentnutrition.com\/pages\/shipping-returns#returns\">Return Policy<\/a>.<\/p>"
+              "answer": "<p>Our return and refund policy lasts up to 30 days from the date of purchase. If 30 days have gone by since your purchase, unfortunately, we can&rsquo;t offer you a refund or exchange.</p>\n<p>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging. Please return the unopened item(s) to the address below:</p>\n<p><strong>5% Nutrition<br></strong><strong>ATTN: RETURNS<br></strong><strong>8285 Bryan Dairy Rd<br></strong><strong>Suite 190<br></strong><strong>Largo, FL 33777</strong></p>\n<p>Please be sure to include a brief note within your package, stating the reason for the exchange/return and describing any pertinent info about the exchange/return (i.e. Return for size X, return for full refund, etc.), order number, full name and email address.&nbsp;</p>\n<p>For more information, please view our <a href=\"https://5percentnutrition.com/pages/shipping-returns#returns\" title=\"https://5percentnutrition.com/pages/shipping-returns#returns\">Return Policy</a>.</p>"
             }
           },
           "1600976423509": {
             "type": "question",
             "settings": {
               "title": "I don’t have any tracking information for my package, what should I do?",
-              "answer": "<p>We do our best ship all the same day they are ordered. Most orders are shipped by noon the next day. Some items may take up to <strong><u>2 <span style=\"text-decoration: underline;\">business<\/span> days<\/u><\/strong> to ship. If you order was placed on a Friday please note this time will not include the weekend, as our staff do not work weekends at this time.&nbsp;<\/p>\n<p>We are open Monday to through Friday orders from 8am to 5pm EST and are closed on all major holidays.<\/p>"
+              "answer": "<p>We do our best ship all the same day they are ordered. Most orders are shipped by noon the next day. Some items may take up to <strong><u>2 <span style=\"text-decoration: underline;\">business</span> days</u></strong> to ship. If you order was placed on a Friday please note this time will not include the weekend, as our staff do not work weekends at this time.&nbsp;</p>\n<p>We are open Monday to through Friday orders from 8am to 5pm EST and are closed on all major holidays.</p>"
             }
           },
           "1550498989903": {
@@ -1306,28 +1306,28 @@
             "type": "question",
             "settings": {
               "title": "How can I access my past orders?",
-              "answer": "<p>If you've placed an order with us, rest assured, we still have the information in our back-office systems. However, for the safety and security of our customers, we elected NOT to import past order data into our new ecommerce system. If you placed an order with us on or before February 15, 2019 please contact&nbsp;<a href=\"https:\/\/5percentnutrition.com\/pages\/contact-us\" title=\"https:\/\/5percentnutrition.com\/pages\/contact-us\">customer service<\/a> or ping us using the live chat.<\/p>"
+              "answer": "<p>If you've placed an order with us, rest assured, we still have the information in our back-office systems. However, for the safety and security of our customers, we elected NOT to import past order data into our new ecommerce system. If you placed an order with us on or before February 15, 2019 please contact&nbsp;<a href=\"https://5percentnutrition.com/pages/contact-us\" title=\"https://5percentnutrition.com/pages/contact-us\">customer service</a> or ping us using the live chat.</p>"
             }
           },
           "1561555964164": {
             "type": "question",
             "settings": {
               "title": "Do you offer any payment plan options?",
-              "answer": "<p>Yes, we've partnered with Sezzle to process orders into 4 easy payments.&nbsp;<a href=\"\/pages\/sezzle\" title=\"Sezzle for Payments\">Learn more<\/a> about Sezzle payments.<\/p>"
+              "answer": "<p>Yes, we've partnered with Sezzle to process orders into 4 easy payments.&nbsp;<a href=\"/pages/sezzle\" title=\"Sezzle for Payments\">Learn more</a> about Sezzle payments.</p>"
             }
           },
           "1600976563302": {
             "type": "question",
             "settings": {
               "title": "I received a damaged or incorrect product, what should I do?",
-              "answer": "<p>Please send a picture of the packing slip and <strong><u>the products you received<\/u><\/strong> to <a href=\"mailto:customerservice@5percentnutrition.com\">customerservice@5percentnutrition.com<\/a> with your order number and name in the email. As soon as we receive this information, we will go over the options we have available with you.<\/p>"
+              "answer": "<p>Please send a picture of the packing slip and <strong><u>the products you received</u></strong> to <a href=\"mailto:customerservice@5percentnutrition.com\">customerservice@5percentnutrition.com</a> with your order number and name in the email. As soon as we receive this information, we will go over the options we have available with you.</p>"
             }
           },
           "1600976591899": {
             "type": "question",
             "settings": {
               "title": "My Package says it was delivered but I have not received it, what should I do?",
-              "answer": "<p>Please send a message to <a href=\"mailto:customerservice@5percentnutrition.com\">customerservice@5percentnutrition.com<\/a> with your name, and order number. If you are able, please answer the following questions within the email, as it will make the process of us talking to the carrier more efficient.<\/p>\n<p>&bull; Did you check with your neighbors to see if one of them accidentally received your package? <br>&bull; Is there another street with a similar name to yours within a 3 to 5 block radius? <br>&bull; Was there someone at home at the above time who may (or may not) have heard the delivery person?<br>&bull; Would it be okay if the carrier contacted you regarding this issue over the phone? If so, can you please provide me with the best number to contact you at?<\/p>"
+              "answer": "<p>Please send a message to <a href=\"mailto:customerservice@5percentnutrition.com\">customerservice@5percentnutrition.com</a> with your name, and order number. If you are able, please answer the following questions within the email, as it will make the process of us talking to the carrier more efficient.</p>\n<p>&bull; Did you check with your neighbors to see if one of them accidentally received your package? <br>&bull; Is there another street with a similar name to yours within a 3 to 5 block radius? <br>&bull; Was there someone at home at the above time who may (or may not) have heard the delivery person?<br>&bull; Would it be okay if the carrier contacted you regarding this issue over the phone? If so, can you please provide me with the best number to contact you at?</p>"
             }
           },
           "page-faq-template-4": {
@@ -1340,56 +1340,56 @@
             "type": "question",
             "settings": {
               "title": "Where do I find the dose and usage instructions?",
-              "answer": "<p>We have added new instructions and content to our latest version of the website. Navigate to the product page that you're interested in learning more about and scroll down to the FAQs section.<\/p>"
+              "answer": "<p>We have added new instructions and content to our latest version of the website. Navigate to the product page that you're interested in learning more about and scroll down to the FAQs section.</p>"
             }
           },
           "1550500973083": {
             "type": "question",
             "settings": {
               "title": "Do we still offer meal plan services?",
-              "answer": "<p>Unfortunately, we have discontinued this program.<\/p>"
+              "answer": "<p>Unfortunately, we have discontinued this program.</p>"
             }
           },
           "1561556151867": {
             "type": "question",
             "settings": {
               "title": "What happened to the Real Foods bars?",
-              "answer": "<p>All Real Food bars and related products have been discontinued.<\/p>"
+              "answer": "<p>All Real Food bars and related products have been discontinued.</p>"
             }
           },
           "1550697843006": {
             "type": "question",
             "settings": {
               "title": "Do you still make the Egg White Crystals?",
-              "answer": "<p>We do apologize. We no longer offer the Egg White Crystals product. We did release a new product, Real Carbs + Protein, which uses similar ingredients but in combination of the Real Carbs supplement. The product is currently available for purchase online <a href=\"https:\/\/5percentnutrition.com\/collections\/protein\/products\/real-carbs-plus-protein\">here.<\/a><\/p>"
+              "answer": "<p>We do apologize. We no longer offer the Egg White Crystals product. We did release a new product, Real Carbs + Protein, which uses similar ingredients but in combination of the Real Carbs supplement. The product is currently available for purchase online <a href=\"https://5percentnutrition.com/collections/protein/products/real-carbs-plus-protein\">here.</a></p>"
             }
           },
           "1550499207601": {
             "type": "question",
             "settings": {
               "title": "My Kill It Reloaded is clumpy, is it safe to use?",
-              "answer": "<p>Due to the ingredients used to promote muscle pump and vascularity, this product can sometimes clump when stored even if the seal is unbroken. This does not reduce the effectiveness of the product and does not indicate a defect. To reduce the clumping, simply tap the edge of the product bottle on a hard surface, 4 to 6 times and shake vigorously for 10 seconds. This should eliminate the clumping.<\/p>"
+              "answer": "<p>Due to the ingredients used to promote muscle pump and vascularity, this product can sometimes clump when stored even if the seal is unbroken. This does not reduce the effectiveness of the product and does not indicate a defect. To reduce the clumping, simply tap the edge of the product bottle on a hard surface, 4 to 6 times and shake vigorously for 10 seconds. This should eliminate the clumping.</p>"
             }
           },
           "1600976815174": {
             "type": "question",
             "settings": {
               "title": "My product has a Prop 65 warning on it, what does that mean?",
-              "answer": "<p>California's&nbsp;Proposition&nbsp;65&nbsp;requires businesses to provide warnings to Californians about exposures to chemicals that can cause cancer, birth defects or other reproductive harm. Lead is widely found in nature and due to the botanical ingredients found in the product, trace amounts of lead have been absorbed from the soil.<\/p>\n<p><a href=\"https:\/\/www.p65warnings.ca.gov\/fact-sheets\/lead-and-lead-compounds\">https:\/\/www.p65warnings.ca.gov\/fact-sheets\/lead-and-lead-compounds<\/a><\/p>\n<p>We test all of our products for heavy metals and reject any product that exceeds the USP limits for heavy metals.<\/p>"
+              "answer": "<p>California's&nbsp;Proposition&nbsp;65&nbsp;requires businesses to provide warnings to Californians about exposures to chemicals that can cause cancer, birth defects or other reproductive harm. Lead is widely found in nature and due to the botanical ingredients found in the product, trace amounts of lead have been absorbed from the soil.</p>\n<p><a href=\"https://www.p65warnings.ca.gov/fact-sheets/lead-and-lead-compounds\">https://www.p65warnings.ca.gov/fact-sheets/lead-and-lead-compounds</a></p>\n<p>We test all of our products for heavy metals and reject any product that exceeds the USP limits for heavy metals.</p>"
             }
           },
           "1600976900019": {
             "type": "question",
             "settings": {
               "title": "I purchased a gift card and haven’t received it in the mail yet, can you help me?",
-              "answer": "<p>Your gift card was sent digitally, to your email address, if you are having issues locating the gift card in your email, please reach out to <a href=\"mailto:customerservice@5percentnutrition.com\">customerservice@5percentnutrition.com<\/a> with the order number and name on the order.<\/p>"
+              "answer": "<p>Your gift card was sent digitally, to your email address, if you are having issues locating the gift card in your email, please reach out to <a href=\"mailto:customerservice@5percentnutrition.com\">customerservice@5percentnutrition.com</a> with the order number and name on the order.</p>"
             }
           },
           "1600976938714": {
             "type": "question",
             "settings": {
               "title": "What is the difference between Kill It, Kill It Reloaded, 5150 and Full As F*ck?",
-              "answer": "<p><strong>Kill It<\/strong> is an effective pre-workout with less caffeine making it ideal for those users looking for a lower stimulant experience as well as users that are using a pre-workout for the first time. <strong>Kill It Reloaded<\/strong> is a complete pre-workout with a higher caffeine content, making it ideal for users with more experience using a pre-workout. <strong>5150<\/strong> is a balls-to-the-wall high stim pre-workout that is designed for hardcore users seeking the ultimate stimulant experience. <strong>Full As F*ck<\/strong> is our mega dosed, stim-free pump formula that&rsquo;s ideal for users that do not want stims as well as those users that are cycling pre-workouts and want a break from the stim-based products.<\/p>"
+              "answer": "<p><strong>Kill It</strong> is an effective pre-workout with less caffeine making it ideal for those users looking for a lower stimulant experience as well as users that are using a pre-workout for the first time. <strong>Kill It Reloaded</strong> is a complete pre-workout with a higher caffeine content, making it ideal for users with more experience using a pre-workout. <strong>5150</strong> is a balls-to-the-wall high stim pre-workout that is designed for hardcore users seeking the ultimate stimulant experience. <strong>Full As F*ck</strong> is our mega dosed, stim-free pump formula that&rsquo;s ideal for users that do not want stims as well as those users that are cycling pre-workouts and want a break from the stim-based products.</p>"
             }
           },
           "1550499523058": {
@@ -1402,14 +1402,14 @@
             "type": "question",
             "settings": {
               "title": "Where do I join the ambassador program?",
-              "answer": "<p>Learn more about the program and <a href=\"\/pages\/ambassadors\" title=\"5% Brand Ambassadors\">register today<\/a>, it's free!<\/p>"
+              "answer": "<p>Learn more about the program and <a href=\"/pages/ambassadors\" title=\"5% Brand Ambassadors\">register today</a>, it's free!</p>"
             }
           },
           "1553892855834": {
             "type": "question",
             "settings": {
               "title": "I'm already an ambassador, how can I login?",
-              "answer": "<p>Please access the <a href=\"https:\/\/5percent.refersion.com\/affiliate\/login\" title=\"https:\/\/5percent.refersion.com\/affiliate\/login\">ambassador dashboard<\/a>.<\/p>"
+              "answer": "<p>Please access the <a href=\"https://5percent.refersion.com/affiliate/login\" title=\"https://5percent.refersion.com/affiliate/login\">ambassador dashboard</a>.</p>"
             }
           },
           "1550500195043": {
@@ -1422,21 +1422,21 @@
             "type": "question",
             "settings": {
               "title": "What are your hours of operation?",
-              "answer": "<p>We are open Monday through Friday from 9:00am to 5:00pm EST. Our live chat is available from 9:00am to 4:30pm EST to handle your inquiries. We are closed on major holidays and over the weekend.<\/p>"
+              "answer": "<p>We are open Monday through Friday from 9:00am to 5:00pm EST. Our live chat is available from 9:00am to 4:30pm EST to handle your inquiries. We are closed on major holidays and over the weekend.</p>"
             }
           },
           "1566419986837": {
             "type": "question",
             "settings": {
               "title": "Do you offer a military or first responder discount program?",
-              "answer": "<p>Yes, we do! Just visit <a href=\"http:\/\/www.5percentnutrition.com\/pages\/military\">www.5percentnutrition.com\/pages\/military<\/a> to confirm your active duty status.<\/p>\n<p>Should you have questions or discount questions in in the future, you&rsquo;re welcome to start a live chat or call during normal business hours.<\/p>"
+              "answer": "<p>Yes, we do! Just visit <a href=\"http://www.5percentnutrition.com/pages/military\">www.5percentnutrition.com/pages/military</a> to confirm your active duty status.</p>\n<p>Should you have questions or discount questions in in the future, you&rsquo;re welcome to start a live chat or call during normal business hours.</p>"
             }
           },
           "1561572605025": {
             "type": "question",
             "settings": {
               "title": "Is your website accessible for visually impaired visitors?",
-              "answer": "<p>We are committed to making our website as accessible as possible to people with special needs, including those with visual, hearing, cognitive and motor impairments. We're constantly working towards improving the accessibility of our website to ensure we provide equal access to all of our users.<\/p>\n<p><a href=\"https:\/\/5percentnutrition.com\/pages\/accessibility\">Click&nbsp;to view&nbsp;full accessibility statement<\/a>.<\/p>"
+              "answer": "<p>We are committed to making our website as accessible as possible to people with special needs, including those with visual, hearing, cognitive and motor impairments. We're constantly working towards improving the accessibility of our website to ensure we provide equal access to all of our users.</p>\n<p><a href=\"https://5percentnutrition.com/pages/accessibility\">Click&nbsp;to view&nbsp;full accessibility statement</a>.</p>"
             }
           },
           "page-faq-template-7": {
@@ -1449,35 +1449,35 @@
             "type": "question",
             "settings": {
               "title": "Where can I inquire about becoming a retailer of 5% Nutrition?",
-              "answer": "<p>You can visit the <a href=\"\/pages\/retail-inquiry\" title=\"WHOLESALE INQUIRIES\">Wholesale Inquiries<\/a> page and complete the form.<\/p>"
+              "answer": "<p>You can visit the <a href=\"/pages/retail-inquiry\" title=\"WHOLESALE INQUIRIES\">Wholesale Inquiries</a> page and complete the form.</p>"
             }
           },
           "1565789287112": {
             "type": "question",
             "settings": {
               "title": "What happened to PayPal Express Checkout?",
-              "answer": "<p><strong>Due to recent changes in PayPal Terms of Services, we are temporarily suspending our use of PayPal as a payment provider. We apologize for any inconvenience this may cause our customers.<\/strong><\/p>\n<p>While we resolve this issue and to improve your shopping experience, we have elected to remove PayPal from the express checkout options.&nbsp;<strong>All orders placed before August 13, 2019 using PayPal will be honored.<\/strong><\/p>\n<p>If you have any questions, please contact our&nbsp;<a href=\"https:\/\/5percentnutrition.com\/pages\/contact-us\">customer service department<\/a>.<\/p>"
+              "answer": "<p><strong>Due to recent changes in PayPal Terms of Services, we are temporarily suspending our use of PayPal as a payment provider. We apologize for any inconvenience this may cause our customers.</strong></p>\n<p>While we resolve this issue and to improve your shopping experience, we have elected to remove PayPal from the express checkout options.&nbsp;<strong>All orders placed before August 13, 2019 using PayPal will be honored.</strong></p>\n<p>If you have any questions, please contact our&nbsp;<a href=\"https://5percentnutrition.com/pages/contact-us\">customer service department</a>.</p>"
             }
           },
           "1550498771219": {
             "type": "question",
             "settings": {
               "title": "What happened to Rich-Piana.com?",
-              "answer": "<p>It's still very much our site. However, it's now been consolidated in the 5% family. We migrated systems beginning February 15, 2019 to a new ecommerce platform with goal of giving our customers the best possible shopping experience. While we feel the site is an overall upgrade, we realize it will take a minute for everyone to get used to the changes. We apologize for these in advance and will make every effort to help you transition to the new site.<\/p>"
+              "answer": "<p>It's still very much our site. However, it's now been consolidated in the 5% family. We migrated systems beginning February 15, 2019 to a new ecommerce platform with goal of giving our customers the best possible shopping experience. While we feel the site is an overall upgrade, we realize it will take a minute for everyone to get used to the changes. We apologize for these in advance and will make every effort to help you transition to the new site.</p>"
             }
           },
           "page-faq-template-8": {
             "type": "question",
             "settings": {
               "title": "Still have a question for us?",
-              "answer": "<p>You can contact us through our <a href=\"\/pages\/contact-us\" title=\"Contact Us\">contact us<\/a>&nbsp;page and we'll be happy to assist you.<\/p>"
+              "answer": "<p>You can contact us through our <a href=\"/pages/contact-us\" title=\"Contact Us\">contact us</a>&nbsp;page and we'll be happy to assist you.</p>"
             }
           },
           "1601921714407": {
             "type": "question",
             "settings": {
               "title": "A product I want is out of stock, is there a way I can be notified when it comes back in stock?",
-              "answer": "<p>You can set up an email notification following these steps:&nbsp;<br>1. Go to the product page (<a href=\"http:\/\/www.5percentnutrition.com\/\">www.5percentnutrition.com<\/a> -&gt; Search for desired product and click)<br>2. Click on the red Sold Out! button&nbsp;<br>3. Enter your email address and hit submit<br>4. All set! As soon as we check the product into inventory, you will receive an email!<\/p>"
+              "answer": "<p>You can set up an email notification following these steps:&nbsp;<br>1. Go to the product page (<a href=\"http://www.5percentnutrition.com/\">www.5percentnutrition.com</a> -&gt; Search for desired product and click)<br>2. Click on the red Sold Out! button&nbsp;<br>3. Enter your email address and hit submit<br>4. All set! As soon as we check the product into inventory, you will receive an email!</p>"
             }
           }
         },
@@ -1546,15 +1546,15 @@
         "settings": {
           "subheading": "",
           "title": "Chris \"Kable\" Martinez",
-          "image": "shopify:\/\/shop_images\/Kable_Web_Bio.png",
+          "image": "shopify://shop_images/Kable_Web_Bio.png",
           "image_position": "left",
-          "content": "<p>&bull;&nbsp;<span style=\"text-decoration: none;\">U.S. Army Veteran<br><\/span><span style=\"text-decoration: none;\">&bull; 19 Year Police Veteran<br><\/span><span style=\"text-decoration: none;\">&bull; SWAT Team Member<\/span><\/p>\n<p><span style=\"text-decoration: none;\">&bull; Personal Trainer<br><\/span><span style=\"text-decoration: none;\">&bull; NPC Mens Physique &amp;&nbsp;<\/span><span style=\"text-decoration: none;\">GBO Beach Body Competitor<\/span><\/p>",
+          "content": "<p>&bull;&nbsp;<span style=\"text-decoration: none;\">U.S. Army Veteran<br></span><span style=\"text-decoration: none;\">&bull; 19 Year Police Veteran<br></span><span style=\"text-decoration: none;\">&bull; SWAT Team Member</span></p>\n<p><span style=\"text-decoration: none;\">&bull; Personal Trainer<br></span><span style=\"text-decoration: none;\">&bull; NPC Mens Physique &amp;&nbsp;</span><span style=\"text-decoration: none;\">GBO Beach Body Competitor</span></p>",
           "height": "6' 0\"",
           "weight": "215 lbs",
           "DOB": "June 8, 1976",
           "residence": "Cutler Bay, Florida",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/kable_official\/",
+          "instagram_url": "https://www.instagram.com/kable_official/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1602,7 +1602,7 @@
         "settings": {
           "subheading": "",
           "title": "Zach Salter",
-          "image": "shopify:\/\/shop_images\/Zach_Salter.png",
+          "image": "shopify://shop_images/Zach_Salter.png",
           "image_position": "left",
           "content": "",
           "height": "5' 11\"",
@@ -1610,7 +1610,7 @@
           "DOB": "December 6, 1981",
           "residence": "Scottsdale, Arizona",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/zachsalter\/",
+          "instagram_url": "https://www.instagram.com/zachsalter/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1626,16 +1626,16 @@
         "settings": {
           "subheading": "",
           "title": "Emma Isaacson",
-          "image": "shopify:\/\/shop_images\/EmmaIsaacson_Page_1200x1080_9072a7d9-4d5d-4566-8c3d-a35d1777493c.png",
+          "image": "shopify://shop_images/EmmaIsaacson_Page_1200x1080_9072a7d9-4d5d-4566-8c3d-a35d1777493c.png",
           "image_position": "left",
           "content": "",
           "height": "5' 4\"",
           "weight": "134 lbs",
           "DOB": "April 15, 1994",
           "residence": "Jacksonville, FL, USA",
-          "facebook_url": "https:\/\/www.facebook.com\/emma.isaacson",
-          "instagram_url": "https:\/\/www.instagram.com\/Cycloneirma\/",
-          "twitter_url": "https:\/\/twitter.com\/Cycloneirma"
+          "facebook_url": "https://www.facebook.com/emma.isaacson",
+          "instagram_url": "https://www.instagram.com/Cycloneirma/",
+          "twitter_url": "https://twitter.com/Cycloneirma"
         }
       },
       "A14-V": {
@@ -1653,15 +1653,15 @@
         "settings": {
           "subheading": "",
           "title": "Alessandro Lima",
-          "image": "shopify:\/\/shop_images\/Alessandro_Lima_web_5b1a78ff-d3c8-4566-93d9-ba13500635b0.png",
+          "image": "shopify://shop_images/Alessandro_Lima_web_5b1a78ff-d3c8-4566-93d9-ba13500635b0.png",
           "image_position": "left",
           "content": "",
           "height": "5' 9\"",
           "weight": "197 lbs",
           "DOB": "January 28, 1979",
           "residence": "Gardena, California",
-          "facebook_url": "https:\/\/www.facebook.com\/profile.php?id=100003556608326",
-          "instagram_url": "https:\/\/www.instagram.com\/alessandrolima4\/",
+          "facebook_url": "https://www.facebook.com/profile.php?id=100003556608326",
+          "instagram_url": "https://www.instagram.com/alessandrolima4/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1677,16 +1677,16 @@
         "settings": {
           "subheading": "",
           "title": "Illia \"Golem\" Yefimchyk",
-          "image": "shopify:\/\/shop_images\/SponsoredAthlete_Page_Illia_Golem.png",
+          "image": "shopify://shop_images/SponsoredAthlete_Page_Illia_Golem.png",
           "image_position": "left",
           "content": "",
           "height": "6' 1\"",
           "weight": "350 lbs",
           "DOB": "April 23, 1988",
           "residence": "Prague, Czech Republic",
-          "facebook_url": "https:\/\/www.facebook.com\/illia.yefimchyk",
-          "instagram_url": "https:\/\/www.instagram.com\/illiagolem\/",
-          "youtube_url": "https:\/\/www.youtube.com\/channel\/UCNlKHPP7SbQ3SkDvCFFjSsw",
+          "facebook_url": "https://www.facebook.com/illia.yefimchyk",
+          "instagram_url": "https://www.instagram.com/illiagolem/",
+          "youtube_url": "https://www.youtube.com/channel/UCNlKHPP7SbQ3SkDvCFFjSsw",
           "pinterest_url": "",
           "snapchat_url": "",
           "twitter_url": "",
@@ -1701,14 +1701,14 @@
         "settings": {
           "subheading": "IFBB Pro",
           "title": "Ed Hall",
-          "image": "shopify:\/\/shop_images\/EdHall_Page_1200x1080_45487664-5971-4e6d-b6a2-df8598d97d0d.png",
+          "image": "shopify://shop_images/EdHall_Page_1200x1080_45487664-5971-4e6d-b6a2-df8598d97d0d.png",
           "image_position": "left",
           "content": "",
           "height": "5' 7\"",
           "weight": "248 lbs",
           "DOB": "February 26, 1966",
           "residence": "La Grange, North Carolina",
-          "instagram_url": "https:\/\/www.instagram.com\/maturedmuscle\/"
+          "instagram_url": "https://www.instagram.com/maturedmuscle/"
         }
       },
       "A19": {
@@ -1716,7 +1716,7 @@
         "settings": {
           "subheading": "",
           "title": "Andrew Rose",
-          "image": "shopify:\/\/shop_images\/Andrew_Rose.png",
+          "image": "shopify://shop_images/Andrew_Rose.png",
           "image_position": "left",
           "content": "",
           "height": "5' 8\"",
@@ -1724,7 +1724,7 @@
           "DOB": "April 29, 1988",
           "residence": "Columbia, South Carolina",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/1morereptokillit\/",
+          "instagram_url": "https://www.instagram.com/1morereptokillit/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1751,15 +1751,15 @@
         "settings": {
           "subheading": "",
           "title": "John Harris",
-          "image": "shopify:\/\/shop_images\/John_Harris.png",
+          "image": "shopify://shop_images/John_Harris.png",
           "image_position": "left",
           "content": "",
           "height": "5' 8\"",
           "weight": "245 lbs",
           "DOB": "",
           "residence": "Cleves, Ohio",
-          "facebook_url": "https:\/\/www.facebook.com\/john.harris.710667",
-          "instagram_url": "https:\/\/www.instagram.com\/johnnyjuice1\/",
+          "facebook_url": "https://www.facebook.com/john.harris.710667",
+          "instagram_url": "https://www.instagram.com/johnnyjuice1/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1788,7 +1788,7 @@
             "type": "collection",
             "settings": {
               "collection": "supplements",
-              "image": "shopify:\/\/shop_images\/Menu-RECOVERY2.jpg",
+              "image": "shopify://shop_images/Menu-RECOVERY2.jpg",
               "image_alignment": "center center",
               "content_position": "bottomLeft",
               "subheading": "",
@@ -1800,7 +1800,7 @@
             "type": "collection",
             "settings": {
               "collection": "apparel",
-              "image": "shopify:\/\/shop_images\/Menu-NATION1.jpg",
+              "image": "shopify://shop_images/Menu-NATION1.jpg",
               "image_alignment": "center center",
               "content_position": "bottomLeft",
               "subheading": "",
@@ -1812,7 +1812,7 @@
             "type": "collection",
             "settings": {
               "collection": "gear",
-              "image": "shopify:\/\/shop_images\/Accessories_4a49dcad-9200-4977-902a-1fef3cf6039f.png",
+              "image": "shopify://shop_images/Accessories_4a49dcad-9200-4977-902a-1fef3cf6039f.png",
               "image_alignment": "center center",
               "content_position": "bottomLeft",
               "subheading": "",
@@ -1890,7 +1890,7 @@
           "1579622370313": {
             "type": "quote",
             "settings": {
-              "content": "<p>You can use this element to add a quote, content...<\/p>",
+              "content": "<p>You can use this element to add a quote, content...</p>",
               "author": ""
             }
           }
@@ -1901,7 +1901,7 @@
         "settings": {
           "show_section": false,
           "title": "Best Sellers",
-          "collection": "best-sellers",
+          "collection": "best-sellers-old",
           "grid_items_count": 9,
           "show_product_info": true,
           "show_vendor": false,
@@ -1922,7 +1922,7 @@
         "settings": {
           "subheading": "",
           "title": "Viridiana Sanchez",
-          "image": "shopify:\/\/shop_images\/Viridiana_Bio-WEB.png",
+          "image": "shopify://shop_images/Viridiana_Bio-WEB.png",
           "image_position": "left",
           "content": "",
           "height": "5' 3\"",
@@ -1930,7 +1930,7 @@
           "DOB": "November 4, 1986",
           "residence": "Livermore, CA, USA",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/vidi04\/",
+          "instagram_url": "https://www.instagram.com/vidi04/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -1957,16 +1957,16 @@
         "settings": {
           "subheading": "",
           "title": "Neal Kirby",
-          "image": "shopify:\/\/shop_images\/NealKirby_Bio-WEB.png",
+          "image": "shopify://shop_images/NealKirby_Bio-WEB.png",
           "image_position": "left",
           "content": "",
           "height": "6'",
           "weight": "240 lbs",
           "DOB": "June 14, 1988",
           "residence": "Raton, New Mexico, USA",
-          "facebook_url": "https:\/\/www.facebook.com\/neal.kirby21",
-          "instagram_url": "https:\/\/www.instagram.com\/nealkirby21\/",
-          "youtube_url": "https:\/\/www.youtube.com\/channel\/UCzBW1LBkfv3ZZ9-4TeqDS7Q",
+          "facebook_url": "https://www.facebook.com/neal.kirby21",
+          "instagram_url": "https://www.instagram.com/nealkirby21/",
+          "youtube_url": "https://www.youtube.com/channel/UCzBW1LBkfv3ZZ9-4TeqDS7Q",
           "pinterest_url": "",
           "snapchat_url": "",
           "twitter_url": "",
@@ -1992,15 +1992,15 @@
         "settings": {
           "subheading": "",
           "title": "Daniel Collins",
-          "image": "shopify:\/\/shop_images\/DanielCollins_Bio-WEB2.png",
+          "image": "shopify://shop_images/DanielCollins_Bio-WEB2.png",
           "image_position": "left",
           "content": "",
           "height": "5' 9\"",
           "weight": "205 lbs",
           "DOB": "February 15th",
           "residence": "Kansas City, Missouri",
-          "facebook_url": "https:\/\/www.facebook.com\/daniel.collins.98871174",
-          "instagram_url": "https:\/\/www.instagram.com\/dc4fitlife\/",
+          "facebook_url": "https://www.facebook.com/daniel.collins.98871174",
+          "instagram_url": "https://www.instagram.com/dc4fitlife/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -2027,7 +2027,7 @@
         "settings": {
           "subheading": "",
           "title": "Kris Craig",
-          "image": "shopify:\/\/shop_images\/KrisCraig2_Page_1200x1080_f885d746-7f5d-418b-a2d5-a722937b15c8.png",
+          "image": "shopify://shop_images/KrisCraig2_Page_1200x1080_f885d746-7f5d-418b-a2d5-a722937b15c8.png",
           "image_position": "left",
           "content": "",
           "height": "6' 8\"",
@@ -2035,7 +2035,7 @@
           "DOB": "October 1, 1989",
           "residence": "Orlando, FL",
           "facebook_url": "",
-          "instagram_url": "https:\/\/www.instagram.com\/kris_craig33\/",
+          "instagram_url": "https://www.instagram.com/kris_craig33/",
           "youtube_url": "",
           "pinterest_url": "",
           "snapchat_url": "",
@@ -2081,7 +2081,7 @@
           "button_color": "#000000",
           "subheading": "Subheading",
           "title": "Heading",
-          "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          "content": "<p>A short sentence describing what someone will receive by subscribing</p>"
         }
       },
       "newsletter-sitewide": {
@@ -2093,7 +2093,7 @@
           "button_color": "#000000",
           "subheading": "Keep updated",
           "title": "Newsletter",
-          "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          "content": "<p>A short sentence describing what someone will receive by subscribing</p>"
         }
       },
       "product-coreline-template": {
@@ -2196,7 +2196,7 @@
         "settings": {
           "subheading": "",
           "title": "",
-          "html": "<div class=\"yotpo yotpo-reviews-carousel\" data-background-color=\"transparent\" data-mode=\"top_rated\" data-type=\"product\" data-count=\"9\" data-show-bottomline=\"1\" data-autoplay-enabled=\"1\" data-autoplay-speed=\"3000\" data-show-navigation=\"1\"> <\/div>"
+          "html": "<div class=\"yotpo yotpo-reviews-carousel\" data-background-color=\"transparent\" data-mode=\"top_rated\" data-type=\"product\" data-count=\"9\" data-show-bottomline=\"1\" data-autoplay-enabled=\"1\" data-autoplay-speed=\"3000\" data-show-navigation=\"1\"> </div>"
         }
       }
     },
@@ -2293,7 +2293,7 @@
               "type": "text",
               "settings": {
                 "title": "About the shop",
-                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>",
                 "show_social_media": true
               }
             },
@@ -2307,7 +2307,7 @@
               "type": "newsletter",
               "settings": {
                 "title": "Newsletter",
-                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.</p>"
               }
             }
           },
@@ -2441,7 +2441,7 @@
                 "title": "2000",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             },
             "item-1": {
@@ -2451,7 +2451,7 @@
                 "title": "2001",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             },
             "item-2": {
@@ -2461,7 +2461,7 @@
                 "title": "2002",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             }
           },
@@ -2561,7 +2561,7 @@
             "text_color": "#ffffff",
             "apply_overlay": true,
             "title": "Our story",
-            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+            "content": "<p>Add your own custom content to explain your processes...</p>"
           }
         },
         "product-template": {
@@ -2684,7 +2684,7 @@
               "type": "text",
               "settings": {
                 "title": "About the shop",
-                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>",
                 "show_social_media": true
               }
             },
@@ -2698,7 +2698,7 @@
               "type": "newsletter",
               "settings": {
                 "title": "Newsletter",
-                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.</p>"
               }
             }
           },
@@ -2832,7 +2832,7 @@
                 "title": "2000",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             },
             "item-1": {
@@ -2842,7 +2842,7 @@
                 "title": "2001",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             },
             "item-2": {
@@ -2852,7 +2852,7 @@
                 "title": "2002",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             }
           },
@@ -2952,7 +2952,7 @@
             "text_color": "#ffffff",
             "apply_overlay": true,
             "title": "Our story",
-            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+            "content": "<p>Add your own custom content to explain your processes...</p>"
           }
         },
         "product-template": {
@@ -3076,7 +3076,7 @@
               "type": "text",
               "settings": {
                 "title": "About the shop",
-                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>",
                 "show_social_media": true
               }
             },
@@ -3090,7 +3090,7 @@
               "type": "newsletter",
               "settings": {
                 "title": "Newsletter",
-                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.</p>"
               }
             }
           },
@@ -3224,7 +3224,7 @@
                 "title": "2000",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             },
             "item-1": {
@@ -3234,7 +3234,7 @@
                 "title": "2001",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             },
             "item-2": {
@@ -3244,7 +3244,7 @@
                 "title": "2002",
                 "subheading": "Sub-heading",
                 "heading": "Heading",
-                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+                "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
               }
             }
           },
@@ -3344,7 +3344,7 @@
             "text_color": "#ffffff",
             "apply_overlay": true,
             "title": "Our story",
-            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+            "content": "<p>Add your own custom content to explain your processes...</p>"
           }
         },
         "product-template": {
